@@ -1,0 +1,32 @@
+#preloader {
+    color: white;
+    position: relative;
+}
+
+#logoLoader {
+    animation: fadeIn 1s 0.5s forwards;
+    left: 50%;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    z-index: 999;
+}
+
+polygon.st1 {
+    animation: blink 0.5s ease 1s 5 alternate forwards;
+    opacity: 0;
+}
+
+.circle {
+    background-color: #191919;
+    border-radius: 50%;
+    display: inline-block;
+    height: 3rem;
+    left: 3rem;
+    opacity: 0;
+    position: fixed;
+    top: 3rem;
+    width: 3rem;
+}

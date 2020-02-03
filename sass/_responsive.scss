@@ -1,0 +1,66 @@
+/* -------------------------------------------------- 
+    Tablet
+-------------------------------------------------- */
+@media only screen and (min-width: 768px) {}
+
+/* -------------------------------------------------- 
+    Desktop
+-------------------------------------------------- */
+@media only screen and (min-width: 992px) {
+    #burger {
+        right: 3rem;
+        top: 3rem;
+    }
+
+    #nav {
+        display: flex;
+    }
+
+    #menu {
+        flex-direction: row;
+    }
+
+    #sections {
+        li {
+            font-size: 3.5rem;
+            margin: 1rem;
+            text-align: initial;
+        }
+    }
+
+    .section-name {
+        padding-left: 2rem;
+    }
+
+    .menu-half {
+        width: 50%;
+
+    }
+
+    #menu-left {
+        display: flex;
+    }
+
+    #close-btn {
+        right: 5rem;
+        top: 5rem;
+    }
+
+    #home-content {
+        // margin: 0 150px;
+        max-width: 1140px;
+    }
+
+    #info-me {
+        // left: 20%;
+        margin-left: 10%;
+    }
+
+    #name {
+        font-size: 5rem;
+    }
+
+    #description {
+        max-width: 50%;
+    }
+}

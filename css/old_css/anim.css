@@ -1,0 +1,61 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lighten {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        top: 50%;
+    }
+
+    50% {
+        left: 50%;
+        top: 3rem;
+        transform: translate(-50%, 0);
+        width: 5rem;
+    }
+
+    100% {
+        cursor: pointer;
+        left: 3rem;
+        top: 3rem;
+        transform: translate(0);
+        width: 3rem;
+    }
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(100);
+    }
+}
