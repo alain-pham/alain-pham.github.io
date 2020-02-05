@@ -247,8 +247,8 @@
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(1.25rem);
-            transform: translateY(1.25rem);
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
 }
 
@@ -263,8 +263,8 @@
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(1.25rem);
-            transform: translateY(1.25rem);
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
 }
 
@@ -408,8 +408,9 @@ polygon.st1 {
 }
 
 #info-me {
+  display: inline-block;
   margin-left: 10%;
-  z-index: 999;
+  z-index: 666;
 }
 
 #info-me p {
@@ -463,8 +464,8 @@ polygon.st1 {
   left: 50%;
   opacity: 0.25;
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 1.5rem;
 }
 
@@ -492,7 +493,7 @@ polygon.st1 {
   height: 100%;
   right: -100%;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .menu-half {
@@ -621,7 +622,7 @@ polygon.st1 {
   height: 100vh;
   position: fixed;
   width: 100vw;
-  z-index: 1000;
+  z-index: 998;
 }
 
 #burger {
