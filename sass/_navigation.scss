@@ -114,7 +114,7 @@
     height: 100vh;
     position: fixed;
     width: 100vw;
-    z-index: 999;
+    z-index: 1000;
 }
 
 #burger {
@@ -187,11 +187,4 @@
 
 .current {
     background-color: red;
-}
-
-#scroll-indicator {
-    background-color: red;
-    height: 2rem;
-    position: absolute;
-    width: 2rem;
 }

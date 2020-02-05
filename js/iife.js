@@ -1,14 +1,20 @@
 "use strict";
 
 /**
- * Loads functions when the page is
+ * Loads functions when the page is loaded
  */
 
 (function () {
-    var d = document;
-    var mediaBig = window.matchMedia("(min-width: 768px)");
-    
-    var logoLoader = d.getElementById("logoLoader");
+    var d = document,
+        mediaBig = window.matchMedia("(min-width: 768px)"),
+        logoLoader = d.getElementById("logoLoader"),
+        circleLoader = d.querySelector(".circle"),
+        burgerBtn = d.getElementById("burger"),
+        closeBtn = d.getElementById("close-btn"),
+        sectionName = d.getElementsByClassName("section-name"),
+        contentMenu = d.getElementById("menu-left");
+
+    // Logo animation at start
     setTimeout(() => {
         logoLoader.style.animation = "lighten 1s forwards";
     }, 3000);
@@ -16,12 +22,10 @@
     setTimeout(() => {
         if (mediaBig.matches) {
             logoLoader.style.animation = "moveUp 1s forwards";
-        }
-
-        else {
+        } else {
             logoLoader.style.animation = "moveUpMobile 1s forwards";
         }
-        
+
         logoLoader.style.opacity = 1;
 
         logoLoader.addEventListener("animationend", () => {
@@ -29,39 +33,48 @@
         });
     }, 4000);
 
-    var circleLoader = d.querySelector(".circle");
+
     circleLoader.addEventListener("animationend", () => {
         circleLoader.parentNode.removeChild(circleLoader);
         completeLoad();
         // remove EventListener
     })
 
-    var burgerBtn = d.getElementById("burger");
+    // Menu behaviour
     burgerBtn.addEventListener("click", showMenu);
-
-    var closeBtn = d.getElementById("close-btn");
     closeBtn.addEventListener("click", hideMenu);
 
-    var sectionName = d.getElementsByClassName("section-name");
-    var contentMenu = d.getElementById("content-menu-left");
     for (let i = 0; i < sectionName.length; i++) {
         sectionName[i].addEventListener("mouseover", () => {
             switch (i) {
                 case 0:
+                    contentMenu.style.backgroundColor = "yellow";
                     break;
-                
+
                 case 1:
+                    contentMenu.style.backgroundColor = "green";
                     break;
 
                 case 2:
+                    contentMenu.style.backgroundColor = "blue";
                     break;
 
                 case 3:
+                    contentMenu.style.backgroundColor = "red";
+                    break;
+                default:
+                    contentMenu.style.backgroundColor = "red";
                     break;
             }
         });
     }
 
+    // 
     window.addEventListener("scroll", scrollNav);
+
+    // var scrollIndicator = d.getElementById("scroll-indicator");
+    // scrollIndicator.addEventListener("click", () => {
+
+    // });
 
 })();

@@ -10,15 +10,16 @@
 }
 
 html {
+    background-color: black;
+    font-family: "Montserrat";
     height: 100%;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     width: 100%;
 }
 
 body {
-    background-color: black;
-    font-family: "Montserrat";
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .page {
@@ -26,7 +27,7 @@ body {
     position: relative;
     width: 100vw;
 
-    & + .page {
+    &+.page {
         display: none;
     }
 }
@@ -39,4 +40,43 @@ a {
 
 ul {
     list-style: none;
+}
+
+#global {
+
+}
+
+#hexagons {
+    animation: blink 1s;
+    display: none;
+}
+
+.hexagon {
+    opacity: 0.05;
+    position: fixed;
+
+    &:first-child {
+        left: 20%;
+        top: 25%;
+        transform: rotate(69deg);
+        width: 2rem;
+    }
+
+    &:nth-child(2) {
+        left: 40%;
+        top: 20%;
+        transform: rotate(420deg);
+        width: 3rem;
+    }
+
+    &:nth-child(3) {
+        bottom: 30%;
+        right: 25%;
+        transform: rotate(1337deg);
+        width: 5rem;
+    }
+}
+
+#site-content {
+
 }

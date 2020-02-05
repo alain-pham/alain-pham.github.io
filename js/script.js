@@ -1,28 +1,34 @@
 "use strict";
 
-var d = document;
-var mediaBig = window.matchMedia("(min-width: 768px)");
-var menu = d.getElementById("menu");
-var menuLeft = d.getElementById("menu-left");
-var viewportHeight = window.innerHeight;
-var scrollAmount = d.documentElement.scrollTop;
+var d = document,
+    mediaBig = window.matchMedia("(min-width: 768px)"),
+    menu = d.getElementById("menu"),
+    menuLeft = d.getElementById("menu-left"),
+    pages = d.getElementsByClassName("page"),
+    pageContent = d.getElementsByClassName("page-content"),
+    viewportHeight = window.innerHeight,
+    scrollAmount = d.documentElement.scrollTop;
 
 /**
- * 
+ * After logo animation stops
  */
 function completeLoad() {
     d.querySelector("body").style.backgroundColor = "#191919";
 
-    var pages = d.getElementsByClassName("page");
     for (let i = 0; i < pages.length; i++) {
         pages[i].style.display = "block";
     }
 
+    for (let i = 0; i < pageContent.length; i++) {
+        pageContent[i].style.display = "flex";
+    }
+
+    d.getElementById("hexagons").style.display = "block";
     d.getElementById("interface").style.display = "block";
 }
 
 /**
- * 
+ * Opening the menu
  */
 function showMenu() {
     menu.style.display = "flex";
@@ -34,7 +40,7 @@ function showMenu() {
 }
 
 /**
- * 
+ * Closing the menu
  */
 function hideMenu() {
     menu.style.animation = "hideMenu 0.5s forwards";
@@ -45,10 +51,10 @@ function hideMenu() {
 }
 
 /**
- * 
+ * Behaviour when scrolling past sections
  */
 function scrollNav() {
-    if (scrollAmount >= viewportHeight) {
-        alert("uwu");
+    if (scrollAmount >= viewportHeight / 2) {
+        
     }
 }
