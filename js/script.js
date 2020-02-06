@@ -6,8 +6,9 @@ var d = document,
     menuLeft = d.getElementById("menu-left"),
     pages = d.getElementsByClassName("page"),
     pageContent = d.getElementsByClassName("page-content"),
-    viewportHeight = window.innerHeight,
-    scrollAmount = d.documentElement.scrollTop;
+    scrollIndic = d.getElementById("scroll-indicator"),
+    scrollDots = d.querySelectorAll("#nav li a"),
+    viewportHeight = window.innerHeight;
 
 /**
  * After logo animation stops
@@ -54,7 +55,48 @@ function hideMenu() {
  * Behaviour when scrolling past sections
  */
 function scrollNav() {
-    if (scrollAmount >= viewportHeight / 2) {
-        
+    // YEET AWAY THIS MESS LATER
+    // Home
+    if (window.pageYOffset < viewportHeight) {
+        for (let i = 0; i < scrollDots.length; i++) {
+            scrollDots[i].classList.remove("current");
+        }
+
+        scrollDots[0].classList.add("current");
+    }
+
+    if (window.pageYOffset >= viewportHeight / 2) {
+        scrollIndic.style.animation = "fadeOut 1s forwards";
+    }
+
+    else {
+        scrollIndic.style.animation = " fadeIn 1s forwards";
+    }
+
+    // About
+    if (window.pageYOffset >= viewportHeight * 0.75) {
+        for (let i = 0; i < scrollDots.length; i++) {
+            scrollDots[i].classList.remove("current");
+        }
+
+        scrollDots[1].classList.add("current");
+    }
+
+    // Portfolio
+    if (window.pageYOffset >= viewportHeight * 1.75) {
+        for (let i = 0; i < scrollDots.length; i++) {
+            scrollDots[i].classList.remove("current");
+        }
+
+        scrollDots[2].classList.add("current");
+    }
+
+    // Contact
+    if (window.pageYOffset >= viewportHeight * 2.75) {
+        for (let i = 0; i < scrollDots.length; i++) {
+            scrollDots[i].classList.remove("current");
+        }
+
+        scrollDots[3].classList.add("current");
     }
 }

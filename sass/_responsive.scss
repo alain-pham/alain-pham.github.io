@@ -25,6 +25,29 @@
             font-size: 3.5rem;
             margin: 1rem;
             text-align: initial;
+            transition: all 0.25s;
+
+            // Hovered section indicator
+            &::before {
+                background-color: red;
+                border-radius: 0.1rem;
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                height: 1rem;
+                opacity: 0;
+                transition: opacity 0.25s;
+                width: 1rem;
+            }
+
+            &:hover {
+                transform: translateX(3rem);
+
+                &:hover::before {
+                    opacity: 1;
+                }
+            }
         }
     }
 
