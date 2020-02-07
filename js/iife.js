@@ -12,7 +12,8 @@
         burgerBtn = d.getElementById("burger"),
         closeBtn = d.getElementById("close-btn"),
         sectionName = d.getElementsByClassName("section-name"),
-        contentMenu = d.getElementById("menu-left");
+        contentMenu = d.getElementById("menu-left"),
+        scrollIndicator = d.getElementById("scroll-indicator");
 
     // Logo animation at start
     setTimeout(() => {
@@ -67,14 +68,16 @@
                     break;
             }
         });
+
+        sectionName[i].addEventListener("click", hideMenu);
     }
 
-    // 
+    // Update current dot nav
     window.addEventListener("scroll", scrollNav);
 
-    // var scrollIndicator = d.getElementById("scroll-indicator");
-    // scrollIndicator.addEventListener("click", () => {
-
-    // });
+    // Scrolls to about section
+    scrollIndicator.addEventListener("click", () => {
+        location.hash = "#about";
+    });
 
 })();

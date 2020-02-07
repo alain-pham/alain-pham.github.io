@@ -136,3 +136,33 @@
         transform: translateY(1.5rem);
     }
 }
+
+@keyframes float1 {
+    0% {
+        transform: rotate(69deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(1rem, 2rem);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: rotate(90deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(69deg) translate(-5rem, 1rem);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: rotate(53deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(69deg) translate(2rem, 3rem);
+    }
+}

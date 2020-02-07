@@ -286,6 +286,72 @@
   }
 }
 
+@-webkit-keyframes float1 {
+  0% {
+    -webkit-transform: rotate(69deg) translate(0);
+            transform: rotate(69deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translate(1rem, 2rem);
+            transform: rotate(0deg) translate(1rem, 2rem);
+  }
+}
+
+@keyframes float1 {
+  0% {
+    -webkit-transform: rotate(69deg) translate(0);
+            transform: rotate(69deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translate(1rem, 2rem);
+            transform: rotate(0deg) translate(1rem, 2rem);
+  }
+}
+
+@-webkit-keyframes float2 {
+  0% {
+    -webkit-transform: rotate(90deg) translate(0);
+            transform: rotate(90deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(69deg) translate(-5rem, 1rem);
+            transform: rotate(69deg) translate(-5rem, 1rem);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    -webkit-transform: rotate(90deg) translate(0);
+            transform: rotate(90deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(69deg) translate(-5rem, 1rem);
+            transform: rotate(69deg) translate(-5rem, 1rem);
+  }
+}
+
+@-webkit-keyframes float3 {
+  0% {
+    -webkit-transform: rotate(53deg) translate(0);
+            transform: rotate(53deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(69deg) translate(2rem, 3rem);
+            transform: rotate(69deg) translate(2rem, 3rem);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    -webkit-transform: rotate(53deg) translate(0);
+            transform: rotate(53deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(69deg) translate(2rem, 3rem);
+            transform: rotate(69deg) translate(2rem, 3rem);
+  }
+}
+
 /* --------------------------------------------------
 # Layout
 -------------------------------------------------- */
@@ -348,26 +414,26 @@ ul {
 }
 
 .hexagon:first-child {
+  -webkit-animation: float1 10s ease-in-out alternate infinite;
+          animation: float1 10s ease-in-out alternate infinite;
   left: 20%;
   top: 25%;
-  -webkit-transform: rotate(69deg);
-          transform: rotate(69deg);
   width: 2rem;
 }
 
 .hexagon:nth-child(2) {
+  -webkit-animation: float2 16s ease-in-out alternate infinite;
+          animation: float2 16s ease-in-out alternate infinite;
   left: 40%;
   top: 20%;
-  -webkit-transform: rotate(420deg);
-          transform: rotate(420deg);
   width: 3rem;
 }
 
 .hexagon:nth-child(3) {
+  -webkit-animation: float3 12s ease-in-out alternate infinite;
+          animation: float3 12s ease-in-out alternate infinite;
   bottom: 30%;
-  right: 25%;
-  -webkit-transform: rotate(1337deg);
-          transform: rotate(1337deg);
+  right: 20%;
   width: 5rem;
 }
 
@@ -477,6 +543,7 @@ polygon.st1 {
   border: 0.15rem solid white;
   border-radius: 1rem;
   bottom: 3rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,6 +556,7 @@ polygon.st1 {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 1.5rem;
+  z-index: 998;
 }
 
 #scroll-wheel {
@@ -716,7 +784,6 @@ polygon.st1 {
 
 .current {
   background-color: red;
-  opacity: 1;
 }
 
 /* --------------------------------------------------
