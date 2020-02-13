@@ -8,6 +8,7 @@ var d = document,
     pageContent = d.getElementsByClassName("page-content"),
     scrollIndic = d.getElementById("scroll-indicator"),
     scrollDots = d.querySelectorAll("#nav li a"),
+    pageName = d.getElementById("page-name"),
     viewportHeight = window.innerHeight;
 
 /**
@@ -26,6 +27,7 @@ function completeLoad() {
 
     d.getElementById("hexagons").style.display = "block";
     d.getElementById("interface").style.display = "block";
+    d.getElementById("actual-page").style.display = "block";
 }
 
 /**
@@ -63,6 +65,7 @@ function scrollNav() {
         }
 
         scrollDots[0].classList.add("current");
+        pageName.innerHTML = "home";
     }
 
     if (window.pageYOffset >= viewportHeight / 2) {
@@ -70,7 +73,7 @@ function scrollNav() {
     }
 
     else {
-        scrollIndic.style.animation = " fadeIn 1s forwards";
+        scrollIndic.style.animation = " fadeIn25 1s forwards";
     }
 
     // About
@@ -80,6 +83,7 @@ function scrollNav() {
         }
 
         scrollDots[1].classList.add("current");
+        pageName.innerHTML = "about";
     }
 
     // Portfolio
@@ -89,6 +93,7 @@ function scrollNav() {
         }
 
         scrollDots[2].classList.add("current");
+        pageName.innerHTML = "portfolio";
     }
 
     // Contact
@@ -98,5 +103,6 @@ function scrollNav() {
         }
 
         scrollDots[3].classList.add("current");
+        pageName.innerHTML = "contact";
     }
 }

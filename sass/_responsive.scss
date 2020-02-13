@@ -16,8 +16,34 @@
         display: flex;
     }
 
+    #upper-left {
+        left: 3rem;
+        top: 3rem;
+    }
+
+    #separator {
+        margin-left: 200%;
+    }
+
+    #page-name {
+        margin-left: 300%;
+    }
+
     #menu {
         flex-direction: row;
+    }
+
+    .menu-half {
+        width: 50%;
+    }
+
+    #menu-left {
+        display: flex;
+    }
+
+    #close-btn {
+        right: 5rem;
+        top: 5rem;
     }
 
     #sections {
@@ -55,21 +81,7 @@
         padding-left: 2rem;
     }
 
-    .menu-half {
-        width: 50%;
-
-    }
-
-    #menu-left {
-        display: flex;
-    }
-
-    #close-btn {
-        right: 5rem;
-        top: 5rem;
-    }
-
-    #home-content {
+    .page-content {
         // margin: 0 150px;
         max-width: 1140px;
     }

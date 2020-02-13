@@ -3,37 +3,9 @@
     position: relative;
 }
 
-#logoLoader {
-    animation: fadeIn 1s 0.5s forwards;
-    left: 50%;
-    opacity: 0;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 5rem;
-    z-index: 999;
-}
-
-polygon.st1 {
-    animation: blink 0.5s ease 1s 5 alternate forwards;
-    opacity: 0;
-}
-
-.circle {
-    background-color: #191919;
-    border-radius: 50%;
-    display: inline-block;
-    height: 3rem;
-    left: 3rem;
-    opacity: 0;
-    position: fixed;
-    top: 3rem;
-    width: 3rem;
-}
-
 /* ------------------------------ */
-#home-content {
-    animation: blink 1s;
+.page-content {
+    animation: fadeIn100 1s;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -74,17 +46,25 @@ polygon.st1 {
 #description {
     margin-top: 5rem;
     position: absolute;
-    width: 30rem;
+    // width: 30rem;
 }
 
 #profile-pic {
-    left: 55%;
+    animation: fadeIn20 5s forwards ease-in-out;
+    background-attachment: fixed;
+    background-image: url("/img/pham.png");
+    background-position: 75% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+    height: 100%;
+    mix-blend-mode: overlay;
     position: absolute;
-    transform: perspective(1000px) rotateY(-45deg) translateX(-50%);
+    width: 100%;
 }
 
 #scroll-indicator {
-    animation: fadeIn 1s forwards;
+    animation: fadeIn25 1s forwards;
     border: 0.15rem solid white;
     border-radius: 1rem;
     bottom: 3rem;

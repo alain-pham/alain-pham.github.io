@@ -21,7 +21,24 @@
 /* --------------------------------------------------
 # Animations
 -------------------------------------------------- */
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeIn20 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes fadeIn20 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes fadeIn25 {
   0% {
     opacity: 0;
   }
@@ -29,12 +46,31 @@
     opacity: 0.25;
   }
 }
-@keyframes fadeIn {
+
+@keyframes fadeIn25 {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 0.25;
+  }
+}
+
+@-webkit-keyframes fadeIn100 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn100 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -53,24 +89,6 @@
   }
   100% {
     opacity: 0;
-  }
-}
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -357,7 +375,16 @@
 -------------------------------------------------- */
 @font-face {
   font-family: "Atami Stencil";
+  font-style: normal;
+  font-weight: normal;
   src: url("../fonts/Atami-Stencil.otf");
+}
+
+@font-face {
+  font-family: "Atami Stencil";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Atami-Stencil-Bold.otf");
 }
 
 * {
@@ -378,6 +405,7 @@ html {
 
 body {
   background-color: black;
+  color: white;
   font-family: "Montserrat";
 }
 
@@ -403,13 +431,13 @@ ul {
 }
 
 #hexagons {
-  -webkit-animation: blink 1s;
-          animation: blink 1s;
+  -webkit-animation: fadeIn100 1s;
+          animation: fadeIn100 1s;
   display: none;
 }
 
 .hexagon {
-  opacity: 0.05;
+  opacity: 0.1;
   position: fixed;
 }
 
@@ -445,41 +473,10 @@ ul {
   position: relative;
 }
 
-#logoLoader {
-  -webkit-animation: fadeIn 1s 0.5s forwards;
-          animation: fadeIn 1s 0.5s forwards;
-  left: 50%;
-  opacity: 0;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 5rem;
-  z-index: 999;
-}
-
-polygon.st1 {
-  -webkit-animation: blink 0.5s ease 1s 5 alternate forwards;
-          animation: blink 0.5s ease 1s 5 alternate forwards;
-  opacity: 0;
-}
-
-.circle {
-  background-color: #191919;
-  border-radius: 50%;
-  display: inline-block;
-  height: 3rem;
-  left: 3rem;
-  opacity: 0;
-  position: fixed;
-  top: 3rem;
-  width: 3rem;
-}
-
 /* ------------------------------ */
-#home-content {
-  -webkit-animation: blink 1s;
-          animation: blink 1s;
+.page-content {
+  -webkit-animation: fadeIn100 1s;
+          animation: fadeIn100 1s;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -527,19 +524,27 @@ polygon.st1 {
 #description {
   margin-top: 5rem;
   position: absolute;
-  width: 30rem;
 }
 
 #profile-pic {
-  left: 55%;
+  -webkit-animation: fadeIn20 5s forwards ease-in-out;
+          animation: fadeIn20 5s forwards ease-in-out;
+  background-attachment: fixed;
+  background-image: url("/img/pham.png");
+  background-position: 75% center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+          clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  height: 100%;
+  mix-blend-mode: overlay;
   position: absolute;
-  -webkit-transform: perspective(1000px) rotateY(-45deg) translateX(-50%);
-          transform: perspective(1000px) rotateY(-45deg) translateX(-50%);
+  width: 100%;
 }
 
 #scroll-indicator {
-  -webkit-animation: fadeIn 1s forwards;
-          animation: fadeIn 1s forwards;
+  -webkit-animation: fadeIn25 1s forwards;
+          animation: fadeIn25 1s forwards;
   border: 0.15rem solid white;
   border-radius: 1rem;
   bottom: 3rem;
@@ -571,6 +576,76 @@ polygon.st1 {
 /* --------------------------------------------------
 # Navigation
 -------------------------------------------------- */
+#upper-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 3.5rem;
+  left: 2rem;
+  position: fixed;
+  top: 2rem;
+  width: 3rem;
+}
+
+#logoLoader {
+  -webkit-animation: fadeIn25 1s 0.5s forwards;
+          animation: fadeIn25 1s 0.5s forwards;
+  left: 50%;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 5rem;
+  z-index: 999;
+}
+
+#actual-page {
+  -webkit-animation: fadeIn100 1s;
+          animation: fadeIn100 1s;
+  display: none;
+}
+
+#separator {
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 0.1rem;
+  height: 100%;
+  margin-left: 150%;
+  position: absolute;
+  width: 0.25rem;
+}
+
+#page-name {
+  font-family: "Atami Stencil";
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-left: 200%;
+  position: absolute;
+}
+
+polygon.st1 {
+  -webkit-animation: fadeIn100 0.5s ease 1s 5 alternate forwards;
+          animation: fadeIn100 0.5s ease 1s 5 alternate forwards;
+  opacity: 0;
+}
+
+.circle {
+  background-color: #191919;
+  border-radius: 50%;
+  display: inline-block;
+  height: 3rem;
+  left: 3rem;
+  opacity: 0;
+  position: fixed;
+  top: 3rem;
+  width: 3rem;
+}
+
 #menu {
   display: none;
   position: fixed;
@@ -693,8 +768,8 @@ polygon.st1 {
 }
 
 #burger {
-  -webkit-animation: blink 1s forwards;
-          animation: blink 1s forwards;
+  -webkit-animation: fadeIn100 1s forwards;
+          animation: fadeIn100 1s forwards;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -759,8 +834,8 @@ polygon.st1 {
 }
 
 #nav li {
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: fadeIn25 1s;
+          animation: fadeIn25 1s;
   background-color: white;
   border-radius: 0.1rem;
   height: 1rem;
@@ -805,11 +880,33 @@ polygon.st1 {
     display: -ms-flexbox;
     display: flex;
   }
+  #upper-left {
+    left: 3rem;
+    top: 3rem;
+  }
+  #separator {
+    margin-left: 200%;
+  }
+  #page-name {
+    margin-left: 300%;
+  }
   #menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .menu-half {
+    width: 50%;
+  }
+  #menu-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #close-btn {
+    right: 5rem;
+    top: 5rem;
   }
   #sections li {
     font-size: 3.5rem;
@@ -841,19 +938,7 @@ polygon.st1 {
   .section-name {
     padding-left: 2rem;
   }
-  .menu-half {
-    width: 50%;
-  }
-  #menu-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #close-btn {
-    right: 5rem;
-    top: 5rem;
-  }
-  #home-content {
+  .page-content {
     max-width: 1140px;
   }
   #info-me {

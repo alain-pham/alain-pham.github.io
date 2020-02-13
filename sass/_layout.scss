@@ -1,6 +1,15 @@
 @font-face {
     font-family: "Atami Stencil";
+    font-style: normal;
+    font-weight: normal;
     src: url("../fonts/Atami-Stencil.otf");
+}
+
+@font-face {
+    font-family: "Atami Stencil";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/Atami-Stencil-Bold.otf");
 }
 
 * {
@@ -20,6 +29,7 @@ html {
 
 body {
     background-color: black;
+    color: white;
     font-family: "Montserrat";
 }
 
@@ -44,12 +54,12 @@ ul {
 }
 
 #hexagons {
-    animation: blink 1s;
+    animation: fadeIn100 1s;
     display: none;
 }
 
 .hexagon {
-    opacity: 0.05;
+    opacity: 0.1;
     position: fixed;
 
     &:first-child {
