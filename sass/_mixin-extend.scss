@@ -1,0 +1,24 @@
+@mixin size($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin pos($position, $top, $right, $bottom, $left) {
+    bottom: $bottom;
+    left: $left;
+    position: $position;
+    right: $right;
+    top: $top;
+}
+
+@mixin for-tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}

@@ -7,7 +7,7 @@
 (function () {
     var d = document,
         mediaBig = window.matchMedia("(min-width: 768px)"),
-        logoLoader = d.getElementById("logoLoader"),
+        logoLoader = d.getElementById("logo-loader"),
         circleLoader = d.querySelector(".circle"),
         burgerBtn = d.getElementById("burger"),
         closeBtn = d.getElementById("close-btn"),
@@ -18,7 +18,7 @@
     // Logo animation at start
     setTimeout(() => {
         logoLoader.style.animation = "lighten 1s forwards";
-    }, 3000);
+    }, 3100);
 
     setTimeout(() => {
         if (mediaBig.matches) {
@@ -32,7 +32,11 @@
         logoLoader.addEventListener("animationend", () => {
             circleLoader.style.animation = "expand 0.5s forwards";
         });
-    }, 4000);
+    }, 4000); /* 4000 */
+
+    logoLoader.addEventListener("click", () => {
+        location.hash = "#home"
+    });
 
 
     circleLoader.addEventListener("animationend", () => {

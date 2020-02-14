@@ -26,8 +26,12 @@ function completeLoad() {
     }
 
     d.getElementById("hexagons").style.display = "block";
-    d.getElementById("interface").style.display = "block";
+    d.getElementById("burger").style.display = "flex";
     d.getElementById("actual-page").style.display = "block";
+
+    if (mediaBig.matches) {
+        d.getElementById("nav").style.display = "flex";
+    }
 }
 
 /**
@@ -35,10 +39,10 @@ function completeLoad() {
  */
 function showMenu() {
     menu.style.display = "flex";
-    menu.style.animation = "showMenu 0.5s forwards";
+    menu.style.animation = "showMenu 0.25s forwards";
 
     if (mediaBig.matches) {
-        menuLeft.style.animation = "menuLeftShow 0.5s 0.5s forwards";
+        menuLeft.style.animation = "menuLeftShow 0.25s 0.25s forwards";
     }
 }
 
@@ -46,7 +50,7 @@ function showMenu() {
  * Closing the menu
  */
 function hideMenu() {
-    menu.style.animation = "hideMenu 0.5s forwards";
+    menu.style.animation = "hideMenu 0.25s forwards";
     
     setTimeout(() => {
         menu.style.display = "none";

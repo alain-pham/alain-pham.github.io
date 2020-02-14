@@ -1,26 +1,41 @@
-#preloader {
-    color: white;
-    position: relative;
-}
-
-/* ------------------------------ */
 .page-content {
     animation: fadeIn100 1s;
     display: none;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin: 0 auto;
+    margin: 0 15px;
+    position: relative;
+    z-index: 2;
+
+    @include for-desktop {
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+}
+
+#home {
+    color: white;
+    position: relative;
 }
 
 #info-me {
-    margin-left: 10%;
-    width: max-content;
-    z-index: 998;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
     p {
         text-shadow: 0 1px #191919;
     }
+
+    @include for-desktop {
+        align-items: flex-start;
+        margin-left: 10%;
+        width: max-content;
+    }
+
+    @include pos(absolute, auto, auto, 25%, auto);
 }
 
 #name {
@@ -29,13 +44,21 @@
     font-weight: bold;
 
     &::after {
-        background-color: red;
+        background-color: $red;
         border-radius: 0.1rem;
         content: "";
         display: block;
-        height: 6px;
-        margin: 1rem 0 1.5rem 0;
-        width: 6rem;
+        margin: 1rem auto 1.5rem auto;
+
+        @include for-desktop {
+            margin: 1rem 0 1.5rem 0;
+        }
+
+        @include size(6px, 6rem);
+    }
+
+    @include for-desktop {
+        font-size: 5rem;
     }
 }
 
@@ -44,45 +67,186 @@
 }
 
 #description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     margin-top: 5rem;
-    position: absolute;
-    // width: 30rem;
+    width: 100%;
+
+    p {
+        width: max-content;
+    }
+
+    @include for-desktop {
+        align-items: flex-start;
+    }
+}
+
+#social-media {
+    margin-top: 1.5rem;
+    width: max-content;
+
+    span {
+        align-items: center;
+        display: inline-flex;
+        margin-right: 0.5rem;
+        transition: all 0.25s;
+
+
+
+        @include for-desktop {
+            opacity: 0.25;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 #profile-pic {
-    animation: fadeIn20 5s forwards ease-in-out;
     background-attachment: fixed;
     background-image: url("/img/pham.png");
-    background-position: 75% center;
+    background-position: 60% center;
     background-repeat: no-repeat;
     background-size: contain;
     clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
-    height: 100%;
-    mix-blend-mode: overlay;
+    filter: brightness(50%);
+    opacity: 0.1;
     position: absolute;
-    width: 100%;
+    z-index: -1;
+
+    @include size(100%, 100%);
 }
 
 #scroll-indicator {
     animation: fadeIn25 1s forwards;
     border: 0.15rem solid white;
     border-radius: 1rem;
-    bottom: 3rem;
     cursor: pointer;
     display: flex;
-    height: 2.5rem;
     justify-content: center;
-    left: 50%;
-    position: absolute;
     transform: translateX(-50%);
-    width: 1.5rem;
-    z-index: 998;
+
+    @include pos(absolute, auto, auto, 3rem, 50%);
+    @include size(2.5rem, 1.5rem);
 }
 
 #scroll-wheel {
     animation: scrollIndicator 2.5s infinite;
     background-color: white;
     border-radius: 50%;
-    height: 0.5rem;
-    width: 0.5rem;
+
+    @include size(0.5rem, 0.5rem);
+}
+
+/* -------------------- */
+
+#about-content {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+        &:first-child {
+            width: 30%;
+
+            &::after {
+                background-color: $red;
+                content: "";
+                height: 100%;
+                width: 6px;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 60%;
+        }
+    }
+}
+
+#summary-me {
+    span {
+        // color: red;
+
+        &:first-child {
+            &::after {
+                content: " / ";
+            }
+        }
+    }
+}
+
+/* -------------------- */
+
+#projects {
+    display: flex;
+    height: 60%;
+    position: absolute;
+    width: 100%;
+
+    &:hover {
+        li {
+            flex: 1 1 10%;
+        }
+    }
+
+    li {
+        list-style: none;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        transition: all 0.5s;
+
+        &:nth-child(1) {
+            background: url("/img/game1.jpg");
+            background-size: cover;
+            background-position: left;
+        }
+
+        &:nth-child(2) {
+            background: url("/img/game2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        &:nth-child(3) {
+            background: url("/img/game3.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        &:nth-child(4) {
+            background: url("/img/game4.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        &:hover {
+            flex: 1 1 70%;
+
+            div {
+                bottom: 0;
+                opacity: 1;
+                transition: all 0.5s;
+            }
+        }
+
+        div {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 0;
+            width: 100%;
+
+            @include pos(absolute, auto, auto, -100%, auto);
+        }
+
+        @include size(100%, 25%);
+    }
+
+
+
+
+
+    // @include size(100%, 100%);
 }
