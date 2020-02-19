@@ -5,7 +5,7 @@
  */
 
 (function () {
-    var d = document,
+    const d = document,
         mediaBig = window.matchMedia("(min-width: 768px)"),
         logoLoader = d.getElementById("logo-loader"),
         circleLoader = d.querySelector(".circle"),
@@ -18,6 +18,7 @@
     // Logo animation at start
     setTimeout(() => {
         logoLoader.style.animation = "lighten 1s forwards";
+        d.getElementById("hexagons").style.display = "block";
     }, 3100);
 
     setTimeout(() => {

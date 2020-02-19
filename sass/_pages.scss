@@ -1,17 +1,19 @@
 .page-content {
     animation: fadeIn100 1s;
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
     margin: 0 15px;
     position: relative;
     z-index: 2;
 
+    @include flex(column, $justify-content: center);
+
     @include for-desktop {
+        align-items: flex-start;
         margin: 0 auto;
         max-width: 1140px;
     }
+
+    @include size(100%);
 }
 
 #home {
@@ -20,14 +22,13 @@
 }
 
 #info-me {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     width: 100%;
 
     p {
         text-shadow: 0 1px #191919;
     }
+
+    @include flex(column, center);
 
     @include for-desktop {
         align-items: flex-start;
@@ -35,7 +36,7 @@
         width: max-content;
     }
 
-    @include pos(absolute, auto, auto, 25%, auto);
+    @include pos(absolute, $bottom: 25%);
 }
 
 #name {
@@ -67,15 +68,15 @@
 }
 
 #description {
-    align-items: center;
     display: flex;
-    flex-direction: column;
     margin-top: 5rem;
     width: 100%;
 
     p {
         width: max-content;
     }
+
+    @include flex(column, center);
 
     @include for-desktop {
         align-items: flex-start;
@@ -91,8 +92,6 @@
         display: inline-flex;
         margin-right: 0.5rem;
         transition: all 0.25s;
-
-
 
         @include for-desktop {
             opacity: 0.25;
@@ -124,11 +123,10 @@
     border: 0.15rem solid white;
     border-radius: 1rem;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
     transform: translateX(-50%);
 
-    @include pos(absolute, auto, auto, 3rem, 50%);
+    @include flex($align-items: flex-start, $justify-content: center);
+    @include pos(absolute, $bottom: 3rem, $left: 50%);
     @include size(2.5rem, 1.5rem);
 }
 
@@ -143,25 +141,46 @@
 /* -------------------- */
 
 #about-content {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-
     div {
-        &:first-child {
-            width: 30%;
+        &#text-me {
+            // width: 30%;
 
             &::after {
                 background-color: $red;
                 content: "";
-                height: 100%;
                 width: 6px;
+
+                @include size(100%);
             }
         }
 
-        &:nth-child(2) {
-            width: 60%;
+        &#skills {
+            // width: 60%; 
         }
+    }
+
+    @include flex(column, center, space-between);
+
+    @include for-desktop {
+        div {
+            &#text-me {
+                width: 30%;
+
+                &::after {
+                    background-color: $red;
+                    content: "";
+                    width: 6px;
+
+                    @include size(100%);
+                }
+            }
+
+            &#skills {
+                width: 60%;
+            }
+        }
+
+        @include flex(row, center, space-between);
     }
 }
 
@@ -177,76 +196,100 @@
     }
 }
 
-/* -------------------- */
+#about-me {
+    margin: 1rem 0;
+}
 
+/* -------------------- */
+// https://www.youtube.com/watch?v=a7ICxQblYrM
 #projects {
     display: flex;
-    height: 60%;
-    position: absolute;
-    width: 100%;
-
-    &:hover {
-        li {
-            flex: 1 1 10%;
-        }
-    }
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 
     li {
-        list-style: none;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        transition: all 0.5s;
+        flex-shrink: 0;
+        scroll-snap-align: start;
 
-        &:nth-child(1) {
+        div {
+            display: none;
+        }
+
+        &#slide-1 {
             background: url("/img/game1.jpg");
+            background-position: center;
             background-size: cover;
-            background-position: left;
         }
 
-        &:nth-child(2) {
+        &#slide-2 {
             background: url("/img/game2.jpg");
-            background-size: cover;
             background-position: center;
+            background-size: cover;
         }
 
-        &:nth-child(3) {
+        &#slide-3 {
             background: url("/img/game3.jpg");
-            background-size: cover;
             background-position: center;
+            background-size: cover;
         }
 
-        &:nth-child(4) {
+        &#slide-4 {
             background: url("/img/game4.jpg");
-            background-size: cover;
             background-position: center;
+            background-size: cover;
         }
+
+        @include size(100%, 100%);
+    }
+
+    @include for-desktop() {
+        position: absolute;
+        width: 100%;
 
         &:hover {
-            flex: 1 1 70%;
-
-            div {
-                bottom: 0;
-                opacity: 1;
-                transition: all 0.5s;
+            li {
+                flex: 1 1 13.33%;
             }
         }
 
-        div {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 1rem 0;
-            width: 100%;
+        li {
+            div {
+                display: block;
+            }
 
-            @include pos(absolute, auto, auto, -100%, auto);
+            list-style: none;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            transition: all 0.25s;
+
+            &:hover {
+                flex: 1 1 60%;
+
+                div {
+                    bottom: 0;
+                    opacity: 1;
+                    transition: all 0.25s;
+                }
+            }
+
+            div {
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 1rem 0;
+                width: 100%;
+
+                @include pos(absolute, $bottom: -100%);
+            }
+
+            @include size(100%, 25%);
         }
-
-        @include size(100%, 25%);
     }
 
+    @include for-desktop {
+        @include size(60%, 100%);
+    }
 
-
-
-
-    // @include size(100%, 100%);
+    @include size(50%, 100%);
 }

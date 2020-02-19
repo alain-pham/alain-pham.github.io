@@ -1,14 +1,21 @@
-@mixin size($height, $width) {
+@mixin size($height: auto, $width: auto) {
     height: $height;
     width: $width;
 }
 
-@mixin pos($position, $top, $right, $bottom, $left) {
+@mixin pos($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
     bottom: $bottom;
     left: $left;
     position: $position;
     right: $right;
     top: $top;
+}
+
+@mixin flex($flex-direction: row, $align-items: center, $justify-content: center) {
+    align-items: $align-items;
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
 }
 
 @mixin for-tablet {

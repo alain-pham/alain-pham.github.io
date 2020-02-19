@@ -1,6 +1,6 @@
 "use strict";
 
-var d = document,
+const d = document,
     mediaBig = window.matchMedia("(min-width: 768px)"),
     menu = d.getElementById("menu"),
     menuLeft = d.getElementById("menu-left"),
@@ -25,7 +25,6 @@ function completeLoad() {
         pageContent[i].style.display = "flex";
     }
 
-    d.getElementById("hexagons").style.display = "block";
     d.getElementById("burger").style.display = "flex";
     d.getElementById("actual-page").style.display = "block";
 
@@ -62,6 +61,10 @@ function hideMenu() {
  */
 function scrollNav() {
     // YEET AWAY THIS MESS LATER
+    const sections = [
+        "home", "about", "portfolio", "contact"
+    ];
+
     // Home
     if (window.pageYOffset < viewportHeight) {
         for (let i = 0; i < scrollDots.length; i++) {
@@ -69,7 +72,7 @@ function scrollNav() {
         }
 
         scrollDots[0].classList.add("current");
-        pageName.innerHTML = "home";
+        pageName.innerHTML = sections[0];
     }
 
     if (window.pageYOffset >= viewportHeight / 2) {
@@ -87,7 +90,7 @@ function scrollNav() {
         }
 
         scrollDots[1].classList.add("current");
-        pageName.innerHTML = "about";
+        pageName.innerHTML = sections[1];
     }
 
     // Portfolio
@@ -97,7 +100,7 @@ function scrollNav() {
         }
 
         scrollDots[2].classList.add("current");
-        pageName.innerHTML = "portfolio";
+        pageName.innerHTML = sections[2];
     }
 
     // Contact
@@ -107,6 +110,6 @@ function scrollNav() {
         }
 
         scrollDots[3].classList.add("current");
-        pageName.innerHTML = "contact";
+        pageName.innerHTML = sections[3];
     }
 }

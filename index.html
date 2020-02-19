@@ -8,7 +8,6 @@
 
 	<!-- CSS -->
 	<link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
-	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap" rel="stylesheet">
 
@@ -174,7 +173,7 @@
 						<span>Montréal</span>
 						<!-- <span></span> -->
 					</div>
-					<p>Hi, I'm Alain. I'm a multimedia integration student looking forward to using my learned knowledge
+					<p id="about-me">Hi, I'm Alain. I'm a multimedia integration student looking forward to using my learned knowledge
 						over the past few years to accomplish great things such as doing web integration and making the
 						spiciest of memes.</p>
 
@@ -191,34 +190,38 @@
 		<section id="portfolio" class="page">
 			<div id="portfolio-content" class="page-content">
 				<ul id="projects">
-					<li>
-						<div>
-							<h2>://JUMP</h2>
-						</div>
+					<li id="slide-1" class="slide">
+						<div><h2>://JUMP</h2></div>
 					</li>
-					<li>
-						<div>
-							<h2>BLÖK</h2>
-						</div>
+					<li id="slide-2" class="slide">
+						<div><h2>BLÖK</h2></div>
 					</li>
-					<li>
-						<div>
-							<h2>ASTRE</h2>
-						</div>
+					<li id="slide-3" class="slide">
+						<div><h2>ASTRE</h2></div>
 					</li>
-					<li>
-						<div>
-							<h2>QUERCUS</h2>
-						</div>
+					<li id="slide-4" class="slide">
+						<div><h2>QUERCUS</h2></div>
 					</li>
 				</ul>
+				<div>
+					<div>
+						<input id="btn-game" type="radio" name="carousel">
+						<label for="btn-game">Lorem.</label>
+					</div>
+					<div>
+						<input id="btn-design" type="radio" name="carousel">
+						<label for="btn-design">Lorem.</label>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<footer id="contact" class="page">
 			<div id="contact-content" class="page-content">
 				<!-- GITHUB, LINKEDIN -->
-
+				<details>
+					<summary><i class="fas fa-copyright"></i> 2020 Alain Pham</summary>
+				</details>
 			</div>
 		</footer>
 	</div>
