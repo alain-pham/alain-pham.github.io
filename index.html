@@ -18,6 +18,7 @@
 
 	<div id="global">
 
+		<!-- Hexagons background -->
 		<div id="hexagons">
 			<svg class="hexagon" version="1.1" xmlns="http://www.w3.org/2000/svg"
 				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.1 48.6"
@@ -51,6 +52,7 @@
 			</svg>
 		</div>
 
+		<!-- Navigation menu -->
 		<div id="menu">
 			<aside id="menu-left" class="menu-half">
 				<div id="content-menu-left">
@@ -59,7 +61,6 @@
 			</aside>
 
 			<aside id="menu-right" class="menu-half">
-				<!-- ANIMATION HERE -->
 				<div id="close-btn">
 					<span class="close-btn-x"></span>
 					<span class="close-btn-x"></span>
@@ -75,16 +76,10 @@
 					<li><a class="section-name" href="#portfolio">portfolio</a></li>
 					<li><a class="section-name" href="#contact">contact</a></li>
 				</ul>
-
-				<!-- LANGUAGES -->
-				<div>
-					<span></span>
-					<span></span>
-				</div>
-
 			</aside>
 		</div>
 
+		<!-- Logo, page indicator and burger button -->
 		<div>
 			<div id="upper-left">
 				<svg id="logo-loader" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +89,7 @@
 						.st0 {
 							fill: none;
 						}
-	
+
 						.st1 {
 							fill: #FFFFFF;
 						}
@@ -106,7 +101,8 @@
 												    			V87.4h35.7v82.8l7.3,4.2l0-87h10.4h0v50.4L86.5,133.5z M122.2,33.5v46.5H86.5l0-67.1L122.2,33.5z M61.5,80.1H25.8v-8.7l35.7-20.6
 												    			L61.5,80.1z" />
 						<polygon class="st1" points="68.8,15.6 0.1,55.3 0.1,134.7 10.1,128.9 10.1,61.1 68.8,27.2 	" />
-						<polygon class="st1" points="137.9,45.8 137.9,113.6 79.2,147.5 79.2,159.1 147.9,119.4 147.9,40 	" />
+						<polygon class="st1"
+							points="137.9,45.8 137.9,113.6 79.2,147.5 79.2,159.1 147.9,119.4 147.9,40 	" />
 					</g>
 				</svg>
 				<div id="actual-page">
@@ -114,7 +110,7 @@
 					<p id="page-name">home</p>
 				</div>
 			</div>
-	
+
 			<div id="burger">
 				<div id="bar1"></div>
 				<div id="bar2"></div>
@@ -122,6 +118,7 @@
 			</div>
 		</div>
 
+		<!-- Navigation dots -->
 		<div>
 			<ul id="nav">
 				<li><a class="current" href="#home"></a></li>
@@ -131,102 +128,139 @@
 			</ul>
 		</div>
 
+		<!-- Black to grey after logo anim -->
 		<span class="circle"></span>
 
-		<!-- <div id="site-content"> -->
-		<section id="home" class="page">
-			<div id="home-content" class="page-content">
-				<div id="info-me">
-					<p id="name">alain pham</p>
-					<p id="occupation">student | multimedia integration</p>
-					<div id="description">
-						<p>🍜 Hi there.</p>
-						<div id="social-media">
-							<span>
-								<a href="https://github.com/megaxalain/"><i class="fab fa-github-square fa-2x"></i></a>
-							</span>
-							<span>
-								<a href="https://www.linkedin.com/in/alainmcpham/"><i
-										class="fab fa-linkedin fa-2x"></i></a>
-							</span>
-							<span>
-								<a href="mailto:alainpham@hotmail.com"><i class="fas fa-envelope-square fa-2x"></i></a>
-							</span>
+		<!-- Main content -->
+		<main>
+			<!-- HOME -->
+			<section id="home" class="page">
+				<div id="home-content" class="page-content">
+					<!-- General info -->
+					<div id="info-me">
+						<p id="name">alain pham</p>
+						<p id="occupation">student | multimedia integration</p>
+						<div id="description">
+							<p>🍜 Hi there.</p>
+							<div id="social-media">
+								<span>
+									<a href="https://github.com/megaxalain/"><i
+											class="fab fa-github-square fa-2x"></i></a>
+								</span>
+								<span>
+									<a href="https://www.linkedin.com/in/alainmcpham/"><i
+											class="fab fa-linkedin fa-2x"></i></a>
+								</span>
+								<span>
+									<a href="mailto:alainpham@hotmail.com"><i
+											class="fas fa-envelope-square fa-2x"></i></a>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div id="profile-pic"></div>
+					<div id="scroll-indicator">
+						<div id="scroll-wheel"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ABOUT -->
+			<section id="about" class="page">
+				<div id="about-content" class="page-content">
+					<div id="text-me">
+						<h1>about me</h1>
+						<div id="summary-me">
+							<span><i class="fas fa-map-marker-alt"></i>&nbsp;</span>
+							<span>Montréal</span>
+						</div>
+						<div id="about-me">
+							<p>
+								Hi! I am <span id="alain">Alain</span>,
+								a multimedia integration student looking forward to
+								using my learned knowledge over the past few years to
+								accomplish great things such as
+							</p>
+							<ul class="fa-ul">
+								<li>
+									<span class="fa-li"><i class="fas fa-gamepad"></i></span>
+									game development
+								</li>
+								<li>
+									<span class="fa-li"><i class="fas fa-object-group"></i></span>
+									web integration
+								</li>
+								<li>
+									<span class="fa-li"><i class="fas fa-video"></i></span>
+									video editing
+								</li>
+								<li class="crossed">
+									<span class="fa-li"><i class="fas fa-trash"></i></span>
+									stealing memes
+								</li>
+							</ul>
+							<p>
+								I am currently seeking an internship.
+							</p>
+						</div>
+					</div>
+					<div id="skills">
+						<h1>knowledge</h1>
+						<div></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- PORTFOLIO -->
+			<section id="portfolio" class="page">
+				<div id="portfolio-content" class="page-content">
+					<ul id="projects">
+						<li id="slide-1" class="slide">
+							<div>
+								
+							</div>
+						</li>
+						<li id="slide-2" class="slide">
+							<div>
+								
+							</div>
+						</li>
+						<li id="slide-3" class="slide">
+							<div>
+								
+							</div>
+						</li>
+						<li id="slide-4" class="slide">
+							<div>
+								
+							</div>
+						</li>
+					</ul>
+					<div id="categories">
+						<div>
+							<input id="btn-game" type="radio" name="carousel">
+							<label for="btn-game">Lorem.</label>
+						</div>
+						<div>
+							<input id="btn-design" type="radio" name="carousel">
+							<label for="btn-design">Lorem.</label>
 						</div>
 					</div>
 				</div>
-				<div id="profile-pic">
+			</section>
 
+			<!-- CONTACT -->
+			<footer id="contact" class="page">
+				<div id="contact-content" class="page-content">
+					<!-- GITHUB, LINKEDIN -->
+					<details>
+						<summary><i class="fas fa-copyright"></i> 2020 Alain Pham</summary>
+					</details>
 				</div>
-				<div id="scroll-indicator">
-					<div id="scroll-wheel"></div>
-				</div>
-			</div>
-		</section>
+			</footer>
+		</main>
 
-		<section id="about" class="page">
-			<div id="about-content" class="page-content">
-				<div id="text-me">
-					<h1>about me</h1>
-					<div id="summary-me">
-						<span>22 years</span>
-						<span>Montréal</span>
-						<!-- <span></span> -->
-					</div>
-					<p id="about-me">Hi, I'm Alain. I'm a multimedia integration student looking forward to using my learned knowledge
-						over the past few years to accomplish great things such as doing web integration and making the
-						spiciest of memes.</p>
-
-				</div>
-				<div id="skills">
-					<h1>knowledge</h1>
-					<div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="portfolio" class="page">
-			<div id="portfolio-content" class="page-content">
-				<ul id="projects">
-					<li id="slide-1" class="slide">
-						<div><h2>://JUMP</h2></div>
-					</li>
-					<li id="slide-2" class="slide">
-						<div><h2>BLÖK</h2></div>
-					</li>
-					<li id="slide-3" class="slide">
-						<div><h2>ASTRE</h2></div>
-					</li>
-					<li id="slide-4" class="slide">
-						<div><h2>QUERCUS</h2></div>
-					</li>
-				</ul>
-				<div>
-					<div>
-						<input id="btn-game" type="radio" name="carousel">
-						<label for="btn-game">Lorem.</label>
-					</div>
-					<div>
-						<input id="btn-design" type="radio" name="carousel">
-						<label for="btn-design">Lorem.</label>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<footer id="contact" class="page">
-			<div id="contact-content" class="page-content">
-				<!-- GITHUB, LINKEDIN -->
-				<details>
-					<summary><i class="fas fa-copyright"></i> 2020 Alain Pham</summary>
-				</details>
-			</div>
-		</footer>
 	</div>
-
-	<!-- </div> -->
 
 	<!-- JS -->
 	<script src="https://kit.fontawesome.com/9784a309ee.js" crossorigin="anonymous"></script>

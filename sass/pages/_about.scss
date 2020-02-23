@@ -1,0 +1,74 @@
+#about-content {
+    div {
+        &#text-me {
+            // width: 30%;
+
+            &::after {
+                background-color: $red;
+                content: "";
+                width: 6px;
+
+                @include size(100%);
+            }
+        }
+
+        &#skills {
+            // width: 60%; 
+        }
+    }
+
+    @include flex(column, center, space-between);
+
+    @include for-desktop {
+        div {
+            &#text-me {
+                width: 35%;
+
+                &::after {
+                    background-color: $red;
+                    content: "";
+                    width: 6px;
+
+                    @include size(100%);
+                }
+            }
+
+            &#skills {
+                width: 60%;
+            }
+        }
+
+        @include flex(row, center, space-between);
+    }
+}
+
+#summary-me {
+    // span {
+    //     color: red;
+
+    //     &:first-child {
+    //         &::after {
+    //             content: " / ";
+    //         }
+    //     }
+    // }
+
+    opacity: 0.5;
+}
+
+#about-me {
+    line-height: 1.5rem;
+    margin: 1rem 0;
+    word-spacing: 0.2rem;
+
+    ul {
+        font-size: 0.9rem;
+        margin: revert;
+        padding: revert;
+    }
+}
+
+#alain {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,106 @@
+#menu {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    font-family: "Atami Stencil";
+    font-weight: bold;
+    right: -100%;
+    z-index: 999;
+
+    @include for-desktop {
+        flex-direction: row;
+    }
+
+    @include size(100%, 100%);
+}
+
+.menu-half {
+    @include flex($align-items: center, $justify-content: center);
+}
+
+#close-btn {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    opacity: 0.25;
+    transition: all 0.25s;
+
+    &::before {
+        content: "";
+        // background-color: white;
+        border: 6px solid white;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.25s;
+
+        @include size(4rem, 4rem);
+    }
+
+    &:hover {
+        opacity: 1;
+
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @include pos(absolute, 2rem, 2rem);
+
+    @include for-desktop {
+        right: 5rem;
+        top: 5rem;
+    }
+
+    @include size(5rem, 5rem);
+}
+
+.close-btn-x {
+    background-color: white;
+    border-radius: 0.1rem;
+    display: inline-block;
+    position: absolute;
+
+    &:first-child {
+        transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+        transform: rotate(-45deg);
+    }
+
+    @include size(3rem, 0.5rem);
+}
+
+#menu-left {
+    background-color: $red;
+    display: none;
+    margin-bottom: 100%;
+    top: -50%;
+
+    @include for-desktop {
+        display: flex;
+        width: 50%;
+    }
+}
+
+#content-menu-left {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+
+    &::before {
+        content: "";
+    }
+}
+
+#menu-right {
+    background-color: black;
+
+    @include for-desktop {
+        @include size(100%, 50%);
+    }
+
+    @include size(100%, 100%);
+}

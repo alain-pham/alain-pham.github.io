@@ -39,11 +39,9 @@
         location.hash = "#home"
     });
 
-
     circleLoader.addEventListener("animationend", () => {
         circleLoader.parentNode.removeChild(circleLoader);
         completeLoad();
-        // remove EventListener
     })
 
     // Menu behaviour

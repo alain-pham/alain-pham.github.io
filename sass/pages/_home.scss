@@ -1,0 +1,121 @@
+#home {
+    color: white;
+    position: relative;
+}
+
+#info-me {
+    width: 100%;
+
+    p {
+        text-shadow: 0 1px #191919;
+    }
+
+    @include flex(column, center);
+
+    @include for-desktop {
+        align-items: flex-start;
+        margin-left: 10%;
+        width: max-content;
+    }
+
+    @include pos(absolute, $bottom: 25%);
+}
+
+#name {
+    font-family: "Atami Stencil";
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    &::after {
+        background-color: $red;
+        border-radius: 0.1rem;
+        content: "";
+        display: block;
+        margin: 1rem auto 1.5rem auto;
+
+        @include for-desktop {
+            margin: 1rem 0 1.5rem 0;
+        }
+
+        @include size(6px, 6rem);
+    }
+
+    @include for-desktop {
+        font-size: 5rem;
+    }
+}
+
+#occupation {
+    font-weight: normal;
+}
+
+#description {
+    display: flex;
+    margin-top: 5rem;
+    width: 100%;
+
+    p {
+        width: max-content;
+    }
+
+    @include flex(column, center);
+
+    @include for-desktop {
+        align-items: flex-start;
+    }
+}
+
+#social-media {
+    margin-top: 1.5rem;
+    width: max-content;
+
+    span {
+        align-items: center;
+        display: inline-flex;
+        margin-right: 0.5rem;
+        transition: all 0.25s;
+
+        @include for-desktop {
+            opacity: 0.25;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#profile-pic {
+    background-attachment: fixed;
+    background-image: url("/img/pham.png");
+    background-position: 60% center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+    filter: brightness(50%);
+    opacity: 0.1;
+    position: absolute;
+    z-index: -1;
+
+    @include size(100%, 100%);
+}
+
+#scroll-indicator {
+    animation: fadeIn25 1s forwards;
+    border: 0.15rem solid white;
+    border-radius: 1rem;
+    cursor: pointer;
+    transform: translateX(-50%);
+
+    @include flex($align-items: flex-start, $justify-content: center);
+    @include pos(absolute, $bottom: 3rem, $left: 50%);
+    @include size(2.5rem, 1.5rem);
+}
+
+#scroll-wheel {
+    animation: scrollIndicator 2.5s infinite;
+    background-color: white;
+    border-radius: 50%;
+
+    @include size(0.5rem, 0.5rem);
+}

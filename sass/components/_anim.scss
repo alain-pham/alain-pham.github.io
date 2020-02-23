@@ -1,0 +1,178 @@
+@keyframes fadeIn20 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeIn25 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes fadeIn100 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes lighten {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        top: 50%;
+    }
+
+    50% {
+        left: 50%;
+        top: 3rem;
+        transform: translate(-50%, 0);
+        width: 5rem;
+    }
+
+    100% {
+        cursor: pointer;
+        left: 3rem;
+        top: 3rem;
+        transform: translate(0);
+        width: 3rem;
+    }
+}
+
+@keyframes moveUpMobile {
+    0% {
+        top: 50%;
+    }
+
+    50% {
+        left: 50%;
+        top: 2rem;
+        transform: translate(-50%, 0);
+        width: 5rem;
+    }
+
+    100% {
+        cursor: pointer;
+        left: 2rem;
+        top: 2rem;
+        transform: translate(0);
+        width: 3rem;
+    }
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(100);
+    }
+}
+
+@keyframes showMenu {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes hideMenu {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+@keyframes menuLeftShow {
+    0% {
+        margin-bottom: 100%;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes scrollIndicator {
+    0% {
+        opacity: 0;
+        transform: translateY(0.25rem);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+}
+
+@keyframes float1 {
+    0% {
+        transform: rotate(69deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(1rem, 2rem);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: rotate(90deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(69deg) translate(-5rem, 1rem);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: rotate(53deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(69deg) translate(2rem, 3rem);
+    }
+}

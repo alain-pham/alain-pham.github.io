@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Atami Stencil";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Atami-Stencil.otf");
+}
+
+@font-face {
+    font-family: "Atami Stencil";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/Atami-Stencil-Bold.otf");
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+ul {
+    list-style: none;
+}
+
+.page {
+    display: none;
+    position: relative;
+
+    @include size(100vh, 100vw);
+}
+
+.page-content {
+    animation: fadeIn100 1s;
+    display: none;
+    margin: 0 15px;
+    position: relative;
+    z-index: 2;
+
+    @include flex(column, $justify-content: center);
+
+    @include for-desktop {
+        align-items: flex-start;
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+
+    @include size(100%);
+}
+
+.crossed {
+    text-decoration: line-through;
+}

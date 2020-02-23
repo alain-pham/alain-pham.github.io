@@ -1,0 +1,197 @@
+#upper-left {
+    display: flex;
+    flex-direction: column;
+    z-index: 998;
+
+    @include for-desktop {
+        left: 3rem;
+        top: 3rem;
+    }
+
+    @include pos(fixed, 2rem, $left: 2rem);
+    @include size(3.5rem, 3rem);
+}
+
+#logo-loader {
+    animation: fadeIn25 1s 0.5s forwards;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    
+    @include pos(fixed, 50%, $left: 50%);
+}
+
+#actual-page {
+    animation: fadeIn100 1s;
+    display: none;
+}
+
+#separator {
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 0.1rem;
+    margin-left: 150%;
+    position: absolute;
+
+    @include for-desktop {
+        margin-left: 200%;
+    }
+
+    @include size(100%, 0.25rem);
+}
+
+#page-name {
+    font-family: "Atami Stencil";
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    margin-left: 200%;
+    position: absolute;
+
+    @include for-desktop {
+        font-size: 2.5rem;
+        margin-left: 300%;
+    }
+}
+
+polygon.st1 {
+    animation: fadeIn100 0.5s ease 1s 5 alternate forwards;
+    opacity: 0;
+}
+
+.circle {
+    background-color: #191919;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0;
+
+    @include pos(fixed, 3rem, $left: 3rem);
+    @include size(3rem, 3rem);
+}
+
+#sections {
+    li {
+        font-size: 2rem;
+        margin: 2rem;
+        text-align: center;
+        transition: all 0.25s;
+
+        @include for-desktop {
+            font-size: 3.5rem;
+            margin: 1rem;
+            text-align: initial;
+            transition: all 0.25s;
+
+            // Hovered section indicator
+            &::before {
+                background-color: $red;
+                border-radius: 0.1rem;
+                content: "";
+                display: inline-block;
+                opacity: 0;
+                transition: all 0.25s;
+
+                @include pos(absolute, 50%);
+                @include size(1rem, 1rem);
+            }
+
+            &:hover {
+                transform: translateX(3rem);
+
+                &:hover::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.section-name {
+    user-select: none;
+
+    @include for-desktop {
+        padding-left: 2rem;
+    }
+}
+
+#burger {
+    animation: fadeIn100 1s forwards;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    z-index: 998;
+
+    &:hover {
+
+        #bar1,
+        #bar2,
+        #bar3 {
+            background-color: rgba(255, 255, 255, 1);
+            transform: translateX(0);
+        }
+    }
+
+    div {
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 0.1rem;
+        transition: all 0.25s;
+
+        @include size(0.375rem, 2.25rem);
+    }
+
+    #bar1,
+    #bar3 {
+        transform: translateX(-0.5rem);
+    }
+
+    #bar2 {
+        transform: translateX(0.5rem);
+        transition: all 0.25s;
+    }
+
+    @include for-desktop {
+        right: 3rem;
+        top: 3rem;
+    }
+
+    @include pos(fixed, 2.5rem, 2rem);
+    @include size(2.25rem);
+}
+
+#nav {
+    display: none;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+
+    li {
+        animation: fadeIn25 1s;
+        background-color: white;
+        border-radius: 0.1rem;
+        margin: 0.5rem 0;
+        opacity: 0.25;
+        transition: all 0.25s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @include size(1rem, 1rem);
+    }
+
+    a {
+        color: $red;
+        display: block;
+
+        @include size(100%, 100%);
+    }
+
+    @include pos(fixed, 50%, 3rem);
+}
+
+.current {
+    background-color: $red;
+}
+
+// https://code.likeagirl.io/js-set-a-background-using-code-1cc26cf96ce4
