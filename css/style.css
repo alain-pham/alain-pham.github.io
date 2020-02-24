@@ -396,8 +396,6 @@ ul {
 }
 
 .page-content {
-  -webkit-animation: fadeIn100 1s;
-          animation: fadeIn100 1s;
   display: none;
   margin: 0 15px;
   position: relative;
@@ -430,6 +428,7 @@ ul {
 }
 
 .crossed {
+  color: gray;
   text-decoration: line-through;
 }
 
@@ -456,6 +455,18 @@ body {
   background-color: black;
   color: white;
   font-family: "Montserrat";
+}
+
+#top-fade {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#191919), to(transparent));
+  background-image: linear-gradient(#191919 0%, transparent 100%);
+  display: none;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  height: 10rem;
+  width: 100%;
 }
 
 #hexagons {
@@ -491,6 +502,14 @@ body {
   bottom: 30%;
   right: 20%;
   width: 5rem;
+}
+
+.hexagon:nth-child(4) {
+  -webkit-animation: float4 8s ease-in-out alternate infinite;
+          animation: float4 8s ease-in-out alternate infinite;
+  left: 10%;
+  bottom: 10%;
+  width: 4rem;
 }
 
 #upper-left {
@@ -732,6 +751,21 @@ polygon.st1 {
   width: 1rem;
 }
 
+#nav li:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+#nav li:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+#nav li:nth-child(4) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
 #nav li:hover {
   opacity: 1;
 }
@@ -859,7 +893,7 @@ polygon.st1 {
 }
 
 #menu-left {
-  background-color: red;
+  background-color: transparent;
   display: none;
   margin-bottom: 100%;
   top: -50%;
@@ -904,6 +938,23 @@ polygon.st1 {
 /* ---------------------
     COMPONENTS
 --------------------- */
+@-webkit-keyframes fadeIn10 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+}
+@keyframes fadeIn10 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+}
+
 @-webkit-keyframes fadeIn20 {
   0% {
     opacity: 0;
@@ -912,6 +963,7 @@ polygon.st1 {
     opacity: 0.2;
   }
 }
+
 @keyframes fadeIn20 {
   0% {
     opacity: 0;
@@ -1253,6 +1305,60 @@ polygon.st1 {
   }
 }
 
+@-webkit-keyframes float4 {
+  0% {
+    -webkit-transform: rotate(0deg) translate(0);
+            transform: rotate(0deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(22deg) translate(-3rem, -3rem);
+            transform: rotate(22deg) translate(-3rem, -3rem);
+  }
+}
+
+@keyframes float4 {
+  0% {
+    -webkit-transform: rotate(0deg) translate(0);
+            transform: rotate(0deg) translate(0);
+  }
+  100% {
+    -webkit-transform: rotate(22deg) translate(-3rem, -3rem);
+            transform: rotate(22deg) translate(-3rem, -3rem);
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 /* ---------------------
     PAGES
 --------------------- */
@@ -1312,7 +1418,7 @@ polygon.st1 {
 }
 
 #summary-me {
-  opacity: 0.5;
+  color: gray;
 }
 
 #about-me {
@@ -1376,17 +1482,22 @@ polygon.st1 {
 }
 
 #name {
+  -webkit-animation: slideLeft 0.75s ease-out;
+          animation: slideLeft 0.75s ease-out;
   font-family: "Atami Stencil";
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 #name::after {
+  -webkit-animation: slideLeft 0.75s 0.35s ease-out forwards;
+          animation: slideLeft 0.75s 0.35s ease-out forwards;
   background-color: red;
   border-radius: 0.1rem;
   content: "";
   display: block;
   margin: 1rem auto 1.5rem auto;
+  opacity: 0;
   height: 6px;
   width: 6rem;
 }
@@ -1404,14 +1515,20 @@ polygon.st1 {
 }
 
 #occupation {
+  -webkit-animation: slideLeft 0.75s 0.7s ease-out forwards;
+          animation: slideLeft 0.75s 0.7s ease-out forwards;
   font-weight: normal;
+  opacity: 0;
 }
 
 #description {
+  -webkit-animation: fadeIn100 0.75s 1.5s forwards;
+          animation: fadeIn100 0.75s 1.5s forwards;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 5rem;
+  opacity: 0;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1469,6 +1586,8 @@ polygon.st1 {
 }
 
 #profile-pic {
+  -webkit-animation: fadeIn10 5s;
+          animation: fadeIn10 5s;
   background-attachment: fixed;
   background-image: url("/img/pham.png");
   background-position: 60% center;
@@ -1536,52 +1655,72 @@ polygon.st1 {
   width: 100%;
 }
 
-#projects li {
+#projects .slide {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   scroll-snap-align: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   width: 100%;
 }
 
-#projects li div {
-  display: none;
-}
-
-#projects li#slide-1 {
+#projects .slide#slide-1 {
   background: url("/img/game1.jpg");
   background-position: center;
   background-size: cover;
 }
 
-#projects li#slide-2 {
+#projects .slide#slide-2 {
   background: url("/img/game2.jpg");
   background-position: center;
   background-size: cover;
 }
 
-#projects li#slide-3 {
+#projects .slide#slide-3 {
   background: url("/img/game3.jpg");
   background-position: center;
   background-size: cover;
 }
 
-#projects li#slide-4 {
+#projects .slide#slide-4 {
   background: url("/img/game4.jpg");
   background-position: center;
   background-size: cover;
+}
+
+#projects .slide:hover .diagonal-box {
+  width: 100%;
+}
+
+#projects .diagonal-box {
+  display: none;
 }
 
 @media (min-width: 992px) {
   #projects {
     width: 100%;
   }
-  #projects:hover li {
+  #projects:hover .slide {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 13.33%;
             flex: 1 1 13.33%;
   }
-  #projects li {
+  #projects:hover .game-name {
+    font-size: 600%;
+  }
+  #projects .slide {
     list-style: none;
     overflow: hidden;
     position: relative;
@@ -1591,40 +1730,45 @@ polygon.st1 {
     height: 100%;
     width: 25%;
   }
-  #projects li:hover {
+  #projects .slide:hover {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 60%;
             flex: 1 1 60%;
   }
-  #projects li:hover div {
-    bottom: 0;
-    opacity: 1;
+  #projects .diagonal-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    overflow: hidden;
+    -webkit-transform: skewY(-11deg);
+            transform: skewY(-11deg);
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 50%;
+    width: 0;
   }
-  #projects li div {
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    display: block;
-    position: relative;
-    bottom: -100%;
-    left: auto;
-    position: absolute;
-    right: auto;
-    top: auto;
-    height: 100%;
-    width: 100%;
+  #projects .diagonal-content {
+    margin: 0 auto;
+    -webkit-transform: skewY(11deg);
+            transform: skewY(11deg);
   }
-  #projects li div::before {
-    background-color: red;
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 100px);
-    -webkit-clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
-            clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
+  #projects .game-name {
+    font-size: 3rem;
+    opacity: 0.5;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
   }
 }
 

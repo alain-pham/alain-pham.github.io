@@ -30,23 +30,22 @@ ul {
 }
 
 .page-content {
-    animation: fadeIn100 1s;
     display: none;
     margin: 0 15px;
     position: relative;
     z-index: 2;
 
     @include flex(column, $justify-content: center);
+    @include size(100%);
 
     @include for-desktop {
         align-items: flex-start;
         margin: 0 auto;
         max-width: 1140px;
     }
-
-    @include size(100%);
 }
 
 .crossed {
+    color: $grey;
     text-decoration: line-through;
 }

@@ -11,33 +11,35 @@
     }
 
     @include flex(column, center);
+    @include pos(absolute, $bottom: 25%);
 
     @include for-desktop {
         align-items: flex-start;
         margin-left: 10%;
         width: max-content;
     }
-
-    @include pos(absolute, $bottom: 25%);
 }
 
 #name {
+    animation: slideLeft 0.75s ease-out;
     font-family: "Atami Stencil";
     font-size: 2.5rem;
     font-weight: bold;
 
     &::after {
+        animation: slideLeft 0.75s 0.35s ease-out forwards;
         background-color: $red;
         border-radius: 0.1rem;
         content: "";
         display: block;
         margin: 1rem auto 1.5rem auto;
+        opacity: 0;
+
+        @include size(6px, 6rem);
 
         @include for-desktop {
             margin: 1rem 0 1.5rem 0;
         }
-
-        @include size(6px, 6rem);
     }
 
     @include for-desktop {
@@ -46,12 +48,16 @@
 }
 
 #occupation {
+    animation: slideLeft 0.75s 0.7s ease-out forwards;
     font-weight: normal;
+    opacity: 0;
 }
 
 #description {
+    animation: fadeIn100 0.75s 1.5s forwards;
     display: flex;
     margin-top: 5rem;
+    opacity: 0;
     width: 100%;
 
     p {
@@ -86,6 +92,7 @@
 }
 
 #profile-pic {
+    animation: fadeIn10 5s;
     background-attachment: fixed;
     background-image: url("/img/pham.png");
     background-position: 60% center;

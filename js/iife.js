@@ -47,27 +47,28 @@
     // Menu behaviour
     burgerBtn.addEventListener("click", showMenu);
     closeBtn.addEventListener("click", hideMenu);
+    contentMenu.addEventListener("click", hideMenu);
 
     for (let i = 0; i < sectionName.length; i++) {
         sectionName[i].addEventListener("mouseover", () => {
             switch (i) {
                 case 0:
-                    contentMenu.style.backgroundColor = "yellow";
+                    // contentMenu.style.backgroundColor = "yellow";
                     break;
 
                 case 1:
-                    contentMenu.style.backgroundColor = "green";
+                    // contentMenu.style.backgroundColor = "green";
                     break;
 
                 case 2:
-                    contentMenu.style.backgroundColor = "blue";
+                    // contentMenu.style.backgroundColor = "blue";
                     break;
 
                 case 3:
-                    contentMenu.style.backgroundColor = "red";
+                    // contentMenu.style.backgroundColor = "red";
                     break;
                 default:
-                    contentMenu.style.backgroundColor = "red";
+                    // contentMenu.style.backgroundColor = "transparent";
                     break;
             }
         });

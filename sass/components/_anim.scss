@@ -1,3 +1,14 @@
+// Fades
+@keyframes fadeIn10 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+}
+
 @keyframes fadeIn20 {
     0% {
         opacity: 0;
@@ -38,6 +49,7 @@
     }
 }
 
+// Page launch
 @keyframes lighten {
     0% {
         opacity: 0.5;
@@ -101,6 +113,7 @@
     }
 }
 
+// Menu
 @keyframes showMenu {
     0% {
         right: -100%;
@@ -147,6 +160,7 @@
     }
 }
 
+// Floating hexagons in background
 @keyframes float1 {
     0% {
         transform: rotate(69deg) translate(0);
@@ -174,5 +188,31 @@
 
     100% {
         transform: rotate(69deg) translate(2rem, 3rem);
+    }
+}
+
+@keyframes float4 {
+    0% {
+        transform: rotate(0deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(22deg) translate(-3rem, -3rem);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

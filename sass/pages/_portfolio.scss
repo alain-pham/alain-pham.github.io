@@ -5,13 +5,9 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 
-    li {
+    .slide {
         flex-shrink: 0;
         scroll-snap-align: start;
-
-        div {
-            display: none;
-        }
 
         &#slide-1 {
             background: url("/img/game1.jpg");
@@ -37,19 +33,34 @@
             background-size: cover;
         }
 
-        @include size(100%, 100%);
-    }
-
-    @include for-desktop() {
-        width: 100%;
-
         &:hover {
-            li {
-                flex: 1 1 13.33%;
+            .diagonal-box {
+                width: 100%;
             }
         }
 
-        li {
+        @include flex($align-items: center);
+        @include size(100%, 100%);
+    }
+
+    .diagonal-box {
+        display: none;
+    }
+
+    @include for-desktop {
+        width: 100%;
+
+        &:hover {
+            .slide {
+                flex: 1 1 13.33%;
+            }
+
+            .game-name {
+                font-size: 600%;
+            }
+        }
+
+        .slide {
             list-style: none;
             overflow: hidden;
             position: relative;
@@ -58,37 +69,32 @@
 
             &:hover {
                 flex: 1 1 60%;
-
-                div {
-                    bottom: 0;
-                    opacity: 1;
-                    transition: all 0.25s;
-                }
-            }
-
-            div {
-                background: rgba(0, 0, 0, 0.8);
-                color: white;
-                display: block;
-
-                position: relative;
-
-                &::before {
-                    background-color: red;
-                    content: '';
-                    position: absolute;
-                    top: -50px;
-                    left: 0;
-                    width: 100%;
-                    height: calc(100% + 100px);
-                    clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% - 50px));
-                }
-
-                @include pos(absolute, $bottom: -100%);
-                @include size(100%, 100%);
             }
 
             @include size(100%, 25%);
+        }
+
+        .diagonal-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            display: block;
+            overflow: hidden;
+            transform: skewY(-11deg);
+            transition: all 0.25s;
+
+            @include flex($align-items: center);
+            @include size(50%, 0);
+        }
+
+        .diagonal-content {
+            margin: 0 auto;
+            // max-width: 50em;
+            transform: skewY(11deg);
+        }
+
+        .game-name {
+            font-size: 3rem;
+            opacity: 0.5;
+            transition: all 0.25s;
         }
     }
 

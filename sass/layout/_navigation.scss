@@ -3,13 +3,13 @@
     flex-direction: column;
     z-index: 998;
 
+    @include pos(fixed, 2rem, $left: 2rem);
+    @include size(3.5rem, 3rem);
+
     @include for-desktop {
         left: 3rem;
         top: 3rem;
     }
-
-    @include pos(fixed, 2rem, $left: 2rem);
-    @include size(3.5rem, 3rem);
 }
 
 #logo-loader {
@@ -17,7 +17,7 @@
     opacity: 0;
     transform: translate(-50%, -50%);
     width: 5rem;
-    
+
     @include pos(fixed, 50%, $left: 50%);
 }
 
@@ -32,11 +32,11 @@
     margin-left: 150%;
     position: absolute;
 
+    @include size(100%, 0.25rem);
+
     @include for-desktop {
         margin-left: 200%;
     }
-
-    @include size(100%, 0.25rem);
 }
 
 #page-name {
@@ -150,13 +150,13 @@ polygon.st1 {
         transition: all 0.25s;
     }
 
+    @include pos(fixed, 2.5rem, 2rem);
+    @include size(2.25rem);
+
     @include for-desktop {
         right: 3rem;
         top: 3rem;
     }
-
-    @include pos(fixed, 2.5rem, 2rem);
-    @include size(2.25rem);
 }
 
 #nav {
@@ -172,6 +172,18 @@ polygon.st1 {
         margin: 0.5rem 0;
         opacity: 0.25;
         transition: all 0.25s;
+
+        &:nth-child(2) {
+            animation-delay: 0.25s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0.75s;
+        }
 
         &:hover {
             opacity: 1;

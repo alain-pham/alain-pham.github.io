@@ -17,9 +17,11 @@ const d = document,
 function completeLoad() {
     d.querySelector("body").style.backgroundColor = "#191919";
 
-    for (let i = 0; i < pages.length; i++) {
+    for (let i = 0; i < pages.length - 1; i++) {
         pages[i].style.display = "block";
     }
+
+    d.getElementById("contact").style.display = "flex";
 
     for (let i = 0; i < pageContent.length; i++) {
         pageContent[i].style.display = "flex";
@@ -27,6 +29,7 @@ function completeLoad() {
 
     d.getElementById("burger").style.display = "flex";
     d.getElementById("actual-page").style.display = "block";
+    d.getElementById("top-fade").style.display = "block";
 
     if (mediaBig.matches) {
         d.getElementById("nav").style.display = "flex";

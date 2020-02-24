@@ -12,9 +12,9 @@
             }
         }
 
-        &#skills {
-            // width: 60%; 
-        }
+        // &#skills {
+        //     width: 60%; 
+        // }
     }
 
     @include flex(column, center, space-between);
@@ -43,6 +43,8 @@
 }
 
 #summary-me {
+    color: $grey;
+
     // span {
     //     color: red;
 
@@ -52,8 +54,6 @@
     //         }
     //     }
     // }
-
-    opacity: 0.5;
 }
 
 #about-me {
