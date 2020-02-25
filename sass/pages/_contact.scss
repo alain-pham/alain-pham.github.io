@@ -16,6 +16,7 @@
 }
 
 .diagonal-content-contact {
+    text-align: center;
     transform: skewY(-11deg);
 
     small {
@@ -26,5 +27,6 @@
 #copyright {
     @include pos(absolute, $bottom: 1rem, $left: 50%);
 
+    font-size: 0.8rem;
     transform: translateX(-50%);
 }

@@ -96,6 +96,28 @@
     }
 }
 
+// #skills-list {
+
+// }
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.skill {
+    @include size(15px, 200px);
+
+    margin-bottom: 25px;
+
+    div {
+        background-color: white;
+        height: 100%;
+        width: 50%;
+
+        div {
+            background-color: $red;
+            height: 100%;
+        }
+    }
+}
+
 #alain {
     color: red;
     font-weight: bold;

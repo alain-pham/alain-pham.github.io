@@ -18,6 +18,12 @@
     justify-content: $justify-content;
 }
 
+@mixin for-big-phone {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
 @mixin for-tablet {
     @media (min-width: 768px) {
         @content;
@@ -26,6 +32,12 @@
 
 @mixin for-desktop {
     @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop {
+    @media (min-width: 1200px) {
         @content;
     }
 }
