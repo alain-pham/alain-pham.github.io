@@ -1,4 +1,6 @@
 #menu {
+    @include size(100%, 100%);
+
     display: none;
     position: fixed;
     flex-direction: column;
@@ -6,8 +8,6 @@
     font-weight: bold;
     right: -100%;
     z-index: 999;
-
-    @include size(100%, 100%);
 
     @include for-desktop {
         flex-direction: row;
@@ -19,6 +19,9 @@
 }
 
 #close-btn {
+    @include pos(absolute, 2rem, 2rem);
+    @include size(5rem, 5rem);
+
     align-items: center;
     cursor: pointer;
     display: flex;
@@ -27,14 +30,14 @@
     transition: all 0.25s;
 
     &::before {
+        @include size(4rem, 4rem);
+
         content: "";
         // background-color: white;
         border: 6px solid white;
         opacity: 0;
         transform: scale(0);
         transition: all 0.25s;
-
-        @include size(4rem, 4rem);
     }
 
     &:hover {
@@ -46,9 +49,6 @@
         }
     }
 
-    @include pos(absolute, 2rem, 2rem);
-    @include size(5rem, 5rem);
-
     @include for-desktop {
         right: 5rem;
         top: 5rem;
@@ -56,6 +56,8 @@
 }
 
 .close-btn-x {
+    @include size(3rem, 0.5rem);
+
     background-color: white;
     border-radius: 0.1rem;
     display: inline-block;
@@ -68,8 +70,6 @@
     &:nth-child(2) {
         transform: rotate(-45deg);
     }
-
-    @include size(3rem, 0.5rem);
 }
 
 #menu-left {
@@ -96,11 +96,24 @@
 }
 
 #menu-right {
-    background-color: black;
-
     @include size(100%, 100%);
+
+    background-color: black;
 
     @include for-desktop {
         @include size(100%, 50%);
+    }
+}
+
+time {
+    @include pos(absolute, $bottom: 10%);
+
+    font-family: "Montserrat";
+    font-size: 2rem;
+    opacity: 0.1;
+    position: absolute;
+
+    @include for-desktop {
+        
     }
 }

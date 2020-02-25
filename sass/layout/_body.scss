@@ -20,14 +20,14 @@ body {
 }
 
 #top-fade {
+    @include size(10rem, 100%);
+
     background-image: linear-gradient(#191919 0%, transparent 100%);
     display: none;
     pointer-events: none;
     position: fixed;
     top: 0;
     z-index: 99;
-
-    @include size(10rem, 100%);
 }
 
 // Background
@@ -66,5 +66,28 @@ body {
         left: 10%;
         bottom: 10%;
         width: 4rem;
+    }
+}
+
+.page {
+    @include size(100vh, 100vw);
+
+    display: none;
+    position: relative;
+}
+
+.page-content {
+    @include flex(column, $justify-content: center);
+    @include size(100%);
+
+    display: none;
+    margin: 0 15px;
+    position: relative;
+    z-index: 2;
+
+    @include for-desktop {
+        align-items: flex-start;
+        margin: 0 auto;
+        max-width: 1140px;
     }
 }

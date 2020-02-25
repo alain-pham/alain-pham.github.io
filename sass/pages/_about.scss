@@ -1,14 +1,24 @@
+#about {
+    .line-anim {
+        @include size($width: max-content);
+    }
+}
+
 #about-content {
+    @include flex(column, center, space-between);
+
+    display: none;
+
     div {
         &#text-me {
             // width: 30%;
 
             &::after {
+                @include size(100%);
+
                 background-color: $red;
                 content: "";
                 width: 6px;
-
-                @include size(100%);
             }
         }
 
@@ -17,19 +27,19 @@
         // }
     }
 
-    @include flex(column, center, space-between);
-
     @include for-desktop {
+        flex-direction: row;
+
         div {
             &#text-me {
                 width: 35%;
 
                 &::after {
+                    @include size(100%);
+
                     background-color: $red;
                     content: "";
                     width: 6px;
-
-                    @include size(100%);
                 }
             }
 
@@ -37,13 +47,21 @@
                 width: 60%;
             }
         }
+    }
+}
 
-        @include flex(row, center, space-between);
+#text-me {
+    .line-anim {
+        &::after {
+            animation-delay: 0.25s;
+        }
     }
 }
 
 #summary-me {
+    animation: slideLeft 0.5s 1s forwards;
     color: $grey;
+    opacity: 0;
 
     // span {
     //     color: red;
@@ -57,14 +75,24 @@
 }
 
 #about-me {
+    animation: slideLeft 0.5s 1.5s forwards;
     line-height: 1.5rem;
     margin: 1rem 0;
+    opacity: 0;
     word-spacing: 0.2rem;
 
     ul {
         font-size: 0.9rem;
         margin: revert;
         padding: revert;
+    }
+}
+
+#skills {
+    .line-anim {
+        &::after {
+            animation-delay: 0.75s;
+        }
     }
 }
 

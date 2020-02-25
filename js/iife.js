@@ -76,6 +76,11 @@
         sectionName[i].addEventListener("click", hideMenu);
     }
 
+    // Displays time in menu
+    setInterval(() => {
+        d.querySelector("time").textContent = showTime();
+    }, 1000);
+
     // Update current dot nav
     window.addEventListener("scroll", scrollNav);
 

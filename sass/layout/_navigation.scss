@@ -1,10 +1,10 @@
 #upper-left {
+    @include pos(fixed, 2rem, $left: 2rem);
+    @include size(3.5rem, 3rem);
+
     display: flex;
     flex-direction: column;
     z-index: 998;
-
-    @include pos(fixed, 2rem, $left: 2rem);
-    @include size(3.5rem, 3rem);
 
     @include for-desktop {
         left: 3rem;
@@ -13,12 +13,12 @@
 }
 
 #logo-loader {
+    @include pos(fixed, 50%, $left: 50%);
+
     animation: fadeIn25 1s 0.5s forwards;
     opacity: 0;
     transform: translate(-50%, -50%);
     width: 5rem;
-
-    @include pos(fixed, 50%, $left: 50%);
 }
 
 #actual-page {
@@ -27,12 +27,12 @@
 }
 
 #separator {
-    background-color: rgba(255, 0, 0, 0.5);
+    @include size(100%, 0.25rem);
+
+    background-color: rgba($color: red, $alpha: 0.5);
     border-radius: 0.1rem;
     margin-left: 150%;
     position: absolute;
-
-    @include size(100%, 0.25rem);
 
     @include for-desktop {
         margin-left: 200%;
@@ -59,13 +59,13 @@ polygon.st1 {
 }
 
 .circle {
+    @include pos(fixed, 3rem, $left: 3rem);
+    @include size(3rem, 3rem);
+
     background-color: #191919;
     border-radius: 50%;
     display: inline-block;
     opacity: 0;
-
-    @include pos(fixed, 3rem, $left: 3rem);
-    @include size(3rem, 3rem);
 }
 
 #sections {
@@ -83,15 +83,15 @@ polygon.st1 {
 
             // Hovered section indicator
             &::before {
+                @include pos(absolute, 50%);
+                @include size(1rem, 1rem);
+
                 background-color: $red;
                 border-radius: 0.1rem;
                 content: "";
                 display: inline-block;
                 opacity: 0;
                 transition: all 0.25s;
-
-                @include pos(absolute, 50%);
-                @include size(1rem, 1rem);
             }
 
             &:hover {
@@ -114,6 +114,9 @@ polygon.st1 {
 }
 
 #burger {
+    @include pos(fixed, 2.5rem, 2rem);
+    @include size(2.25rem);
+
     animation: fadeIn100 1s forwards;
     cursor: pointer;
     display: none;
@@ -127,17 +130,17 @@ polygon.st1 {
         #bar1,
         #bar2,
         #bar3 {
-            background-color: rgba(255, 255, 255, 1);
+            background-color: white;
             transform: translateX(0);
         }
     }
 
     div {
-        background-color: rgba(255, 255, 255, 0.25);
+        @include size(0.375rem, 2.25rem);
+
+        background-color: rgba($color: white, $alpha: 0.25);
         border-radius: 0.1rem;
         transition: all 0.25s;
-
-        @include size(0.375rem, 2.25rem);
     }
 
     #bar1,
@@ -150,9 +153,6 @@ polygon.st1 {
         transition: all 0.25s;
     }
 
-    @include pos(fixed, 2.5rem, 2rem);
-    @include size(2.25rem);
-
     @include for-desktop {
         right: 3rem;
         top: 3rem;
@@ -160,12 +160,16 @@ polygon.st1 {
 }
 
 #nav {
+    @include pos(fixed, 50%, 3rem);
+
     display: none;
     flex-direction: column;
     transform: translate(-50%, -50%);
     z-index: 998;
 
     li {
+        @include size(1rem, 1rem);
+
         animation: fadeIn25 1s;
         background-color: white;
         border-radius: 0.1rem;
@@ -188,18 +192,14 @@ polygon.st1 {
         &:hover {
             opacity: 1;
         }
-
-        @include size(1rem, 1rem);
     }
 
     a {
+        @include size(100%, 100%);
+
         color: $red;
         display: block;
-
-        @include size(100%, 100%);
     }
-
-    @include pos(fixed, 50%, 3rem);
 }
 
 .current {

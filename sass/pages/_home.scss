@@ -1,17 +1,22 @@
 #home {
     color: white;
     position: relative;
+
+    .line-anim {
+        &::after {
+            animation-delay: 0.5s;
+        }
+    }
 }
 
 #info-me {
-    width: 100%;
+    @include flex(column, center);
+    @include pos(absolute, $bottom: 25%);
+    @include size($width: 100%);
 
     p {
         text-shadow: 0 1px #191919;
     }
-
-    @include flex(column, center);
-    @include pos(absolute, $bottom: 25%);
 
     @include for-desktop {
         align-items: flex-start;
@@ -21,40 +26,56 @@
 }
 
 #name {
-    animation: slideLeft 0.75s ease-out;
     font-family: "Atami Stencil";
     font-size: 2.5rem;
     font-weight: bold;
-
-    &::after {
-        animation: slideLeft 0.75s 0.35s ease-out forwards;
-        background-color: $red;
-        border-radius: 0.1rem;
-        content: "";
-        display: block;
-        margin: 1rem auto 1.5rem auto;
-        opacity: 0;
-
-        @include size(6px, 6rem);
-
-        @include for-desktop {
-            margin: 1rem 0 1.5rem 0;
-        }
-    }
 
     @include for-desktop {
         font-size: 5rem;
     }
 }
 
-#occupation {
-    animation: slideLeft 0.75s 0.7s ease-out forwards;
-    font-weight: normal;
+#line {
+    @include size(6px, 6rem);
+
+    animation: fadeIn100 0.75s 1.5s ease-out forwards;
+    background-color: $red;
+    border-radius: 0.1rem;
+    display: block;
+    margin: 1rem auto 1.5rem auto;
     opacity: 0;
+
+    @include for-desktop {
+        margin: 1rem 0 1.5rem 0;
+    }
+}
+
+#occupation {
+    // animation: slideLeft 0.75s 1s ease-out forwards;
+    font-weight: normal;
+    // opacity: 0;
+
+    // &::before {
+    //     @include size(6px, 6rem);
+
+    //     animation: fadeIn100 0.75s 2s ease-out forwards;
+    //     background-color: $red;
+    //     border-radius: 0.1rem;
+    //     content: "";
+    //     display: block;
+    //     margin: 1rem auto 1.5rem auto;
+    //     opacity: 0;
+
+    //     @include for-desktop {
+    //         margin: 1rem 0 1.5rem 0;
+    //     }
+    // }
 }
 
 #description {
-    animation: fadeIn100 0.75s 1.5s forwards;
+    @include flex(column, center);
+
+    animation: fadeIn100 0.75s 2s forwards;
     display: flex;
     margin-top: 5rem;
     opacity: 0;
@@ -64,15 +85,15 @@
         width: max-content;
     }
 
-    @include flex(column, center);
-
     @include for-desktop {
         align-items: flex-start;
     }
 }
 
 #social-media {
+    animation: fadeIn100 0.75s 2.5s forwards;
     margin-top: 1.5rem;
+    opacity: 0;
     width: max-content;
 
     span {
@@ -92,6 +113,8 @@
 }
 
 #profile-pic {
+    @include size(100%, 100%);
+
     animation: fadeIn10 5s;
     background-attachment: fixed;
     background-image: url("/img/pham.png");
@@ -103,26 +126,24 @@
     opacity: 0.1;
     position: absolute;
     z-index: -1;
-
-    @include size(100%, 100%);
 }
 
 #scroll-indicator {
+    @include flex($align-items: flex-start, $justify-content: center);
+    @include pos(absolute, $bottom: 3rem, $left: 50%);
+    @include size(2.5rem, 1.5rem);
+
     animation: fadeIn25 1s forwards;
     border: 0.15rem solid white;
     border-radius: 1rem;
     cursor: pointer;
     transform: translateX(-50%);
-
-    @include flex($align-items: flex-start, $justify-content: center);
-    @include pos(absolute, $bottom: 3rem, $left: 50%);
-    @include size(2.5rem, 1.5rem);
 }
 
 #scroll-wheel {
+    @include size(0.5rem, 0.5rem);
+
     animation: scrollIndicator 2.5s infinite;
     background-color: white;
     border-radius: 50%;
-
-    @include size(0.5rem, 0.5rem);
 }

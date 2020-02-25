@@ -1,0 +1,30 @@
+#contact-content {
+    @include size($width: 100%);
+
+    align-items: center;
+    display: none;
+}
+
+.diagonal-box-contact {
+    @include flex($align-items: center);
+    @include size(50%, 100%);
+
+    animation: fullWidth 1s;
+    background-color: rgba($color: black, $alpha: 0.25);
+    overflow: hidden;
+    transform: skewY(11deg);
+}
+
+.diagonal-content-contact {
+    transform: skewY(-11deg);
+
+    small {
+        margin: 0.67rem 0;
+    }
+}
+
+#copyright {
+    @include pos(absolute, $bottom: 1rem, $left: 50%);
+
+    transform: translateX(-50%);
+}

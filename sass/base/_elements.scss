@@ -22,30 +22,29 @@ ul {
     list-style: none;
 }
 
-.page {
-    display: none;
-    position: relative;
-
-    @include size(100vh, 100vw);
-}
-
-.page-content {
-    display: none;
-    margin: 0 15px;
-    position: relative;
-    z-index: 2;
-
-    @include flex(column, $justify-content: center);
-    @include size(100%);
-
-    @include for-desktop {
-        align-items: flex-start;
-        margin: 0 auto;
-        max-width: 1140px;
-    }
-}
-
 .crossed {
     color: $grey;
     text-decoration: line-through;
+}
+
+// https: //www.youtube.com/watch?v=HnkxDmF6luc
+.line-anim {
+    position: relative;
+
+    &::after {
+        @include size(105%, 0);
+
+        animation: line-anim 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        background: white;
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    span {
+        animation: appear-text 0.1s forwards;
+        animation-delay: 1s;
+        opacity: 0;
+    }
 }

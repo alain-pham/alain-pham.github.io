@@ -9,6 +9,7 @@ const d = document,
     scrollIndic = d.getElementById("scroll-indicator"),
     scrollDots = d.querySelectorAll("#nav li a"),
     pageName = d.getElementById("page-name"),
+    mainContent = d.querySelector("main"),
     viewportHeight = window.innerHeight;
 
 /**
@@ -23,9 +24,10 @@ function completeLoad() {
 
     d.getElementById("contact").style.display = "flex";
 
-    for (let i = 0; i < pageContent.length; i++) {
-        pageContent[i].style.display = "flex";
-    }
+    // for (let i = 0; i < pageContent.length; i++) {
+    //     pageContent[i].style.display = "flex";
+    // }
+    pageContent[0].style.display = "flex";
 
     d.getElementById("burger").style.display = "flex";
     d.getElementById("actual-page").style.display = "block";
@@ -40,6 +42,7 @@ function completeLoad() {
  * Opening the menu
  */
 function showMenu() {
+    mainContent.style.filter = "blur(3px)";
     menu.style.display = "flex";
     menu.style.animation = "showMenu 0.25s forwards";
 
@@ -52,8 +55,9 @@ function showMenu() {
  * Closing the menu
  */
 function hideMenu() {
+    mainContent.style.filter = "none";
     menu.style.animation = "hideMenu 0.25s forwards";
-    
+
     setTimeout(() => {
         menu.style.display = "none";
     }, 500);
@@ -63,10 +67,11 @@ function hideMenu() {
  * Behaviour when scrolling past sections
  */
 function scrollNav() {
-    // YEET AWAY THIS MESS LATER
     const sections = [
         "home", "about", "portfolio", "contact"
     ];
+
+    let test;
 
     // Home
     if (window.pageYOffset < viewportHeight) {
@@ -75,13 +80,14 @@ function scrollNav() {
         }
 
         scrollDots[0].classList.add("current");
-        pageName.innerHTML = sections[0];
+        pageName.textContent = sections[0];
     }
 
+    // Hides the scroll indicator
     if (window.pageYOffset >= viewportHeight / 2) {
         scrollIndic.style.animation = "fadeOut 1s forwards";
-    }
-
+    } 
+    
     else {
         scrollIndic.style.animation = " fadeIn25 1s forwards";
     }
@@ -93,7 +99,8 @@ function scrollNav() {
         }
 
         scrollDots[1].classList.add("current");
-        pageName.innerHTML = sections[1];
+        pageName.textContent = sections[1];
+        pageContent[1].style.display = "flex";
     }
 
     // Portfolio
@@ -103,7 +110,8 @@ function scrollNav() {
         }
 
         scrollDots[2].classList.add("current");
-        pageName.innerHTML = sections[2];
+        pageName.textContent = sections[2];
+        pageContent[2].style.display = "flex";
     }
 
     // Contact
@@ -113,6 +121,20 @@ function scrollNav() {
         }
 
         scrollDots[3].classList.add("current");
-        pageName.innerHTML = sections[3];
+        pageName.textContent = sections[3];
+        pageContent[3].style.display = "flex";
     }
+}
+
+/**
+ * Displays the current time
+ */
+function showTime() {
+    const today = new Date();
+    const currentTime = today.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+    return (currentTime);
 }
