@@ -13,13 +13,15 @@
         closeBtn = d.getElementById("close-btn"),
         sectionName = d.getElementsByClassName("section-name"),
         contentMenu = d.getElementById("menu-left"),
-        scrollIndicator = d.getElementById("scroll-indicator");
+        scrollIndicator = d.getElementById("scroll-indicator"),
+        sectionTitle = d.getElementsByClassName("title-reveal"),
+        portfolioTitle = d.getElementById("portfolio-title");
 
     // Logo animation at start
     setTimeout(() => {
         logoLoader.style.animation = "lighten 1s forwards";
-        d.getElementById("hexagons").style.display = "block";
-    }, 3100);
+        d.getElementById("hexagons").style.display = displayType[1];
+    }, 2100);
 
     setTimeout(() => {
         if (mediaBig.matches) {
@@ -33,12 +35,14 @@
         logoLoader.addEventListener("animationend", () => {
             circleLoader.style.animation = "expand 0.5s forwards";
         });
-    }, 4000); /* 4000 */
+    }, 3000); /* 3000 */
 
+    // Click on logo returns home
     logoLoader.addEventListener("click", () => {
-        location.hash = "#home"
+        location.hash = "#home";
     });
 
+    // After screen changes colour
     circleLoader.addEventListener("animationend", () => {
         circleLoader.parentNode.removeChild(circleLoader);
         completeLoad();
@@ -87,6 +91,12 @@
     // Scrolls to about section
     scrollIndicator.addEventListener("click", () => {
         location.hash = "#about";
+    });
+
+    // Displays section content after title animation
+    portfolioTitle.addEventListener("animationend", () => {
+        portfolioTitle.style.display = displayType[0];
+        d.getElementById("projects").style.display = displayType[2];
     });
 
 })();

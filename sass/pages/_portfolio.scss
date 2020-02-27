@@ -1,5 +1,19 @@
 #portfolio-content {
     display: none;
+
+    @include for-desktop {
+        align-items: center;
+    }
+}
+
+#portfolio-title {
+    animation: revealSection 1s 0.25s cubic-bezier(0, 1, 1, 1) forwards;
+    font-size: 3.5rem;
+    font-weight: bold;
+
+    @include for-desktop {
+        font-size: 8rem;
+    }
 }
 
 // https://www.youtube.com/watch?v=a7ICxQblYrM
@@ -8,21 +22,22 @@
     @include size(50%, 100%);
 
     animation: slideUp 1s forwards;
-    display: flex;
+    // display: flex;
+    display: none;
     opacity: 0;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 
-    &::after {
-        @include pos(absolute, $top: -2.5rem, $left: 2rem);
-        @include size(max-content, max-content);
+    // &::after {
+    //     @include pos(absolute, $top: -2.5rem, $left: 2rem);
+    //     @include size(max-content, max-content);
 
-        content: "games";
-        font-size: 3.5rem;
-        font-weight: bold;
-        text-shadow: -3px 3px black;
-    }
+    //     content: "games";
+    //     font-size: 3.5rem;
+    //     font-weight: bold;
+    //     text-shadow: -3px 3px black;
+    // }
 
     .slide {
         @include flex($align-items: center);

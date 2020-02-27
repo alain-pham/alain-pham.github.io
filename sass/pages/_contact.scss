@@ -7,7 +7,7 @@
 
 .diagonal-box-contact {
     @include flex($align-items: center);
-    @include size(50%, 100%);
+    @include size(50%, 100vw);
 
     animation: fullWidth 1s;
     background-color: rgba($color: black, $alpha: 0.25);

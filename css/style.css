@@ -631,8 +631,8 @@ body {
 }
 
 polygon.st1 {
-  -webkit-animation: fadeIn100 0.5s ease 1s 5 alternate forwards;
-          animation: fadeIn100 0.5s ease 1s 5 alternate forwards;
+  -webkit-animation: fadeIn100 0.5s ease 1s 3 alternate forwards;
+          animation: fadeIn100 0.5s ease 1s 3 alternate forwards;
   opacity: 0;
 }
 
@@ -1419,9 +1419,6 @@ time {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
   }
-  50% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1435,9 +1432,6 @@ time {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
   }
-  50% {
-    opacity: 0;
-  }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -1450,7 +1444,7 @@ time {
     width: 0;
   }
   100% {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -1459,7 +1453,7 @@ time {
     width: 0;
   }
   100% {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -1508,6 +1502,40 @@ time {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes revealSection {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes revealSection {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
 }
 
@@ -1566,6 +1594,15 @@ time {
   #about-content div#skills {
     width: 60%;
   }
+}
+
+#diagonal-about {
+  background-color: green;
+  height: 10rem;
+  position: absolute;
+  -webkit-transform: skewY(11deg);
+          transform: skewY(11deg);
+  width: 100%;
 }
 
 #text-me .line-anim::after {
@@ -1646,7 +1683,7 @@ time {
       -ms-flex-pack: center;
           justify-content: center;
   height: 50%;
-  width: 100%;
+  width: 100vw;
   -webkit-animation: fullWidth 1s;
           animation: fullWidth 1s;
   background-color: rgba(0, 0, 0, 0.25);
@@ -1888,6 +1925,27 @@ time {
   display: none;
 }
 
+@media (min-width: 992px) {
+  #portfolio-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#portfolio-title {
+  -webkit-animation: revealSection 1s 0.25s cubic-bezier(0, 1, 1, 1) forwards;
+          animation: revealSection 1s 0.25s cubic-bezier(0, 1, 1, 1) forwards;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  #portfolio-title {
+    font-size: 8rem;
+  }
+}
+
 #projects {
   bottom: auto;
   left: auto;
@@ -1898,32 +1956,12 @@ time {
   width: 100%;
   -webkit-animation: slideUp 1s forwards;
           animation: slideUp 1s forwards;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   opacity: 0;
   overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-}
-
-#projects::after {
-  bottom: auto;
-  left: 2rem;
-  position: absolute;
-  right: auto;
-  top: -2.5rem;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  content: "games";
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-shadow: -3px 3px black;
 }
 
 #projects .slide {

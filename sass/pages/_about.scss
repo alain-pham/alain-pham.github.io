@@ -50,6 +50,14 @@
     }
 }
 
+#diagonal-about {
+    background-color: green;
+    height: 10rem;
+    position: absolute;
+    transform: skewY(11deg);
+    width: 100%;
+}
+
 #text-me {
     .line-anim {
         &::after {
