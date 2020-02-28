@@ -417,6 +417,37 @@ ul {
   opacity: 0;
 }
 
+.social-media {
+  -webkit-animation: fadeIn100 0.75s forwards;
+          animation: fadeIn100 0.75s forwards;
+  margin-top: 1.5rem;
+  opacity: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.social-media span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 0.5rem;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+@media (min-width: 992px) {
+  .social-media span {
+    opacity: 0.25;
+  }
+  .social-media span:hover {
+    opacity: 1;
+  }
+}
+
 /* ---------------------
     LAYOUT
 --------------------- */
@@ -432,6 +463,8 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
   height: 100%;
   width: 100%;
 }
@@ -502,6 +535,7 @@ body {
   width: 100vw;
   display: none;
   position: relative;
+  scroll-snap-align: start;
 }
 
 .page-content {
@@ -1006,24 +1040,6 @@ time {
   }
   10% {
     opacity: 0.1;
-  }
-}
-
-@-webkit-keyframes fadeIn20 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.2;
-  }
-}
-
-@keyframes fadeIn20 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.2;
   }
 }
 
@@ -1597,12 +1613,12 @@ time {
 }
 
 #diagonal-about {
-  background-color: green;
+  background-color: red;
   height: 10rem;
   position: absolute;
   -webkit-transform: skewY(11deg);
           transform: skewY(11deg);
-  width: 100%;
+  width: 100vw;
 }
 
 #text-me .line-anim::after {
@@ -1632,6 +1648,11 @@ time {
   padding: revert;
 }
 
+#resume-btn {
+  height: 2.5rem;
+  width: 7.5rem;
+}
+
 #skills .line-anim::after {
   -webkit-animation-delay: 0.75s;
           animation-delay: 0.75s;
@@ -1657,6 +1678,11 @@ time {
 #alain {
   color: red;
   font-weight: bold;
+}
+
+#contact .social-media {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 #contact-content {
@@ -1693,13 +1719,26 @@ time {
 }
 
 .diagonal-content-contact {
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 10rem;
   -webkit-transform: skewY(-11deg);
           transform: skewY(-11deg);
 }
 
-.diagonal-content-contact small {
-  margin: 0.67rem 0;
+.diagonal-content-contact h1 {
+  margin: 0;
 }
 
 #copyright {
@@ -1721,6 +1760,11 @@ time {
 #home .line-anim::after {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+}
+
+#home .social-media {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 #info-me {
@@ -1829,37 +1873,6 @@ time {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-  }
-}
-
-#social-media {
-  -webkit-animation: fadeIn100 0.75s 2.5s forwards;
-          animation: fadeIn100 0.75s 2.5s forwards;
-  margin-top: 1.5rem;
-  opacity: 0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-#social-media span {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-right: 0.5rem;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-
-@media (min-width: 992px) {
-  #social-media span {
-    opacity: 0.25;
-  }
-  #social-media span:hover {
-    opacity: 1;
   }
 }
 

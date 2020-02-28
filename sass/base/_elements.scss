@@ -48,3 +48,25 @@ ul {
         opacity: 0;
     }
 }
+
+.social-media {
+    animation: fadeIn100 0.75s forwards;
+    margin-top: 1.5rem;
+    opacity: 0;
+    width: max-content;
+
+    span {
+        align-items: center;
+        display: inline-flex;
+        margin-right: 0.5rem;
+        transition: all 0.25s;
+
+        @include for-desktop {
+            opacity: 0.25;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

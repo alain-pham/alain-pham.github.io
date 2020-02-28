@@ -7,6 +7,10 @@
             animation-delay: 0.5s;
         }
     }
+
+    .social-media {
+        animation-delay: 2.5s;
+    }
 }
 
 #info-me {
@@ -87,28 +91,6 @@
 
     @include for-desktop {
         align-items: flex-start;
-    }
-}
-
-#social-media {
-    animation: fadeIn100 0.75s 2.5s forwards;
-    margin-top: 1.5rem;
-    opacity: 0;
-    width: max-content;
-
-    span {
-        align-items: center;
-        display: inline-flex;
-        margin-right: 0.5rem;
-        transition: all 0.25s;
-
-        @include for-desktop {
-            opacity: 0.25;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
     }
 }
 
