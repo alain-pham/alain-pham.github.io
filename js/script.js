@@ -16,6 +16,10 @@ const displayType = [
     "none", "block", "flex"
 ];
 
+const sections = [
+    "home", "about", "portfolio", "contact"
+];
+
 /**
  * After logo animation stops
  */
@@ -23,7 +27,15 @@ function completeLoad() {
     d.querySelector("body").style.backgroundColor = "#191919";
 
     for (let i = 0; i < pages.length - 1; i++) {
-        pages[i].style.display = displayType[1];
+        // Even = block
+        if (i % 2 == 0) {
+            pages[i].style.display = displayType[1];
+        }
+
+        // Odd = flex
+        else {
+            pages[i].style.display = displayType[2];
+        }
     }
 
     // Contact page display flex
@@ -52,7 +64,7 @@ function showMenu() {
     menu.style.animation = "showMenu 0.25s forwards";
 
     if (mediaBig.matches) {
-        menuLeft.style.animation = "menuLeftShow 0.25s 0.25s forwards";
+        menuLeft.style.animation = "menuLeftShow 0.1s forwards";
     }
 }
 
@@ -72,10 +84,6 @@ function hideMenu() {
  * Behaviour when scrolling past sections
  */
 function scrollNav() {
-    const sections = [
-        "home", "about", "portfolio", "contact"
-    ];
-
     // Home
     if (window.pageYOffset < viewportHeight) {
         for (let i = 0; i < scrollDots.length; i++) {

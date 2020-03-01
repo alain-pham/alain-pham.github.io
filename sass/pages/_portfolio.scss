@@ -47,25 +47,25 @@
         scroll-snap-align: start;
 
         &#slide-1 {
-            background: url("/img/game1.jpg");
+            background: url("/img/games/game1.jpg");
             background-position: center;
             background-size: cover;
         }
 
         &#slide-2 {
-            background: url("/img/game2.jpg");
+            background: url("/img/games/game2.jpg");
             background-position: center;
             background-size: cover;
         }
 
         &#slide-3 {
-            background: url("/img/game3.jpg");
+            background: url("/img/games/game3.jpg");
             background-position: center;
             background-size: cover;
         }
 
         &#slide-4 {
-            background: url("/img/game4.jpg");
+            background: url("/img/games/game4.jpg");
             background-position: center;
             background-size: cover;
         }
@@ -132,6 +132,44 @@
     }
 }
 
-#categories {
-    margin: 0 auto;
+#projects-2 {
+    @include flex(row, $align-items: flex-start);
+    @include pos($position: absolute);
+    @include size(50%, 100%);
+
+    // background-color: red;
+    flex-wrap: wrap;
 }
+
+.preview {
+    @include flex(row, center, center);
+    @include size(50%, 25%);
+
+    border: 1px solid green;
+
+    &#preview-1 {
+        background-image: url("/img/");
+    }
+
+    &#preview-2 {}
+
+    &#preview-3 {}
+
+    &#preview-4 {}
+
+    &#preview-5 {}
+
+    &#preview-6 {}
+
+    &#preview-7 {}
+
+    &#preview-8 {}
+
+    @include for-desktop {
+        @include size(285px, 285px)
+    }
+}
+
+// #categories {
+//     margin: 0 auto;
+// }

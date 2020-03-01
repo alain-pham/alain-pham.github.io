@@ -5,7 +5,7 @@
 }
 
 #about-content {
-    @include flex(column, center, space-between);
+    @include flex(column, center, space-around);
 
     display: none;
 
@@ -97,6 +97,7 @@
 }
 
 #resume-btn {
+    border: 0;
     height: 2.5rem;
     width: 7.5rem;
 }
@@ -113,25 +114,41 @@
 
 // }
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-.skill {
-    @include size(15px, 200px);
-
-    margin-bottom: 25px;
-
-    div {
-        background-color: white;
-        height: 100%;
-        width: 50%;
-
-        div {
-            background-color: $red;
-            height: 100%;
-        }
-    }
+.skills-title {
+    display: inline-block;
+    margin: 0.67rem 0;
 }
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.skill-category {
+    // @include size(15px, 200px);
+
+    // margin-bottom: 25px;
+
+    // div {
+    //     background-color: white;
+    //     height: 100%;
+    //     width: 50%;
+
+    //     div {
+    //         background-color: $red;
+    //         height: 100%;
+    //     }
+    // }
+
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: $red;
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem;
+}
+
+
 #alain {
-    color: red;
+    color: $red;
     font-weight: bold;
 }

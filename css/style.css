@@ -463,8 +463,6 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
   height: 100%;
   width: 100%;
 }
@@ -535,7 +533,6 @@ body {
   width: 100vw;
   display: none;
   position: relative;
-  scroll-snap-align: start;
 }
 
 .page-content {
@@ -1576,9 +1573,8 @@ time {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   display: none;
 }
 
@@ -1649,6 +1645,7 @@ time {
 }
 
 #resume-btn {
+  border: 0;
   height: 2.5rem;
   width: 7.5rem;
 }
@@ -1658,21 +1655,24 @@ time {
           animation-delay: 0.75s;
 }
 
+.skills-title {
+  display: inline-block;
+  margin: 0.67rem 0;
+}
+
+.skill-category {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .skill {
-  height: 15px;
-  width: 200px;
-  margin-bottom: 25px;
-}
-
-.skill div {
-  background-color: white;
-  height: 100%;
-  width: 50%;
-}
-
-.skill div div {
   background-color: red;
-  height: 100%;
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem;
 }
 
 #alain {
@@ -1999,25 +1999,25 @@ time {
 }
 
 #projects .slide#slide-1 {
-  background: url("/img/game1.jpg");
+  background: url("/img/games/game1.jpg");
   background-position: center;
   background-size: cover;
 }
 
 #projects .slide#slide-2 {
-  background: url("/img/game2.jpg");
+  background: url("/img/games/game2.jpg");
   background-position: center;
   background-size: cover;
 }
 
 #projects .slide#slide-3 {
-  background: url("/img/game3.jpg");
+  background: url("/img/games/game3.jpg");
   background-position: center;
   background-size: cover;
 }
 
 #projects .slide#slide-4 {
-  background: url("/img/game4.jpg");
+  background: url("/img/games/game4.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -2094,7 +2094,58 @@ time {
   }
 }
 
-#categories {
-  margin: 0 auto;
+#projects-2 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: auto;
+  left: auto;
+  position: absolute;
+  right: auto;
+  top: auto;
+  height: 50%;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.preview {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50%;
+  width: 25%;
+  border: 1px solid green;
+}
+
+.preview#preview-1 {
+  background-image: url("/img/");
+}
+
+@media (min-width: 992px) {
+  .preview {
+    height: 285px;
+    width: 285px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
