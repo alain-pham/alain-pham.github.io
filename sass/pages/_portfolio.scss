@@ -22,22 +22,11 @@
     @include size(50%, 100%);
 
     animation: slideUp 1s forwards;
-    // display: flex;
     display: none;
     opacity: 0;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-
-    // &::after {
-    //     @include pos(absolute, $top: -2.5rem, $left: 2rem);
-    //     @include size(max-content, max-content);
-
-    //     content: "games";
-    //     font-size: 3.5rem;
-    //     font-weight: bold;
-    //     text-shadow: -3px 3px black;
-    // }
 
     .slide {
         @include flex($align-items: center);
@@ -134,38 +123,65 @@
 
 #projects-2 {
     @include flex(row, $align-items: flex-start);
-    @include pos($position: absolute);
-    @include size(50%, 100%);
+    // @include pos($position: absolute);
+    @include size($width: 100%);
 
-    // background-color: red;
+    // display: none;
     flex-wrap: wrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .preview {
     @include flex(row, center, center);
-    @include size(50%, 25%);
+    @include size(150px, 150px);
 
-    border: 1px solid green;
+    background-size: cover;
 
     &#preview-1 {
-        background-image: url("/img/");
+        background-image: url("/img/creation/creation1.jpg");
+        background-position: 85%;
     }
 
-    &#preview-2 {}
+    &#preview-2 {
+        background-image: url("/img/creation/creation2.jpg");
+    }
 
-    &#preview-3 {}
+    &#preview-3 {
+        background-image: url("/img/creation/creation3.jpg");
+    }
 
-    &#preview-4 {}
+    &#preview-4 {
+        background-image: url("/img/creation/creation4.jpg");
+    }
 
-    &#preview-5 {}
+    &#preview-5 {
+        background-image: url("/img/creation/creation5.jpg");
+        background-position: center;
+    }
 
-    &#preview-6 {}
+    &#preview-6 {
+        background-image: url("/img/creation/creation6.jpg");
+        background-position: 33%;
+    }
 
-    &#preview-7 {}
+    &#preview-7 {
+        background-image: url("/img/creation/creation7.jpg");
+        background-position: 25%;
+    }
 
-    &#preview-8 {}
+    &#preview-8 {
+        background-image: url("/img/creation/creation8.jpg");
+        background-position: right;
+        flex: 1;
+    }
+    
+    @include for-tablet {
+        @include size(240px, 240px);
+    }
 
-    @include for-desktop {
+    @include for-big-desktop {
         @include size(285px, 285px)
     }
 }

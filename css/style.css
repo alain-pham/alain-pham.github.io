@@ -1610,11 +1610,18 @@ time {
 
 #diagonal-about {
   background-color: red;
+  display: none;
   height: 10rem;
   position: absolute;
   -webkit-transform: skewY(11deg);
           transform: skewY(11deg);
   width: 100vw;
+}
+
+@media (min-width: 768px) {
+  #diagonal-about {
+    display: block;
+  }
 }
 
 #text-me .line-anim::after {
@@ -1678,6 +1685,7 @@ time {
 #alain {
   color: red;
   font-weight: bold;
+  text-shadow: 1px 1px black;
 }
 
 #contact .social-media {
@@ -2108,15 +2116,14 @@ time {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  bottom: auto;
-  left: auto;
-  position: absolute;
-  right: auto;
-  top: auto;
-  height: 50%;
+  height: auto;
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .preview {
@@ -2133,16 +2140,59 @@ time {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50%;
-  width: 25%;
-  border: 1px solid green;
+  height: 150px;
+  width: 150px;
+  background-size: cover;
 }
 
 .preview#preview-1 {
-  background-image: url("/img/");
+  background-image: url("/img/creation/creation1.jpg");
+  background-position: 85%;
 }
 
-@media (min-width: 992px) {
+.preview#preview-2 {
+  background-image: url("/img/creation/creation2.jpg");
+}
+
+.preview#preview-3 {
+  background-image: url("/img/creation/creation3.jpg");
+}
+
+.preview#preview-4 {
+  background-image: url("/img/creation/creation4.jpg");
+}
+
+.preview#preview-5 {
+  background-image: url("/img/creation/creation5.jpg");
+  background-position: center;
+}
+
+.preview#preview-6 {
+  background-image: url("/img/creation/creation6.jpg");
+  background-position: 33%;
+}
+
+.preview#preview-7 {
+  background-image: url("/img/creation/creation7.jpg");
+  background-position: 25%;
+}
+
+.preview#preview-8 {
+  background-image: url("/img/creation/creation8.jpg");
+  background-position: right;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (min-width: 768px) {
+  .preview {
+    height: 240px;
+    width: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
   .preview {
     height: 285px;
     width: 285px;

@@ -52,10 +52,15 @@
 
 #diagonal-about {
     background-color: red;
+    display: none;
     height: 10rem;
     position: absolute;
     transform: skewY(11deg);
     width: 100vw;
+
+    @include for-tablet {
+        display: block;
+    }
 }
 
 #text-me {
@@ -151,4 +156,5 @@
 #alain {
     color: $red;
     font-weight: bold;
+    text-shadow: 1px 1px black;
 }

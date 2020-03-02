@@ -75,9 +75,9 @@ function hideMenu() {
     mainContent.style.filter = displayType[0];
     menu.style.animation = "hideMenu 0.25s forwards";
 
-    // setTimeout(() => {
+    setTimeout(() => {
         menu.style.display = displayType[0];
-    // }, 500);
+    }, 250);
 }
 
 /**

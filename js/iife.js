@@ -99,4 +99,7 @@
         d.getElementById("projects").style.display = displayType[2];
     });
 
+    //
+    // HIDE #PROJECTS AND SHOW #PROJECTS-2
+
 })();
