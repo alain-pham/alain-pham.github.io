@@ -98,7 +98,7 @@ function scrollNav() {
     if (window.pageYOffset >= viewportHeight / 2) {
         scrollIndic.style.animation = "fadeOut 1s forwards";
     } else {
-        scrollIndic.style.animation = " fadeIn25 1s forwards";
+        scrollIndic.style.animation = "fadeIn25 1s forwards";
     }
 
     // About

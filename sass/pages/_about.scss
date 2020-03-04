@@ -1,6 +1,26 @@
 #about {
+    height: auto;
+
     .line-anim {
-        @include size($width: max-content);
+        width: max-content;
+    }
+
+    @include for-desktop {
+        height: 100vh;
+    }
+}
+
+#diagonal-about {
+    animation: fullWidth 1s;
+    background-color: red;
+    display: none;
+    height: 1rem;
+    position: absolute;
+    transform: skewY(11deg);
+    width: 100vw;
+
+    @include for-tablet {
+        display: block;
     }
 }
 
@@ -11,20 +31,14 @@
 
     div {
         &#text-me {
-            // width: 30%;
 
             &::after {
-                @include size(100%);
+                @include size(100%, 6px);
 
                 background-color: $red;
                 content: "";
-                width: 6px;
             }
         }
-
-        // &#skills {
-        //     width: 60%; 
-        // }
     }
 
     @include for-desktop {
@@ -33,14 +47,6 @@
         div {
             &#text-me {
                 width: 35%;
-
-                &::after {
-                    @include size(100%);
-
-                    background-color: $red;
-                    content: "";
-                    width: 6px;
-                }
             }
 
             &#skills {
@@ -50,17 +56,8 @@
     }
 }
 
-#diagonal-about {
-    background-color: red;
-    display: none;
-    height: 10rem;
-    position: absolute;
-    transform: skewY(11deg);
-    width: 100vw;
-
-    @include for-tablet {
-        display: block;
-    }
+#center-content {
+    @include flex(row, flex-start, space-between);
 }
 
 #text-me {
@@ -72,7 +69,7 @@
 }
 
 #summary-me {
-    animation: slideLeft 0.5s 1s forwards;
+    animation: slideLeft 0.5s 0.75s forwards;
     color: $grey;
     opacity: 0;
 
@@ -88,7 +85,7 @@
 }
 
 #about-me {
-    animation: slideLeft 0.5s 1.5s forwards;
+    animation: slideLeft 0.5s 1.25s forwards;
     line-height: 1.5rem;
     margin: 1rem 0;
     opacity: 0;
@@ -99,25 +96,52 @@
         margin: revert;
         padding: revert;
     }
+
+    &::after {
+        content: "";
+    }
 }
 
-#resume-btn {
+#download-cv {
+    @include size(2.5rem, 7.5rem);
+
+    animation: fadeIn100 0.5s 1.5s forwards;
+    background-color: white;
     border: 0;
-    height: 2.5rem;
-    width: 7.5rem;
+    margin: 1rem auto;
+    opacity: 0;
+
+    a {
+        @include size(100%, 100%);
+
+        color: black;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    @include for-desktop {
+        margin: 1rem 0;
+    }
 }
 
 #skills {
     .line-anim {
         &::after {
-            animation-delay: 0.75s;
+            animation-delay: 0.5s;
+        }
+
+        span {
+            animation-delay: 1s;
         }
     }
 }
 
-// #skills-list {
-
-// }
+#skills-list {
+    animation: slideLeft 0.5s 1.5s forwards;
+    opacity: 0;
+}
 
 .skills-title {
     display: inline-block;
@@ -148,8 +172,13 @@
 .skill {
     background-color: $red;
     display: inline-block;
+    font-size: 0.8rem;
     margin: 0 0.5rem 0.5rem 0;
     padding: 0.5rem;
+
+    @include for-desktop {
+        font-size: 1rem;
+    }
 }
 
 

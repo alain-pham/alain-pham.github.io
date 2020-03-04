@@ -11,13 +11,14 @@
     top: $top;
 }
 
-@mixin flex($flex-direction: row, $align-items: center, $justify-content: center) {
-    align-items: $align-items;
+@mixin flex($direction: row, $align: center, $justify: center) {
+    align-items: $align;
     display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
+    flex-direction: $direction;
+    justify-content: $justify;
 }
 
+// MEDIA QUERIES
 @mixin for-big-phone {
     @media (min-width: 576px) {
         @content;

@@ -15,7 +15,8 @@
         contentMenu = d.getElementById("menu-left"),
         scrollIndicator = d.getElementById("scroll-indicator"),
         sectionTitle = d.getElementsByClassName("title-reveal"),
-        portfolioTitle = d.getElementById("portfolio-title");
+        portfolioTitle = d.getElementById("portfolio-title"),
+        worksBtn = d.getElementsByClassName("btn-works");
 
     // Logo animation at start
     setTimeout(() => {
@@ -101,5 +102,8 @@
 
     //
     // HIDE #PROJECTS AND SHOW #PROJECTS-2
+    // if (worksBtn) {
+
+    // }
 
 })();

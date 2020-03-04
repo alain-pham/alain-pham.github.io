@@ -79,7 +79,7 @@ body {
 }
 
 .page-content {
-    @include flex(column, $justify-content: center);
+    @include flex(column, $justify: center);
     @include size(100%);
 
     display: none;

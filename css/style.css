@@ -393,6 +393,24 @@ ul {
   text-decoration: line-through;
 }
 
+.line {
+  height: 6px;
+  width: 6rem;
+  -webkit-animation: fadeIn100 0.75s 1.5s ease-out forwards;
+          animation: fadeIn100 0.75s 1.5s ease-out forwards;
+  background-color: red;
+  border-radius: 0.1rem;
+  display: block;
+  margin: 1rem auto 1.5rem auto;
+  opacity: 0;
+}
+
+@media (min-width: 992px) {
+  .line {
+    margin: 1rem 0 1.5rem 0;
+  }
+}
+
 .line-anim {
   position: relative;
 }
@@ -895,6 +913,19 @@ polygon.st1 {
 }
 
 #close-btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   bottom: auto;
   left: auto;
   position: absolute;
@@ -902,16 +933,7 @@ polygon.st1 {
   top: 2rem;
   height: 5rem;
   width: 5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   opacity: 0.25;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
@@ -982,9 +1004,16 @@ polygon.st1 {
 }
 
 #content-menu-left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1027,7 +1056,7 @@ time {
   0% {
     opacity: 0;
   }
-  10% {
+  100% {
     opacity: 0.1;
   }
 }
@@ -1035,7 +1064,7 @@ time {
   0% {
     opacity: 0;
   }
-  10% {
+  100% {
     opacity: 0.1;
   }
 }
@@ -1555,11 +1584,38 @@ time {
 /* ---------------------
     PAGES
 --------------------- */
-#about .line-anim {
+#about {
   height: auto;
+}
+
+#about .line-anim {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+@media (min-width: 992px) {
+  #about {
+    height: 100vh;
+  }
+}
+
+#diagonal-about {
+  -webkit-animation: fullWidth 1s;
+          animation: fullWidth 1s;
+  background-color: red;
+  display: none;
+  height: 1rem;
+  position: absolute;
+  -webkit-transform: skewY(11deg);
+          transform: skewY(11deg);
+  width: 100vw;
+}
+
+@media (min-width: 768px) {
+  #diagonal-about {
+    display: block;
+  }
 }
 
 #about-content {
@@ -1580,10 +1636,9 @@ time {
 
 #about-content div#text-me::after {
   height: 100%;
-  width: auto;
+  width: 6px;
   background-color: red;
   content: "";
-  width: 6px;
 }
 
 @media (min-width: 992px) {
@@ -1596,32 +1651,25 @@ time {
   #about-content div#text-me {
     width: 35%;
   }
-  #about-content div#text-me::after {
-    height: 100%;
-    width: auto;
-    background-color: red;
-    content: "";
-    width: 6px;
-  }
   #about-content div#skills {
     width: 60%;
   }
 }
 
-#diagonal-about {
-  background-color: red;
-  display: none;
-  height: 10rem;
-  position: absolute;
-  -webkit-transform: skewY(11deg);
-          transform: skewY(11deg);
-  width: 100vw;
-}
-
-@media (min-width: 768px) {
-  #diagonal-about {
-    display: block;
-  }
+#center-content {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #text-me .line-anim::after {
@@ -1630,15 +1678,15 @@ time {
 }
 
 #summary-me {
-  -webkit-animation: slideLeft 0.5s 1s forwards;
-          animation: slideLeft 0.5s 1s forwards;
+  -webkit-animation: slideLeft 0.5s 0.75s forwards;
+          animation: slideLeft 0.5s 0.75s forwards;
   color: gray;
   opacity: 0;
 }
 
 #about-me {
-  -webkit-animation: slideLeft 0.5s 1.5s forwards;
-          animation: slideLeft 0.5s 1.5s forwards;
+  -webkit-animation: slideLeft 0.5s 1.25s forwards;
+          animation: slideLeft 0.5s 1.25s forwards;
   line-height: 1.5rem;
   margin: 1rem 0;
   opacity: 0;
@@ -1651,15 +1699,51 @@ time {
   padding: revert;
 }
 
-#resume-btn {
-  border: 0;
+#about-me::after {
+  content: "";
+}
+
+#download-cv {
   height: 2.5rem;
   width: 7.5rem;
+  -webkit-animation: fadeIn100 0.5s 1.5s forwards;
+          animation: fadeIn100 0.5s 1.5s forwards;
+  background-color: white;
+  border: 0;
+  margin: 1rem auto;
+  opacity: 0;
+}
+
+#download-cv a {
+  height: 100%;
+  width: 100%;
+  color: black;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #download-cv {
+    margin: 1rem 0;
+  }
 }
 
 #skills .line-anim::after {
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+#skills .line-anim span {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#skills-list {
+  -webkit-animation: slideLeft 0.5s 1.5s forwards;
+          animation: slideLeft 0.5s 1.5s forwards;
+  opacity: 0;
 }
 
 .skills-title {
@@ -1678,8 +1762,15 @@ time {
 .skill {
   background-color: red;
   display: inline-block;
+  font-size: 0.8rem;
   margin: 0 0.5rem 0.5rem 0;
   padding: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .skill {
+    font-size: 1rem;
+  }
 }
 
 #alain {
@@ -1694,12 +1785,11 @@ time {
 }
 
 #contact-content {
-  height: auto;
-  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   display: none;
+  width: 100%;
 }
 
 .diagonal-box-contact {
@@ -1717,13 +1807,19 @@ time {
       -ms-flex-pack: center;
           justify-content: center;
   height: 50%;
-  width: 100vw;
+  width: 100%;
   -webkit-animation: fullWidth 1s;
           animation: fullWidth 1s;
   background-color: rgba(0, 0, 0, 0.25);
   overflow: hidden;
   -webkit-transform: skewY(11deg);
           transform: skewY(11deg);
+}
+
+@media (min-width: 768px) {
+  .diagonal-box-contact {
+    width: 100vw;
+  }
 }
 
 .diagonal-content-contact {
@@ -1794,7 +1890,6 @@ time {
   position: absolute;
   right: auto;
   top: auto;
-  height: auto;
   width: 100%;
 }
 
@@ -1823,24 +1918,6 @@ time {
 @media (min-width: 992px) {
   #name {
     font-size: 5rem;
-  }
-}
-
-#line {
-  height: 6px;
-  width: 6rem;
-  -webkit-animation: fadeIn100 0.75s 1.5s ease-out forwards;
-          animation: fadeIn100 0.75s 1.5s ease-out forwards;
-  background-color: red;
-  border-radius: 0.1rem;
-  display: block;
-  margin: 1rem auto 1.5rem auto;
-  opacity: 0;
-}
-
-@media (min-width: 992px) {
-  #line {
-    margin: 1rem 0 1.5rem 0;
   }
 }
 
@@ -2001,6 +2078,8 @@ time {
           justify-content: center;
   height: 100%;
   width: 100%;
+  background-position: center;
+  background-size: cover;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   scroll-snap-align: start;
@@ -2082,7 +2161,6 @@ time {
     height: 50%;
     width: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
     overflow: hidden;
     -webkit-transform: skewY(-11deg);
             transform: skewY(-11deg);
@@ -2116,14 +2194,18 @@ time {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: auto;
-  width: 100%;
+  bottom: auto;
+  left: auto;
+  position: absolute;
+  right: -100vw;
+  top: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 
 .preview {

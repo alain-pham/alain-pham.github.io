@@ -29,9 +29,11 @@
     -webkit-overflow-scrolling: touch;
 
     .slide {
-        @include flex($align-items: center);
+        @include flex($align: center);
         @include size(100%, 100%);
 
+        background-position: center;
+        background-size: cover;
         flex-shrink: 0;
         scroll-snap-align: start;
 
@@ -98,11 +100,10 @@
         }
 
         .diagonal-box {
-            @include flex($align-items: center);
+            @include flex($align: center);
             @include size(50%, 0);
 
             background-color: rgba($color: #000000, $alpha: 0.5);
-            display: flex;
             overflow: hidden;
             transform: skewY(-11deg);
             transition: all 0.25s;
@@ -122,15 +123,15 @@
 }
 
 #projects-2 {
-    @include flex(row, $align-items: flex-start);
-    // @include pos($position: absolute);
-    @include size($width: 100%);
+    @include flex(row, $align: flex-start);
+    @include pos($position: absolute, $right: -100vw);
 
     // display: none;
     flex-wrap: wrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
 }
 
 .preview {

@@ -16,7 +16,8 @@
 #info-me {
     @include flex(column, center);
     @include pos(absolute, $bottom: 25%);
-    @include size($width: 100%);
+    
+    width: 100%;
 
     p {
         text-shadow: 0 1px #191919;
@@ -39,41 +40,8 @@
     }
 }
 
-#line {
-    @include size(6px, 6rem);
-
-    animation: fadeIn100 0.75s 1.5s ease-out forwards;
-    background-color: $red;
-    border-radius: 0.1rem;
-    display: block;
-    margin: 1rem auto 1.5rem auto;
-    opacity: 0;
-
-    @include for-desktop {
-        margin: 1rem 0 1.5rem 0;
-    }
-}
-
 #occupation {
-    // animation: slideLeft 0.75s 1s ease-out forwards;
     font-weight: normal;
-    // opacity: 0;
-
-    // &::before {
-    //     @include size(6px, 6rem);
-
-    //     animation: fadeIn100 0.75s 2s ease-out forwards;
-    //     background-color: $red;
-    //     border-radius: 0.1rem;
-    //     content: "";
-    //     display: block;
-    //     margin: 1rem auto 1.5rem auto;
-    //     opacity: 0;
-
-    //     @include for-desktop {
-    //         margin: 1rem 0 1.5rem 0;
-    //     }
-    // }
 }
 
 #description {
@@ -111,7 +79,7 @@
 }
 
 #scroll-indicator {
-    @include flex($align-items: flex-start, $justify-content: center);
+    @include flex($align: flex-start, $justify: center);
     @include pos(absolute, $bottom: 3rem, $left: 50%);
     @include size(2.5rem, 1.5rem);
 
