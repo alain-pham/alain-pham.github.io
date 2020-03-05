@@ -119,13 +119,21 @@ function scrollNav() {
         showSection(2);
     }
 
-    // Contact
     if (window.pageYOffset >= viewportHeight * 2.75) {
+        pages[3].style.backgroundColor = "initial";
+    }
+
+    // Contact
+    if (window.pageYOffset >= viewportHeight * 3.75) {
         for (let i = 0; i < scrollDots.length; i++) {
             scrollDots[i].classList.remove("current");
         }
 
         showSection(3);
+        pageContent[4].style.display = displayType[2];
+
+        
+        pages[4].style.backgroundColor = "initial";
     }
 }
 
@@ -151,4 +159,5 @@ function showSection(iNum) {
 
     // Flex display
     pageContent[iNum].style.display = displayType[2];
+    pages[iNum].style.backgroundColor = "initial";
 }

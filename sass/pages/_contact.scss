@@ -14,12 +14,16 @@
     @include flex($align: center);
     @include size(50%, 100%);
 
-    animation: fullWidth 1s;
     background-color: rgba($color: black, $alpha: 0.25);
     overflow: hidden;
-    transform: skewY(11deg);
+
+    h1 {
+        font-size: 1.2rem;
+    }
 
     @include for-tablet {
+        animation: fullWidth 1s;
+        transform: skewY(11deg);
         width: 100vw;
     }
 }
@@ -28,10 +32,14 @@
     @include flex(column, center, space-between);
 
     height: 10rem;
-    transform: skewY(-11deg);
+    text-align: center;
 
     h1 {
         margin: 0;
+    }
+
+    @include for-tablet {
+        transform: skewY(-11deg);
     }
 }
 

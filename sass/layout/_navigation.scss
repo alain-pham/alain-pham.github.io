@@ -42,10 +42,14 @@
 #page-name {
     font-family: "Atami Stencil";
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 3.5rem;
     margin-left: 200%;
     position: absolute;
+
+    @include for-tablet {
+        font-size: 2rem;
+    }
 
     @include for-desktop {
         font-size: 2.5rem;

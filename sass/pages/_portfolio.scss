@@ -16,6 +16,11 @@
     }
 }
 
+#games-title {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+}
+
 // https://www.youtube.com/watch?v=a7ICxQblYrM
 #projects {
     @include pos($position: relative);
@@ -125,13 +130,14 @@
 #projects-2 {
     @include flex(row, $align: flex-start);
     @include pos($position: absolute, $right: -100vw);
+    @include size(50%, 100%);
 
     // display: none;
     flex-wrap: wrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    width: 100%;
+    // width: 100%;
 }
 
 .preview {

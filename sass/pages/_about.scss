@@ -56,9 +56,9 @@
     }
 }
 
-#center-content {
-    @include flex(row, flex-start, space-between);
-}
+// #center-content {
+//     @include flex(row, flex-start, space-between);
+// }
 
 #text-me {
     .line-anim {
@@ -108,7 +108,7 @@
     animation: fadeIn100 0.5s 1.5s forwards;
     background-color: white;
     border: 0;
-    margin: 1rem auto;
+    margin: 1rem 0;
     opacity: 0;
 
     a {
@@ -171,6 +171,7 @@
 
 .skill {
     background-color: $red;
+    border-radius: 0.1rem;
     display: inline-block;
     font-size: 0.8rem;
     margin: 0 0.5rem 0.5rem 0;

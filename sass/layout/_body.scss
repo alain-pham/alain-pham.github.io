@@ -73,6 +73,7 @@ body {
 .page {
     @include size(100vh, 100vw);
 
+    background-color: black;
     display: none;
     position: relative;
     // scroll-snap-align: start;

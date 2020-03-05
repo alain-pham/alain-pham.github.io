@@ -549,6 +549,7 @@ body {
 .page {
   height: 100vh;
   width: 100vw;
+  background-color: black;
   display: none;
   position: relative;
 }
@@ -666,10 +667,16 @@ body {
 #page-name {
   font-family: "Atami Stencil";
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 3.5rem;
   margin-left: 200%;
   position: absolute;
+}
+
+@media (min-width: 768px) {
+  #page-name {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1656,22 +1663,6 @@ time {
   }
 }
 
-#center-content {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 #text-me .line-anim::after {
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
@@ -1710,7 +1701,7 @@ time {
           animation: fadeIn100 0.5s 1.5s forwards;
   background-color: white;
   border: 0;
-  margin: 1rem auto;
+  margin: 1rem 0;
   opacity: 0;
 }
 
@@ -1761,6 +1752,7 @@ time {
 
 .skill {
   background-color: red;
+  border-radius: 0.1rem;
   display: inline-block;
   font-size: 0.8rem;
   margin: 0 0.5rem 0.5rem 0;
@@ -1808,16 +1800,20 @@ time {
           justify-content: center;
   height: 50%;
   width: 100%;
-  -webkit-animation: fullWidth 1s;
-          animation: fullWidth 1s;
   background-color: rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  -webkit-transform: skewY(11deg);
-          transform: skewY(11deg);
+}
+
+.diagonal-box-contact h1 {
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
   .diagonal-box-contact {
+    -webkit-animation: fullWidth 1s;
+            animation: fullWidth 1s;
+    -webkit-transform: skewY(11deg);
+            transform: skewY(11deg);
     width: 100vw;
   }
 }
@@ -1837,12 +1833,18 @@ time {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 10rem;
-  -webkit-transform: skewY(-11deg);
-          transform: skewY(-11deg);
+  text-align: center;
 }
 
 .diagonal-content-contact h1 {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .diagonal-content-contact {
+    -webkit-transform: skewY(-11deg);
+            transform: skewY(-11deg);
+  }
 }
 
 #copyright {
@@ -1857,6 +1859,7 @@ time {
 }
 
 #home {
+  background-color: initial;
   color: white;
   position: relative;
 }
@@ -2044,6 +2047,11 @@ time {
   }
 }
 
+#games-title {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
 #projects {
   bottom: auto;
   left: auto;
@@ -2199,13 +2207,14 @@ time {
   position: absolute;
   right: -100vw;
   top: auto;
+  height: 50%;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  width: 100%;
 }
 
 .preview {
