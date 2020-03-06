@@ -22,7 +22,7 @@
     setTimeout(() => {
         logoLoader.style.animation = "lighten 1s forwards";
         d.getElementById("hexagons").style.display = displayType[1];
-    }, 2100);
+    }, 1100);
 
     setTimeout(() => {
         if (mediaBig.matches) {
@@ -36,7 +36,7 @@
         logoLoader.addEventListener("animationend", () => {
             circleLoader.style.animation = "expand 0.5s forwards";
         });
-    }, 3000); /* 3000 */
+    }, 2000); /* 3000 */
 
     // Click on logo returns home
     logoLoader.addEventListener("click", () => {

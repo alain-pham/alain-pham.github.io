@@ -82,6 +82,7 @@
 
         &:hover {
             .slide {
+                filter: brightness(10%);
                 flex: 1 1 13.33%;
             }
 
@@ -100,6 +101,7 @@
             transition: all 0.25s;
 
             &:hover {
+                filter: none;
                 flex: 1 1 60%;
             }
         }
@@ -192,7 +194,3 @@
         @include size(285px, 285px)
     }
 }
-
-// #categories {
-//     margin: 0 auto;
-// }

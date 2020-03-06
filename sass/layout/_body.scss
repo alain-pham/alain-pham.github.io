@@ -76,14 +76,15 @@ body {
     background-color: black;
     display: none;
     position: relative;
+    transition: all 0.25s;
     // scroll-snap-align: start;
 }
 
 .page-content {
     @include flex(column, $justify: center);
-    @include size(100%);
 
     display: none;
+    height: 100%;
     margin: 0 15px;
     position: relative;
     z-index: 2;

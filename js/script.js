@@ -119,8 +119,13 @@ function scrollNav() {
         showSection(2);
     }
 
+    // Portfolio 2
     if (window.pageYOffset >= viewportHeight * 2.75) {
-        pages[3].style.backgroundColor = "initial";
+        for (let i = 0; i < scrollDots.length; i++) {
+            scrollDots[i].classList.remove("current");
+        }
+
+        showSection(3);
     }
 
     // Contact
@@ -129,11 +134,7 @@ function scrollNav() {
             scrollDots[i].classList.remove("current");
         }
 
-        showSection(3);
-        pageContent[4].style.display = displayType[2];
-
-        
-        pages[4].style.backgroundColor = "initial";
+        showSection(4);
     }
 }
 
