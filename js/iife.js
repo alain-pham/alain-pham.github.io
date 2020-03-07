@@ -9,6 +9,7 @@
         mediaBig = window.matchMedia("(min-width: 768px)"),
         logoLoader = d.getElementById("logo-loader"),
         circleLoader = d.querySelector(".circle"),
+        hexagon = d.getElementsByClassName("hexagon"),
         burgerBtn = d.getElementById("burger"),
         closeBtn = d.getElementById("close-btn"),
         sectionName = d.getElementsByClassName("section-name"),

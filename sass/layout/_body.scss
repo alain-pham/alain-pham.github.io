@@ -33,12 +33,11 @@ body {
 
 // Background
 #hexagons {
-    animation: fadeIn100 1s;
+    animation: flash 1s ease-in-out forwards;
     display: none;
 }
 
 .hexagon {
-    opacity: 0.1;
     position: fixed;
 
     &:first-child {
@@ -73,7 +72,7 @@ body {
 .page {
     @include size(100vh, 100vw);
 
-    background-color: black;
+    // background-color: black;
     display: none;
     position: relative;
     transition: all 0.25s;

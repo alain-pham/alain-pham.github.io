@@ -160,5 +160,4 @@ function showSection(iNum) {
 
     // Flex display
     pageContent[iNum].style.display = displayType[2];
-    pages[iNum].style.backgroundColor = "initial";
 }
