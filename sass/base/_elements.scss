@@ -85,3 +85,17 @@ ul {
         }
     }
 }
+
+.diagonal-about {
+    animation: fullWidth 1s;
+    background-color: red;
+    display: none;
+    height: 1rem;
+    position: absolute;
+    transform: skewY(11deg);
+    width: 100vw;
+
+    @include for-tablet {
+        display: block;
+    }
+}

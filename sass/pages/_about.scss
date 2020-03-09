@@ -1,5 +1,5 @@
 #about {
-    height: auto;
+    // height: auto;
 
     .line-anim {
         width: max-content;
@@ -10,36 +10,10 @@
     }
 }
 
-#diagonal-about {
-    animation: fullWidth 1s;
-    background-color: red;
-    display: none;
-    height: 1rem;
-    position: absolute;
-    transform: skewY(11deg);
-    width: 100vw;
-
-    @include for-tablet {
-        display: block;
-    }
-}
-
 #about-content {
     @include flex(column, center, space-around);
 
     display: none;
-
-    div {
-        &#text-me {
-
-            &::after {
-                @include size(100%, 6px);
-
-                background-color: $red;
-                content: "";
-            }
-        }
-    }
 
     @include for-desktop {
         flex-direction: row;
@@ -56,9 +30,13 @@
     }
 }
 
-// #center-content {
-//     @include flex(row, flex-start, space-between);
-// }
+#center-content {
+    @include flex(column, flex-start, space-between);
+
+    @include for-desktop {
+        @include flex(row, flex-start, space-between);
+    }
+}
 
 #text-me {
     .line-anim {
@@ -124,11 +102,19 @@
 
     &:hover {
         background: linear-gradient(145deg, #1b1b1b, #171717);
+
+        a {
+            color: $grey;
+        }
     }
 
     &:active {
         box-shadow: inset 5px 5px 10px #151515,
         inset -5px -5px 10px #1d1d1d;
+
+        a {
+            color: #191919;
+        }
     }
 
     a {
@@ -136,15 +122,19 @@
 
         // color: black;
         display: inline-block;
-        font-weight: bold;
         line-height: 2.5rem;
         position: absolute;
         text-align: center;
         transition: all 0.25s;
     }
 
+    @include for-tablet {
+        width: 33%;
+    }
+
     @include for-desktop {
-        margin: 1rem 0;
+        margin: 1rem auto;
+        width: 75%;
     }
 }
 
@@ -200,7 +190,7 @@
     margin: 0 0.5rem 0.5rem 0;
     padding: 0.5rem;
 
-    @include for-desktop {
+    @include for-tablet {
         font-size: 1rem;
     }
 }

@@ -9,15 +9,13 @@
         mediaBig = window.matchMedia("(min-width: 768px)"),
         logoLoader = d.getElementById("logo-loader"),
         circleLoader = d.querySelector(".circle"),
-        hexagon = d.getElementsByClassName("hexagon"),
         burgerBtn = d.getElementById("burger"),
         closeBtn = d.getElementById("close-btn"),
         sectionName = d.getElementsByClassName("section-name"),
+        sectionNum = d.querySelectorAll("#sections li"),
         contentMenu = d.getElementById("menu-left"),
         scrollIndicator = d.getElementById("scroll-indicator"),
-        sectionTitle = d.getElementsByClassName("title-reveal"),
-        portfolioTitle = d.getElementById("portfolio-title"),
-        worksBtn = d.getElementsByClassName("btn-works");
+        worksTitle = d.getElementById("portfolio-title");
 
     // Logo animation at start
     setTimeout(() => {
@@ -57,28 +55,9 @@
 
     for (let i = 0; i < sectionName.length; i++) {
         sectionName[i].addEventListener("mouseover", () => {
-            switch (i) {
-                case 0:
-                    // contentMenu.style.backgroundColor = "yellow";
-                    break;
-
-                case 1:
-                    // contentMenu.style.backgroundColor = "green";
-                    break;
-
-                case 2:
-                    // contentMenu.style.backgroundColor = "blue";
-                    break;
-
-                case 3:
-                    // contentMenu.style.backgroundColor = "red";
-                    break;
-                default:
-                    // contentMenu.style.backgroundColor = "transparent";
-                    break;
-            }
+            currentNum.textContent = sectionNum[i].dataset.num;
         });
-
+        
         sectionName[i].addEventListener("click", hideMenu);
     }
 
@@ -96,15 +75,9 @@
     });
 
     // Displays section content after title animation
-    portfolioTitle.addEventListener("animationend", () => {
-        portfolioTitle.style.display = displayType[0];
+    worksTitle.addEventListener("animationend", () => {
+        worksTitle.style.display = displayType[0];
         d.getElementById("projects").style.display = displayType[2];
     });
-
-    //
-    // HIDE #PROJECTS AND SHOW #PROJECTS-2
-    // if (worksBtn) {
-
-    // }
 
 })();

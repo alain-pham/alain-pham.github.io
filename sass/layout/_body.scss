@@ -9,7 +9,7 @@ html {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
-    // scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
 
     @include size(100%, 100%);
 }
@@ -76,7 +76,7 @@ body {
     display: none;
     position: relative;
     transition: all 0.25s;
-    // scroll-snap-align: start;
+    scroll-snap-align: start;
 }
 
 .page-content {

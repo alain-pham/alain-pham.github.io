@@ -4,6 +4,7 @@ const d = document,
     mediaBig = window.matchMedia("(min-width: 768px)"),
     menu = d.getElementById("menu"),
     menuLeft = d.getElementById("menu-left"),
+    currentNum = d.getElementById("bg-num"),
     pages = d.getElementsByClassName("page"),
     pageContent = d.getElementsByClassName("page-content"),
     scrollIndic = d.getElementById("scroll-indicator"),
@@ -59,7 +60,7 @@ function completeLoad() {
  * Opening the menu
  */
 function showMenu() {
-    mainContent.style.filter = "blur(3px)";
+    mainContent.style.filter = "blur(10px)";
     menu.style.display = displayType[2];
     menu.style.animation = "showMenu 0.25s forwards";
 
@@ -78,6 +79,19 @@ function hideMenu() {
     setTimeout(() => {
         menu.style.display = displayType[0];
     }, 250);
+
+    while (currentNum.lastChild) {
+        currentNum.lastChild.remove();
+    }
+}
+
+/**
+ * Remove the current highlighted nav dot
+ */
+function removeDot() {
+    for (let i = 0; i < scrollDots.length; i++) {
+        scrollDots[i].classList.remove("current");
+    }
 }
 
 /**
@@ -86,54 +100,42 @@ function hideMenu() {
 function scrollNav() {
     // Home
     if (window.pageYOffset < viewportHeight) {
-        for (let i = 0; i < scrollDots.length; i++) {
-            scrollDots[i].classList.remove("current");
-        }
+        removeDot();
 
         scrollDots[0].classList.add("current");
-        pageName.textContent = sections[0];
+        pageName.innerText = sections[0];
     }
 
     // Hides the scroll indicator
     if (window.pageYOffset >= viewportHeight / 2) {
         scrollIndic.style.animation = "fadeOut 1s forwards";
-    } else {
+    } 
+    
+    else {
         scrollIndic.style.animation = "fadeIn25 1s forwards";
     }
 
     // About
     if (window.pageYOffset >= viewportHeight * 0.75) {
-        for (let i = 0; i < scrollDots.length; i++) {
-            scrollDots[i].classList.remove("current");
-        }
-
+        removeDot();
         showSection(1);
     }
 
     // Portfolio
     if (window.pageYOffset >= viewportHeight * 1.75) {
-        for (let i = 0; i < scrollDots.length; i++) {
-            scrollDots[i].classList.remove("current");
-        }
-
+        removeDot();
         showSection(2);
     }
 
     // Portfolio 2
     if (window.pageYOffset >= viewportHeight * 2.75) {
-        for (let i = 0; i < scrollDots.length; i++) {
-            scrollDots[i].classList.remove("current");
-        }
-
+        removeDot();
         showSection(3);
     }
 
     // Contact
     if (window.pageYOffset >= viewportHeight * 3.75) {
-        for (let i = 0; i < scrollDots.length; i++) {
-            scrollDots[i].classList.remove("current");
-        }
-
+        removeDot();
         showSection(4);
     }
 }
@@ -156,7 +158,7 @@ function showTime() {
  */
 function showSection(iNum) {
     scrollDots[iNum].classList.add("current");
-    pageName.textContent = sections[iNum];
+    pageName.innerText = sections[iNum];
 
     // Flex display
     pageContent[iNum].style.display = displayType[2];

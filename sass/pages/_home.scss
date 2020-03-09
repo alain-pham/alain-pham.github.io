@@ -42,7 +42,9 @@
 }
 
 #occupation {
+    animation: slideUp 0.5s 1s forwards;
     font-weight: normal;
+    opacity: 0;
 }
 
 #description {

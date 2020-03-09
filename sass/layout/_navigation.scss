@@ -72,51 +72,6 @@ polygon.st1 {
     opacity: 0;
 }
 
-#sections {
-    li {
-        font-size: 2rem;
-        margin: 2rem;
-        text-align: center;
-        transition: all 0.25s;
-
-        @include for-desktop {
-            font-size: 3.5rem;
-            margin: 1rem;
-            text-align: initial;
-            transition: all 0.25s;
-
-            // Hovered section indicator
-            &::before {
-                @include pos(absolute, 50%);
-                @include size(1rem, 1rem);
-
-                background-color: $red;
-                border-radius: 0.1rem;
-                content: "";
-                display: inline-block;
-                opacity: 0;
-                transition: all 0.25s;
-            }
-
-            &:hover {
-                transform: translateX(3rem);
-
-                &:hover::before {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
-.section-name {
-    user-select: none;
-
-    @include for-desktop {
-        padding-left: 2rem;
-    }
-}
-
 #burger {
     @include pos(fixed, 2.5rem, 2rem);
     @include size(2.25rem);
@@ -129,8 +84,8 @@ polygon.st1 {
     padding: 0 0.5rem;
     z-index: 998;
 
-    &:hover {
-
+    &:hover,
+    :active {
         #bar1,
         #bar2,
         #bar3 {
