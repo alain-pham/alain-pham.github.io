@@ -1787,12 +1787,12 @@ time {
 }
 
 #download-cv {
-  -webkit-animation: fadeIn100 0.5s 1.5s forwards;
-          animation: fadeIn100 0.5s 1.5s forwards;
   background: #191919;
   border-radius: 0.1rem;
   -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
           box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
+  -webkit-animation: fadeIn100 0.5s 1.5s forwards;
+          animation: fadeIn100 0.5s 1.5s forwards;
   height: 2.5rem;
   margin: 1rem 0;
   opacity: 0;
@@ -1870,10 +1870,11 @@ time {
 }
 
 .skill {
-  background: red;
+  background: #191919;
   border-radius: 0.1rem;
   -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
           box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
+  background: red;
   display: inline-block;
   font-size: 0.8rem;
   margin: 0 0.5rem 0.5rem 0;
@@ -2330,13 +2331,6 @@ time {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  bottom: auto;
-  left: auto;
-  position: absolute;
-  right: -100vw;
-  top: auto;
-  height: 50%;
-  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-x: auto;
@@ -2371,10 +2365,7 @@ time {
 
 .preview#preview-2 {
   background-image: url("/img/creation/creation2.jpg");
-}
-
-.preview#preview-3 {
-  background-image: url("/img/creation/creation3.jpg");
+  background-position: bottom;
 }
 
 .preview#preview-4 {
@@ -2384,11 +2375,6 @@ time {
 .preview#preview-5 {
   background-image: url("/img/creation/creation5.jpg");
   background-position: center;
-}
-
-.preview#preview-6 {
-  background-image: url("/img/creation/creation6.jpg");
-  background-position: 33%;
 }
 
 .preview#preview-7 {

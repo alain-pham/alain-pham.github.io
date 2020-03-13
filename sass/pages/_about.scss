@@ -91,10 +91,9 @@
 }
 
 #download-cv {
+    @include neumorph();
+
     animation: fadeIn100 0.5s 1.5s forwards;
-    background: #191919;
-    border-radius: 0.1rem;
-    box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
     height: 2.5rem;
     margin: 1rem 0;
     opacity: 0;
@@ -162,29 +161,14 @@
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .skill-category {
-    // @include size(15px, 200px);
-
-    // margin-bottom: 25px;
-
-    // div {
-    //     background-color: white;
-    //     height: 100%;
-    //     width: 50%;
-
-    //     div {
-    //         background-color: $red;
-    //         height: 100%;
-    //     }
-    // }
-
     display: inline-flex;
     flex-wrap: wrap;
 }
 
 .skill {
+    @include neumorph();
+
     background: $red;
-    border-radius: 0.1rem;
-    box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
     display: inline-block;
     font-size: 0.8rem;
     margin: 0 0.5rem 0.5rem 0;

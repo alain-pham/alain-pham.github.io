@@ -18,6 +18,13 @@
     justify-content: $justify;
 }
 
+@mixin neumorph() {
+    background: #191919;
+    border-radius: 0.1rem;
+    box-shadow: 5px 5px 10px #151515,
+    -5px -5px 10px #1d1d1d;
+}
+
 // MEDIA QUERIES
 @mixin for-big-phone {
     @media (min-width: 576px) {
