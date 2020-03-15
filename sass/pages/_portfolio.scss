@@ -144,6 +144,7 @@
 .preview {
     @include flex(row, center, center);
     @include size(150px, 150px);
+    @include flex(250px, 450px);
 
     background-size: cover;
 
@@ -154,36 +155,31 @@
 
     &#preview-2 {
         background-image: url("/img/creation/creation2.jpg");
-        background-position: bottom;
+        background-position: center;
     }
 
-    // &#preview-3 {
-    //     background-image: url("/img/creation/creation3.jpg");
-    // }
+    &#preview-3 {
+        background-image: url("/img/creation/creation3.jpg");
+    }
 
     &#preview-4 {
         background-image: url("/img/creation/creation4.jpg");
+        background-position: center;
     }
 
     &#preview-5 {
         background-image: url("/img/creation/creation5.jpg");
-        background-position: center;
+        // background-position: center;
     }
 
-    // &#preview-6 {
-    //     background-image: url("/img/creation/creation6.jpg");
-    //     background-position: 33%;
-    // }
-
-    &#preview-7 {
-        background-image: url("/img/creation/creation7.jpg");
-        background-position: 25%;
+    &#preview-6 {
+        background-image: url("/img/creation/creation6.jpg");
+        background-position: center;
+        // flex: 1;
     }
 
     &#preview-8 {
-        background-image: url("/img/creation/creation8.jpg");
-        background-position: right;
-        flex: 1;
+
     }
     
     @include for-tablet {
@@ -191,6 +187,7 @@
     }
 
     @include for-big-desktop {
-        @include size(285px, 285px)
+        // @include size(285px, 285px);
+        @include size(380px, 380px);
     }
 }

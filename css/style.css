@@ -2355,6 +2355,13 @@ time {
           justify-content: center;
   height: 150px;
   width: 150px;
+  -webkit-box-align: 450px;
+      -ms-flex-align: 450px;
+          align-items: 450px;
+  display: flex;
+  -ms-flex-direction: 250px;
+      flex-direction: 250px;
+  justify-content: center;
   background-size: cover;
 }
 
@@ -2365,29 +2372,25 @@ time {
 
 .preview#preview-2 {
   background-image: url("/img/creation/creation2.jpg");
-  background-position: bottom;
+  background-position: center;
+}
+
+.preview#preview-3 {
+  background-image: url("/img/creation/creation3.jpg");
 }
 
 .preview#preview-4 {
   background-image: url("/img/creation/creation4.jpg");
+  background-position: center;
 }
 
 .preview#preview-5 {
   background-image: url("/img/creation/creation5.jpg");
+}
+
+.preview#preview-6 {
+  background-image: url("/img/creation/creation6.jpg");
   background-position: center;
-}
-
-.preview#preview-7 {
-  background-image: url("/img/creation/creation7.jpg");
-  background-position: 25%;
-}
-
-.preview#preview-8 {
-  background-image: url("/img/creation/creation8.jpg");
-  background-position: right;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 @media (min-width: 768px) {
@@ -2399,8 +2402,8 @@ time {
 
 @media (min-width: 1200px) {
   .preview {
-    height: 285px;
-    width: 285px;
+    height: 380px;
+    width: 380px;
   }
 }
 /*# sourceMappingURL=style.css.map */
