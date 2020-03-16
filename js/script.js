@@ -18,7 +18,7 @@ const displayType = [
 ];
 
 const sections = [
-    "home", "about", "portfolio", "contact"
+    "home", "about", "games", "creation", "contact"
 ];
 
 /**
