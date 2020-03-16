@@ -18,6 +18,12 @@
     justify-content: $justify;
 }
 
+@mixin grid($rows, $columns) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
 @mixin neumorph() {
     background: #191919;
     border-radius: 0.1rem;

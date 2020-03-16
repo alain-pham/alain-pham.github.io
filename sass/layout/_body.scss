@@ -6,12 +6,15 @@
 }
 
 html {
+    @include size(100%, 100%);
+
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 
-    @include size(100%, 100%);
+    @include for-desktop {
+        scroll-snap-type: y mandatory;
+    }
 }
 
 body {

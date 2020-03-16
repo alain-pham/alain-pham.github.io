@@ -111,6 +111,13 @@
         text-align: center;
         transition: all 0.25s;
 
+        &:active {
+            a {
+                color: $red;
+            }
+        }
+
+        // #sections li
         @include for-desktop {
             font-size: 3.5rem;
             margin: 1rem;
@@ -141,6 +148,7 @@
         }
     }
 
+    // #sections
     @include for-desktop {
         // On hover, all section names are darkened
         &:hover {

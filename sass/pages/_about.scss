@@ -1,6 +1,4 @@
 #about {
-    // height: auto;
-
     .line-anim {
         width: max-content;
     }
@@ -39,31 +37,23 @@
 }
 
 #text-me {
-    .line-anim {
-        &::after {
-            animation-delay: 0.25s;
-        }
+    span {
+        animation-delay: 0.25s;
     }
 }
 
 #summary-me {
-    animation: slideLeft 0.5s 0.75s forwards;
+    animation: slideLeft 0.5s 0.5s forwards;
     color: $grey;
     opacity: 0;
 
-    // span {
-    //     color: red;
-
-    //     &:first-child {
-    //         &::after {
-    //             content: " / ";
-    //         }
-    //     }
-    // }
+    @include for-desktop {
+        animation: slideUp 0.5s 0.5s forwards;
+    }
 }
 
 #about-me {
-    animation: slideLeft 0.5s 1.25s forwards;
+    animation: slideLeft 0.5s 0.75s forwards;
     line-height: 1.5rem;
     margin: 1rem 0;
     opacity: 0;
@@ -78,10 +68,14 @@
     &::after {
         content: "";
     }
+
+    @include for-desktop {
+        animation: slideUp 0.5s 0.75s forwards;
+    }
 }
 
 .line-cv {
-    animation: fadeIn100 0.5s 1.5s forwards;
+    animation: fadeIn100 0.5s 1s forwards;
     display: none;
     opacity: 0;
 
@@ -93,7 +87,7 @@
 #download-cv {
     @include neumorph();
 
-    animation: fadeIn100 0.5s 1.5s forwards;
+    animation: slideLeft 0.5s 1s forwards;
     height: 2.5rem;
     margin: 1rem 0;
     opacity: 0;
@@ -119,7 +113,6 @@
     a {
         @include size(100%, 100%);
 
-        // color: black;
         display: inline-block;
         line-height: 2.5rem;
         position: absolute;
@@ -132,6 +125,7 @@
     }
 
     @include for-desktop {
+        animation: slideUp 0.5s 1s forwards;
         margin: 1rem auto;
         width: 75%;
     }
@@ -140,17 +134,17 @@
 #skills {
     .line-anim {
         &::after {
-            animation-delay: 0.5s;
+            animation-delay: 1s;
         }
 
         span {
-            animation-delay: 1s;
+            animation-delay: 1.5s;
         }
     }
 }
 
 #skills-list {
-    animation: slideLeft 0.5s 1.5s forwards;
+    animation: slideUp 0.5s 1.5s forwards;
     opacity: 0;
 }
 

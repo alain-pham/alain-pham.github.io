@@ -129,22 +129,24 @@
     }
 }
 
-#projects-2 {
-    @include flex(row, $align: flex-start);
-    // @include size(50%, 100%);
+#portfolio2-content {
+    width: 100%;
+}
 
-    // display: none;
-    flex-wrap: wrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+#projects-2 {
+    @include grid(repeat(3, 1fr), repeat(2, 1fr));
+    @include size(60%, 100%);
     // width: 100%;
+
+    display: grid;
+    
+    @include for-desktop {
+        @include grid($rows: repeat(2, 1fr), $columns: repeat(3, 1fr));
+    }
 }
 
 .preview {
     @include flex(row, center, center);
-    @include size(150px, 150px);
-    @include flex(250px, 450px);
 
     background-size: cover;
 
@@ -156,6 +158,10 @@
     &#preview-2 {
         background-image: url("/img/creation/creation2.jpg");
         background-position: center;
+
+        &:hover {
+            background-image: url("/img/creation/creation2.gif");
+        }
     }
 
     &#preview-3 {
@@ -175,19 +181,9 @@
     &#preview-6 {
         background-image: url("/img/creation/creation6.jpg");
         background-position: center;
-        // flex: 1;
-    }
-
-    &#preview-8 {
-
-    }
-    
-    @include for-tablet {
-        @include size(240px, 240px);
-    }
-
-    @include for-big-desktop {
-        // @include size(285px, 285px);
-        @include size(380px, 380px);
+        
+        &:hover {
+            background-image: url("/img/creation/creation6.gif");
+        }
     }
 }
