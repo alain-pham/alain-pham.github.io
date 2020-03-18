@@ -11,10 +11,11 @@ const d = document,
     scrollDots = d.querySelectorAll("#nav li a"),
     pageName = d.getElementById("page-name"),
     mainContent = d.querySelector("main"),
+    diagLine = d.getElementsByClassName("diagonal-line"),
     viewportHeight = window.innerHeight;
 
 const displayType = [
-    "none", "block", "flex"
+    "none", "block", "flex", "grid"
 ];
 
 const sections = [
@@ -46,6 +47,7 @@ function completeLoad() {
     pageContent[0].style.display = displayType[2];
 
     // UI elements are shown
+    showDiagonal(0);
     d.getElementById("burger").style.display = displayType[2];
     d.getElementById("actual-page").style.display = displayType[1];
     d.getElementById("top-fade").style.display = displayType[1];
@@ -119,6 +121,7 @@ function scrollNav() {
     if (window.pageYOffset >= viewportHeight * 0.75) {
         removeDot();
         showSection(1);
+        showDiagonal(1);
     }
 
     // Portfolio
@@ -131,6 +134,7 @@ function scrollNav() {
     if (window.pageYOffset >= viewportHeight * 2.75) {
         removeDot();
         showSection(3);
+        showDiagonal(2);
     }
 
     // Contact
@@ -162,4 +166,13 @@ function showSection(iNum) {
 
     // Flex display
     pageContent[iNum].style.display = displayType[2];
+}
+
+/**
+ * 
+ */
+function showDiagonal(iNum) {
+    if (mediaBig.matches) {
+        diagLine[iNum].style.display = "block";
+    }
 }

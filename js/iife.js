@@ -15,7 +15,7 @@
         sectionNum = d.querySelectorAll("#sections li"),
         contentMenu = d.getElementById("menu-left"),
         scrollIndicator = d.getElementById("scroll-indicator"),
-        worksTitle = d.getElementById("portfolio-title");
+        worksTitle = d.getElementsByClassName("title-reveal");
 
     // Logo animation at start
     setTimeout(() => {
@@ -75,9 +75,14 @@
     });
 
     // Displays section content after title animation
-    worksTitle.addEventListener("animationend", () => {
-        worksTitle.style.display = displayType[0];
+    worksTitle[0].addEventListener("animationend", () => {
+        worksTitle[0].style.display = displayType[0];
         d.getElementById("projects").style.display = displayType[2];
+    });
+
+    worksTitle[1].addEventListener("animationend", () => {
+        worksTitle[1].style.display = displayType[0];
+        d.getElementById("projects-2").style.display = displayType[3];
     });
 
 })();

@@ -6,7 +6,7 @@
     }
 }
 
-#portfolio-title {
+.title-reveal {
     animation: revealSection 1s 0.25s cubic-bezier(0, 1, 1, 1) forwards;
     font-size: 3.5rem;
     font-weight: bold;
@@ -16,17 +16,12 @@
     }
 }
 
-#games-title {
-    font-size: 3rem;
-    letter-spacing: 0.5rem;
-}
-
 // https://www.youtube.com/watch?v=a7ICxQblYrM
 #projects {
     @include pos($position: relative);
     @include size(60%, 100%);
 
-    animation: slideUp 1s forwards;
+    animation: slideUp 0.5s forwards;
     display: none;
     opacity: 0;
     overflow-x: auto;
@@ -129,26 +124,34 @@
     }
 }
 
+// PORTFOLIO #2
 #portfolio2-content {
+    align-items: center;
     width: 100%;
 }
 
 #projects-2 {
-    @include grid(repeat(3, 1fr), repeat(2, 1fr));
+    // @include grid(repeat(3, 1fr), repeat(2, 1fr));
     @include size(60%, 100%);
-    // width: 100%;
 
-    display: grid;
+    animation: slideUp 0.5s forwards;
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     
     @include for-desktop {
-        @include grid($rows: repeat(2, 1fr), $columns: repeat(3, 1fr));
+        // @include grid($rows: repeat(2, 1fr), $columns: repeat(3, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 
 .preview {
     @include flex(row, center, center);
+    @include size(100%, 100%);
 
     background-size: cover;
+    position: relative;
 
     &#preview-1 {
         background-image: url("/img/creation/creation1.jpg");
@@ -156,11 +159,17 @@
     }
 
     &#preview-2 {
+        @include flex();
+
         background-image: url("/img/creation/creation2.jpg");
         background-position: center;
 
         &:hover {
             background-image: url("/img/creation/creation2.gif");
+
+            .gif {
+                opacity: 0;
+            }
         }
     }
 
@@ -184,6 +193,17 @@
         
         &:hover {
             background-image: url("/img/creation/creation6.gif");
+
+            .gif {
+                opacity: 0;
+            }
         }
     }
+}
+
+.gif {
+    font-size: 3rem;
+    opacity: 0.75;
+    position: absolute;
+    transition: all 0.25s;
 }
