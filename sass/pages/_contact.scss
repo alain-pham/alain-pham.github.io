@@ -31,7 +31,9 @@
 .diagonal-content-contact {
     @include flex(column, center, space-between);
 
+    animation: fadeIn100 0.5s 0.75s forwards;
     height: 10rem;
+    opacity: 0;
     text-align: center;
 
     h1 {

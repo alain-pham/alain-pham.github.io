@@ -127,7 +127,7 @@
     @include for-desktop {
         animation: slideUp 0.5s 1s forwards;
         margin: 1rem auto;
-        width: 75%;
+        width: 100%;
     }
 }
 
@@ -143,20 +143,38 @@
     }
 }
 
-#skills-list {
-    animation: slideUp 0.5s 1.5s forwards;
-    opacity: 0;
-}
+// #skills-list {
+//     animation: slideUp 0.5s 1.5s forwards;
+//     opacity: 0;
+// }
 
 .skills-title {
-    display: inline-block;
     margin: 0.67rem 0;
+
+    &:nth-of-type(1) {
+        animation: slideUp 0.5s 1.5s forwards;
+        opacity: 0;
+    }
+
+    &:nth-of-type(2) {
+        animation: slideUp 0.5s 2s forwards;
+        opacity: 0;
+    }
 }
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .skill-category {
     display: inline-flex;
     flex-wrap: wrap;
+
+    &:nth-of-type(1) {
+        animation: slideUp 0.5s 1.75s forwards;
+        opacity: 0;
+    }
+
+    &:nth-of-type(2) {
+        animation: slideUp 0.5s 2.25s forwards;
+        opacity: 0;
+    }
 }
 
 .skill {

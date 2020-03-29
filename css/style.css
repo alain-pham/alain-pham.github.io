@@ -1887,7 +1887,7 @@ time {
     -webkit-animation: slideUp 0.5s 1s forwards;
             animation: slideUp 0.5s 1s forwards;
     margin: 1rem auto;
-    width: 75%;
+    width: 100%;
   }
 }
 
@@ -1901,15 +1901,20 @@ time {
           animation-delay: 1.5s;
 }
 
-#skills-list {
+.skills-title {
+  margin: 0.67rem 0;
+}
+
+.skills-title:nth-of-type(1) {
   -webkit-animation: slideUp 0.5s 1.5s forwards;
           animation: slideUp 0.5s 1.5s forwards;
   opacity: 0;
 }
 
-.skills-title {
-  display: inline-block;
-  margin: 0.67rem 0;
+.skills-title:nth-of-type(2) {
+  -webkit-animation: slideUp 0.5s 2s forwards;
+          animation: slideUp 0.5s 2s forwards;
+  opacity: 0;
 }
 
 .skill-category {
@@ -1918,6 +1923,18 @@ time {
   display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.skill-category:nth-of-type(1) {
+  -webkit-animation: slideUp 0.5s 1.75s forwards;
+          animation: slideUp 0.5s 1.75s forwards;
+  opacity: 0;
+}
+
+.skill-category:nth-of-type(2) {
+  -webkit-animation: slideUp 0.5s 2.25s forwards;
+          animation: slideUp 0.5s 2.25s forwards;
+  opacity: 0;
 }
 
 .skill {
@@ -2005,7 +2022,10 @@ time {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-animation: fadeIn100 0.5s 0.75s forwards;
+          animation: fadeIn100 0.5s 0.75s forwards;
   height: 10rem;
+  opacity: 0;
   text-align: center;
 }
 
@@ -2043,8 +2063,8 @@ time {
 }
 
 #home .social-media {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 #info-me {
@@ -2086,9 +2106,12 @@ time {
 }
 
 #name {
+  -webkit-animation: appear-text 0.1s 1s forwards;
+          animation: appear-text 0.1s 1s forwards;
   font-family: "Atami Stencil";
   font-size: 2.5rem;
   font-weight: bold;
+  opacity: 0;
 }
 
 @media (min-width: 992px) {
@@ -2118,8 +2141,8 @@ time {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: fadeIn100 0.75s 2s forwards;
-          animation: fadeIn100 0.75s 2s forwards;
+  -webkit-animation: fadeIn100 0.75s 1.5s forwards;
+          animation: fadeIn100 0.75s 1.5s forwards;
   display: flex;
   margin-top: 5rem;
   opacity: 0;
@@ -2466,6 +2489,29 @@ time {
 
 .preview#preview-6:hover .gif {
   opacity: 0;
+}
+
+.preview::after {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0.5rem solid red;
+  border-radius: 0.75rem;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.preview:hover::after {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  opacity: 0.2;
 }
 
 .gif {

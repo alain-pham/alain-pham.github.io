@@ -10,7 +10,7 @@
     }
 
     .social-media {
-        animation-delay: 2.5s;
+        animation-delay: 2s;
     }
 }
 
@@ -32,9 +32,20 @@
 }
 
 #name {
+    animation: appear-text 0.1s 1s forwards;
     font-family: "Atami Stencil";
     font-size: 2.5rem;
     font-weight: bold;
+    opacity: 0;
+
+        // &::before {
+        //     background-color: red;
+        //     content: "";
+        //     display: inline-block;
+        //     height: 0.25rem;
+        //     position: absolute;
+        //     width: 100%;
+        // }
 
     @include for-desktop {
         font-size: 5rem;
@@ -50,7 +61,7 @@
 #description {
     @include flex(column, center);
 
-    animation: fadeIn100 0.75s 2s forwards;
+    animation: fadeIn100 0.75s 1.5s forwards;
     display: flex;
     margin-top: 5rem;
     opacity: 0;

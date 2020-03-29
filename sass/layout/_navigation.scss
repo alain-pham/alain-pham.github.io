@@ -136,7 +136,7 @@ polygon.st1 {
         opacity: 0.25;
         transition: all 0.25s;
 
-        @for $i from 1 to 6 {
+        @for $i from 1 through 5 {
             &:nth-child(#{$i}) {
                 animation-delay: $i * 0.25s;
             }
