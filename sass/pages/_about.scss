@@ -3,6 +3,10 @@
         width: max-content;
     }
 
+    h1 {
+        text-shadow: 0 1px #191919;
+    }
+
     @include for-desktop {
         height: 100vh;
     }
@@ -61,8 +65,8 @@
 
     ul {
         font-size: 0.9rem;
-        margin: revert;
-        padding: revert;
+        margin: 1rem 0;
+        padding-left: 40px;
     }
 
     &::after {

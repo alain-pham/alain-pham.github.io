@@ -1022,8 +1022,12 @@ polygon.st1 {
 
 #bg-num {
   color: red;
-  font-size: 10rem;
+  font-size: 20rem;
   position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #sections li {
@@ -1706,6 +1710,10 @@ time {
   width: max-content;
 }
 
+#about h1 {
+  text-shadow: 0 1px #191919;
+}
+
 @media (min-width: 992px) {
   #about {
     height: 100vh;
@@ -1807,8 +1815,8 @@ time {
 
 #about-me ul {
   font-size: 0.9rem;
-  margin: revert;
-  padding: revert;
+  margin: 1rem 0;
+  padding-left: 40px;
 }
 
 #about-me::after {

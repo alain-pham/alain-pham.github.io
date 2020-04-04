@@ -100,8 +100,9 @@
 
 #bg-num {
     color: $red;
-    font-size: 10rem;
+    font-size: 20rem;
     position: absolute;
+    user-select: none;
 }
 
 #sections {
