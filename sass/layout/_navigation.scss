@@ -1,3 +1,4 @@
+// Éléments de l'interface fixed
 #upper-left {
     @include pos(fixed, 2rem, $left: 2rem);
     @include size(3.5rem, 3rem);
@@ -158,5 +159,3 @@ polygon.st1 {
 .current {
     background-color: $red;
 }
-
-// https://code.likeagirl.io/js-set-a-background-using-code-1cc26cf96ce4

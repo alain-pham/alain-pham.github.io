@@ -14,6 +14,14 @@ var linguJSON = {
 
     "translated_segments": [
         {
+            "source": "home",
+            "target": "accueil"
+        },
+        {
+            "source": "about",
+            "target": "à propos"
+        },
+        {
             "source": "student | multimedia integration",
             "target": "étudiant | intégration multimédia"
         },
@@ -58,7 +66,11 @@ var linguJSON = {
             "target": "OBTENEZ MON CV"
         },
         {
-            "source": "more works",
+            "source": "games",
+            "target": "jeux"
+        },
+        {
+            "source": "even more",
             "target": "encore plus"
         },
         {

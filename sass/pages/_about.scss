@@ -1,3 +1,4 @@
+// Section "à propos"
 #about {
     .line-anim {
         width: max-content;
@@ -42,7 +43,7 @@
 
 #text-me {
     span {
-        animation-delay: 0.25s;
+        animation-delay: 0.5s;
     }
 }
 
@@ -147,11 +148,6 @@
     }
 }
 
-// #skills-list {
-//     animation: slideUp 0.5s 1.5s forwards;
-//     opacity: 0;
-// }
-
 .skills-title {
     margin: 0.67rem 0;
 
@@ -194,7 +190,6 @@
         font-size: 1rem;
     }
 }
-
 
 #alain {
     color: $red;

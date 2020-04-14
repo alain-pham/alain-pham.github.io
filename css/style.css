@@ -1786,8 +1786,8 @@ time {
 }
 
 #text-me span {
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 #summary-me {
@@ -2039,6 +2039,10 @@ time {
 
 .diagonal-content-contact h1 {
   margin: 0;
+}
+
+.diagonal-content-contact p {
+  font-size: 0.8rem;
 }
 
 @media (min-width: 768px) {
@@ -2475,6 +2479,15 @@ time {
 
 .preview#preview-3 {
   background-image: url("/img/creation/creation3.jpg");
+  background-position: center;
+}
+
+.preview#preview-3:hover {
+  background-image: url("/img/creation/creation3.gif");
+}
+
+.preview#preview-3:hover .gif {
+  opacity: 0;
 }
 
 .preview#preview-4 {

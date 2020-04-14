@@ -1,3 +1,4 @@
+// Section "portfolio"
 #portfolio-content {
     display: none;
 
@@ -175,6 +176,15 @@
 
     &#preview-3 {
         background-image: url("/img/creation/creation3.jpg");
+        background-position: center;
+
+        &:hover {
+            background-image: url("/img/creation/creation3.gif");
+
+            .gif {
+                opacity: 0;
+            }
+        }
     }
 
     &#preview-4 {
