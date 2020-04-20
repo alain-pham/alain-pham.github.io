@@ -1785,6 +1785,12 @@ time {
   }
 }
 
+#text-me h1 {
+  -webkit-animation: fadeIn100 0.1s 0.5s forwards;
+          animation: fadeIn100 0.1s 0.5s forwards;
+  opacity: 0;
+}
+
 #text-me span {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
@@ -1923,6 +1929,11 @@ time {
   -webkit-animation: slideUp 0.5s 2s forwards;
           animation: slideUp 0.5s 2s forwards;
   opacity: 0;
+}
+
+.skills-title p {
+  display: inline-block;
+  font-weight: bold;
 }
 
 .skill-category {

@@ -42,6 +42,11 @@
 }
 
 #text-me {
+    h1 {
+        animation: fadeIn100 0.1s 0.5s forwards;
+        opacity: 0;
+    }
+
     span {
         animation-delay: 0.5s;
     }
@@ -159,6 +164,11 @@
     &:nth-of-type(2) {
         animation: slideUp 0.5s 2s forwards;
         opacity: 0;
+    }
+
+    p {
+        display: inline-block;
+        font-weight: bold;
     }
 }
 

@@ -19,7 +19,7 @@ const displayType = [
 ];
 
 const sections = [
-    "home", "about", "games", "creation", "contact"
+    "accueil", "à_propos", "jeux", "design", "contact"
 ];
 
 /**
