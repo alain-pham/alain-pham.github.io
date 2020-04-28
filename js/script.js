@@ -169,7 +169,7 @@ function showSection(iNum) {
 }
 
 /**
- * 
+ * Displays the red lines between sections
  */
 function showDiagonal(iNum) {
     if (mediaBig.matches) {

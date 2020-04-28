@@ -54,6 +54,7 @@
     contentMenu.addEventListener("click", hideMenu);
 
     for (let i = 0; i < sectionName.length; i++) {
+        // Displays the section number
         sectionName[i].addEventListener("mouseover", () => {
             currentNum.textContent = sectionNum[i].dataset.num;
         });

@@ -1023,6 +1023,7 @@ polygon.st1 {
 #bg-num {
   color: red;
   font-size: 20rem;
+  opacity: 0.75;
   position: absolute;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2531,7 +2532,6 @@ time {
   top: 0;
   border: 0.5rem solid red;
   border-radius: 0.75rem;
-  content: "";
   opacity: 0;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
