@@ -1022,9 +1022,10 @@ polygon.st1 {
 
 #bg-num {
   color: red;
-  font-size: 20rem;
+  font-size: 3rem;
   opacity: 0.75;
   position: absolute;
+  text-shadow: 0 3px #191919;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -2461,6 +2462,13 @@ time {
 .preview#preview-1 {
   background-image: url("/img/creation/creation1.jpg");
   background-position: 85%;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.preview#preview-1:hover {
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
 }
 
 .preview#preview-2 {
@@ -2507,8 +2515,18 @@ time {
   background-position: center;
 }
 
+.preview#preview-4:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 .preview#preview-5 {
   background-image: url("/img/creation/creation5.jpg");
+}
+
+.preview#preview-5:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .preview#preview-6 {

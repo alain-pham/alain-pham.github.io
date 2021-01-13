@@ -101,9 +101,10 @@
 
 #bg-num {
     color: $red;
-    font-size: 20rem;
+    font-size: 3rem;
     opacity: 0.75;
     position: absolute;
+    text-shadow: 0 3px #191919;
     user-select: none;
 }
 
