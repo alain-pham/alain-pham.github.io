@@ -94,7 +94,7 @@
     }
 }
 
-#download-cv {
+.download-cv {
     @include neumorph();
 
     animation: slideLeft 0.5s 1s forwards;

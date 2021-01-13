@@ -1851,7 +1851,7 @@ time {
   }
 }
 
-#download-cv {
+.download-cv {
   background: #191919;
   border-radius: 0.1rem;
   -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
@@ -1864,24 +1864,24 @@ time {
   position: relative;
 }
 
-#download-cv:hover {
+.download-cv:hover {
   background: linear-gradient(145deg, #1b1b1b, #171717);
 }
 
-#download-cv:hover a {
+.download-cv:hover a {
   color: gray;
 }
 
-#download-cv:active {
+.download-cv:active {
   -webkit-box-shadow: inset 5px 5px 10px #151515, inset -5px -5px 10px #1d1d1d;
           box-shadow: inset 5px 5px 10px #151515, inset -5px -5px 10px #1d1d1d;
 }
 
-#download-cv:active a {
+.download-cv:active a {
   color: #191919;
 }
 
-#download-cv a {
+.download-cv a {
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -1893,13 +1893,13 @@ time {
 }
 
 @media (min-width: 768px) {
-  #download-cv {
+  .download-cv {
     width: 33%;
   }
 }
 
 @media (min-width: 992px) {
-  #download-cv {
+  .download-cv {
     -webkit-animation: slideUp 0.5s 1s forwards;
             animation: slideUp 0.5s 1s forwards;
     margin: 1rem auto;
