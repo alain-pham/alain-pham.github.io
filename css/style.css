@@ -571,7 +571,6 @@ body {
   position: relative;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
-  scroll-snap-align: start;
 }
 
 .page-content {
@@ -1838,6 +1837,11 @@ time {
   }
 }
 
+/* Details about me */
+#description {
+  text-align: justify;
+}
+
 .line-cv {
   -webkit-animation: fadeIn100 0.5s 1s forwards;
           animation: fadeIn100 0.5s 1s forwards;
@@ -1854,8 +1858,8 @@ time {
 .download-cv {
   background: #191919;
   border-radius: 0.1rem;
-  -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
-          box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
+  -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
+          box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
   -webkit-animation: slideLeft 0.5s 1s forwards;
           animation: slideLeft 0.5s 1s forwards;
   height: 2.5rem;
@@ -1961,8 +1965,8 @@ time {
 .skill {
   background: #191919;
   border-radius: 0.1rem;
-  -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
-          box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
+  -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
+          box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
   background: red;
   display: inline-block;
   font-size: 0.8rem;
@@ -2152,7 +2156,7 @@ time {
   opacity: 0;
 }
 
-#description {
+#message {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2174,14 +2178,14 @@ time {
   width: 100%;
 }
 
-#description p {
+#message p {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 
 @media (min-width: 992px) {
-  #description {
+  #message {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -2336,6 +2340,12 @@ time {
   background-size: cover;
 }
 
+#projects .slide#slide-5 {
+  background: url("/img/games/game5.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 #projects .slide:hover .diagonal-box {
   width: 100%;
 }
@@ -2346,6 +2356,7 @@ time {
 
 @media (min-width: 992px) {
   #projects {
+    overflow-x: hidden;
     width: 100%;
   }
   #projects:hover .slide {
@@ -2355,12 +2366,9 @@ time {
         -ms-flex: 1 1 13.33%;
             flex: 1 1 13.33%;
   }
-  #projects:hover .game-name {
-    font-size: 600%;
-  }
   #projects .slide {
     height: 100%;
-    width: 25%;
+    width: 20%;
     list-style: none;
     overflow: hidden;
     position: relative;

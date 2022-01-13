@@ -59,7 +59,7 @@
     opacity: 0;
 }
 
-#description {
+#message {
     @include flex(column, center);
 
     animation: fadeIn100 0.75s 1.5s forwards;
