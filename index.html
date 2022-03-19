@@ -148,11 +148,14 @@
 					</div>
 					<div class="line"></div>
 					<!-- <p id="occupation">student | multimedia integration</p> -->
-					<p id="occupation">étudiant | UQAT - Jeux vidéo, intégration logicielle</p>
+					<p id="occupation">Intégrateur | Programmeur Gameplay</p>
 					<div id="message">
 						<p>🍜 Bienvenue dans mon portfolio web!</p>
 					</div>
 					<div class="social-media">
+						<span>
+							<a href="https://megaxalain.itch.io/" target="_blank"><i class="fab fa-itch-io fa-2x"></i></a>
+						</span>
 						<span>
 							<a href="https://github.com/alain-pham/" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
 						</span>
@@ -222,7 +225,7 @@
 							</ul>
 						</div>
 						<hr class="line-cv">
-						<div class="download-cv">
+						<div id="download-cv">
 							<!-- <a href="/img/pdf/cv.pdf" download>DOWNLOAD MY CV</a> -->
 							<a href="/img/pdf/CV_PhamAlain.pdf" download>> OBTENEZ MON CV <</a>
 						</div>
@@ -287,7 +290,7 @@
 
 				<!-- LIST OF GAMES -->
 				<ul id="projects">
-					<li id="slide-1" class="slide" title="Disponible sur itch.io!">
+					<li id="slide-1" class="slide" title="Disponible sur itch.io!" data-game-title="test" onclick="changeGame(this)">
 						<div class="diagonal-box">
 							<div class="diagonal-content">
 								<a href="https://megaxalain.itch.io/jump" target="_blank"><b class="game-name">://JUMP</b></a>
@@ -379,6 +382,25 @@
 		</footer>
 	</main>
 
+	<!-- Popup -->
+	<div id="popup" class="page game-popup">
+		<div class="popup-content">
+			<div class="popup-body">
+				<div id="game-img">
+					<img src="" alt="">
+				</div>
+				<div class="game-info">
+					<h1 id="game-title">GAME TITLE</h1>
+					<p id="game-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa sed neque ullam sint iusto dolorem praesentium voluptatibus aspernatur molestiae est temporibus, ducimus ab quo, ipsum corrupti impedit at maiores?</p>
+					<a href="">
+						<div id="game-btn">
+							<span>JOUER</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- JS -->
 	<script src="https://kit.fontawesome.com/9784a309ee.js" crossorigin="anonymous"></script>

@@ -1,0 +1,40 @@
+.game-popup {
+    background-color: rgba($color: #000000, $alpha: 0.75);
+    left: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.popup-content {
+    @include flex();
+    @include size(100%, 100%);
+}
+
+.popup-body {
+    @include flex();
+    @include size(85%, 85%);
+
+    #game-img {
+        @include size(100px, 100px);
+
+        margin-right: 15px;
+        flex: 1;
+    }
+
+    .game-info {
+        flex: 2;
+    }
+
+    #game-description {
+        margin: 15px 0;
+    }
+
+    #game-btn {
+        background-color: red;
+        padding: 15px;
+        width: fit-content;
+    }
+}

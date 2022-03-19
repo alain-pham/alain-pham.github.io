@@ -1702,6 +1702,24 @@ time {
   }
 }
 
+@-webkit-keyframes glowResume {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glowResume {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* ---------------------
     PAGES
 --------------------- */
@@ -1855,39 +1873,42 @@ time {
   }
 }
 
-.download-cv {
+#download-cv {
   background: #191919;
   border-radius: 0.1rem;
   -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
           box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
   -webkit-animation: slideLeft 0.5s 1s forwards;
           animation: slideLeft 0.5s 1s forwards;
+  font-weight: bold;
   height: 2.5rem;
   margin: 1rem 0;
   opacity: 0;
   position: relative;
 }
 
-.download-cv:hover {
+#download-cv:hover {
   background: linear-gradient(145deg, #1b1b1b, #171717);
 }
 
-.download-cv:hover a {
+#download-cv:hover a {
   color: gray;
 }
 
-.download-cv:active {
+#download-cv:active {
   -webkit-box-shadow: inset 5px 5px 10px #151515, inset -5px -5px 10px #1d1d1d;
           box-shadow: inset 5px 5px 10px #151515, inset -5px -5px 10px #1d1d1d;
 }
 
-.download-cv:active a {
+#download-cv:active a {
   color: #191919;
 }
 
-.download-cv a {
+#download-cv a {
   height: 100%;
   width: 100%;
+  -webkit-animation: glowResume 1s alternate infinite;
+          animation: glowResume 1s alternate infinite;
   display: inline-block;
   line-height: 2.5rem;
   position: absolute;
@@ -1897,13 +1918,13 @@ time {
 }
 
 @media (min-width: 768px) {
-  .download-cv {
+  #download-cv {
     width: 33%;
   }
 }
 
 @media (min-width: 992px) {
-  .download-cv {
+  #download-cv {
     -webkit-animation: slideUp 0.5s 1s forwards;
             animation: slideUp 0.5s 1s forwards;
     margin: 1rem auto;
@@ -2578,5 +2599,78 @@ time {
   position: absolute;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+}
+
+.game-popup {
+  background-color: rgba(0, 0, 0, 0.75);
+  left: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.popup-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.popup-body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 85%;
+  width: 85%;
+}
+
+.popup-body #game-img {
+  height: 100px;
+  width: 100px;
+  margin-right: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.popup-body .game-info {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.popup-body #game-description {
+  margin: 15px 0;
+}
+
+.popup-body #game-btn {
+  background-color: red;
+  padding: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 /*# sourceMappingURL=style.css.map */

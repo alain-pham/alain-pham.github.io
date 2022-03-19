@@ -12,7 +12,10 @@ const d = document,
     pageName = d.getElementById("page-name"),
     mainContent = d.querySelector("main"),
     diagLine = d.getElementsByClassName("diagonal-line"),
-    viewportHeight = window.innerHeight;
+    viewportHeight = window.innerHeight,
+    
+    gameTitle = d.getElementById("game-title"),
+    gameDescription = d.getElementById("game-description");
 
 const displayType = [
     "none", "block", "flex", "grid"
@@ -175,4 +178,14 @@ function showDiagonal(iNum) {
     if (mediaBig.matches) {
         diagLine[iNum].style.display = "block";
     }
+}
+
+/**
+ * 
+ */
+function changeGame() {
+    var gameTitle = game.getAttribute("data-game-title");
+    gameTitle.innerHTML = gameTitle;
+
+    alert("uwu");
 }

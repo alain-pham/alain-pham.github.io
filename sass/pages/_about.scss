@@ -99,10 +99,11 @@
     }
 }
 
-.download-cv {
+#download-cv {
     @include neumorph();
 
     animation: slideLeft 0.5s 1s forwards;
+    font-weight: bold;
     height: 2.5rem;
     margin: 1rem 0;
     opacity: 0;
@@ -128,6 +129,7 @@
     a {
         @include size(100%, 100%);
 
+        animation: glowResume 1s alternate infinite;
         display: inline-block;
         line-height: 2.5rem;
         position: absolute;

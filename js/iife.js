@@ -15,7 +15,10 @@
         sectionNum = d.querySelectorAll("#sections li"),
         contentMenu = d.getElementById("menu-left"),
         scrollIndicator = d.getElementById("scroll-indicator"),
-        worksTitle = d.getElementsByClassName("title-reveal");
+        worksTitle = d.getElementsByClassName("title-reveal"),
+        
+        slide = d.getElementsByClassName("slide"),
+        gamePopup = d.getElementById("popup");
 
     // Logo animation at start
     setTimeout(() => {
@@ -85,5 +88,12 @@
         worksTitle[1].style.display = displayType[0];
         d.getElementById("projects-2").style.display = displayType[3];
     });
+
+    //
+    for (let i = 0; i < slide.length; i++) {
+        slide[i].addEventListener("click", () => {
+            gamePopup.style.display = "flex";
+        });
+    }
 
 })();
