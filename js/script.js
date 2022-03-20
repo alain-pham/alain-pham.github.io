@@ -183,9 +183,7 @@ function showDiagonal(iNum) {
 /**
  * 
  */
-function changeGame() {
-    var gameTitle = game.getAttribute("data-game-title");
-    gameTitle.innerHTML = gameTitle;
-
-    alert("uwu");
+function changeGame(game) {
+    gameTitle.innerHTML = game.getAttribute("data-game-title");
+    gameDescription.innerHTML = game.getAttribute("data-game-description");
 }

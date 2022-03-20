@@ -64,7 +64,7 @@
 		</aside>
 
 		<aside id="menu-right" class="menu-half">
-			<div id="close-btn">
+			<div id="closeBtnMenu" class="close-btn">
 				<span class="close-btn-x"></span>
 				<span class="close-btn-x"></span>
 			</div>
@@ -290,35 +290,38 @@
 
 				<!-- LIST OF GAMES -->
 				<ul id="projects">
-					<li id="slide-1" class="slide" title="Disponible sur itch.io!" data-game-title="test" onclick="changeGame(this)">
+					<li id="slide-1" class="slide" title="Disponible sur itch.io!" data-game-title="://JUMP"
+					data-game-description="Projet individuel. Un jeu dont le but est de survivre le plus longtemps possible en sautant sur des plateformes 
+					générées procéduralement. Les assets visuels viennent de : https://www.gameart2d.com/character-spritesheet-1.html . 
+					L'objectif était de créer un jeu avec des mécaniques simples et une valeur de rejouabilité infinie.">
 						<div class="diagonal-box">
 							<div class="diagonal-content">
 								<a href="https://megaxalain.itch.io/jump" target="_blank"><b class="game-name">://JUMP</b></a>
 							</div>
 						</div>
 					</li>
-					<li id="slide-2" class="slide" title="Disponible sur itch.io!">
+					<li id="slide-2" class="slide" title="Disponible sur itch.io!" data-game-title="BLOK">
 						<div class="diagonal-box">
 							<div class="diagonal-content">
 								<a href="https://megaxalain.itch.io/blok" target="_blank"><b class="game-name">BLOK</b></a>
 							</div>
 						</div>
 					</li>
-					<li id="slide-3" class="slide" title="Bientôt disponible!">
+					<li id="slide-3" class="slide" title="Bientôt disponible!" data-game-title="ASTRE">
 						<div class="diagonal-box">
 							<div class="diagonal-content">
 								<a href="" target="_blank"><b class="game-name">ASTRE</b></a>
 							</div>
 						</div>
 					</li>
-					<li id="slide-4" class="slide" title="Disponible sur itch.io!">
+					<li id="slide-4" class="slide" title="Disponible sur itch.io!" data-game-title="QUERCUS">
 						<div class="diagonal-box">
 							<div class="diagonal-content">
 								<a href="https://megaxalain.itch.io/quercus" target="_blank"><b class="game-name">QUERCUS</b></a>
 							</div>
 						</div>
 					</li>
-					<li id="slide-5" class="slide" title="Disponible sur itch.io!">
+					<li id="slide-5" class="slide" title="Disponible sur itch.io!" data-game-title="WARRIORS' ARENA">
 						<div class="diagonal-box">
 							<div class="diagonal-content">
 								<a href="https://qendajar.itch.io/warriors-arena" target="_blank"><b class="game-name">WARRIORS' ARENA</b></a>
@@ -386,10 +389,15 @@
 	<div id="popup" class="page game-popup">
 		<div class="popup-content">
 			<div class="popup-body">
+				<div id="closeBtnPopup" class="close-btn">
+					<span class="close-btn-x"></span>
+					<span class="close-btn-x"></span>
+				</div>
 				<div id="game-img">
 					<img src="" alt="">
 				</div>
 				<div class="game-info">
+					
 					<h1 id="game-title">GAME TITLE</h1>
 					<p id="game-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa sed neque ullam sint iusto dolorem praesentium voluptatibus aspernatur molestiae est temporibus, ducimus ab quo, ipsum corrupti impedit at maiores?</p>
 					<a href="">

@@ -10,7 +10,7 @@
         logoLoader = d.getElementById("logo-loader"),
         circleLoader = d.querySelector(".circle"),
         burgerBtn = d.getElementById("burger"),
-        closeBtn = d.getElementById("close-btn"),
+        closeBtnMenu = d.getElementById("closeBtnMenu"),
         sectionName = d.getElementsByClassName("section-name"),
         sectionNum = d.querySelectorAll("#sections li"),
         contentMenu = d.getElementById("menu-left"),
@@ -18,7 +18,8 @@
         worksTitle = d.getElementsByClassName("title-reveal"),
         
         slide = d.getElementsByClassName("slide"),
-        gamePopup = d.getElementById("popup");
+        gamePopup = d.getElementById("popup"),
+        closeBtnPopup = d.getElementById("closeBtnPopup");
 
     // Logo animation at start
     setTimeout(() => {
@@ -53,7 +54,7 @@
 
     // Menu behaviour
     burgerBtn.addEventListener("click", showMenu);
-    closeBtn.addEventListener("click", hideMenu);
+    closeBtnMenu.addEventListener("click", hideMenu);
     contentMenu.addEventListener("click", hideMenu);
 
     for (let i = 0; i < sectionName.length; i++) {
@@ -93,7 +94,12 @@
     for (let i = 0; i < slide.length; i++) {
         slide[i].addEventListener("click", () => {
             gamePopup.style.display = "flex";
+            changeGame(slide[i]);
         });
     }
+
+    closeBtnPopup.addEventListener("click", () => {
+        gamePopup.style.display = "none";
+    })
 
 })();

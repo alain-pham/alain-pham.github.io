@@ -19,7 +19,7 @@
     @include flex($align: center, $justify: center);
 }
 
-#close-btn {
+.close-btn {
     @include flex();
     @include pos(absolute, 2rem, 2rem);
     @include size(5rem, 5rem);

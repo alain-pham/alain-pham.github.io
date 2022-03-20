@@ -896,7 +896,7 @@ polygon.st1 {
           justify-content: center;
 }
 
-#close-btn {
+.close-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -923,7 +923,7 @@ polygon.st1 {
   transition: all 0.25s;
 }
 
-#close-btn::before {
+.close-btn::before {
   height: 4rem;
   width: 4rem;
   content: "";
@@ -935,20 +935,20 @@ polygon.st1 {
   transition: all 0.25s;
 }
 
-#close-btn:hover,
-#close-btn :active {
+.close-btn:hover,
+.close-btn :active {
   opacity: 1;
 }
 
-#close-btn:hover::before,
-#close-btn :active::before {
+.close-btn:hover::before,
+.close-btn :active::before {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
 @media (min-width: 992px) {
-  #close-btn {
+  .close-btn {
     right: 5rem;
     top: 5rem;
   }
@@ -2602,7 +2602,7 @@ time {
 }
 
 .game-popup {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.9);
   left: 0;
   height: 100%;
   position: fixed;
