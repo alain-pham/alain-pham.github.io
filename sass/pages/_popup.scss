@@ -15,26 +15,37 @@
 
 .popup-body {
     @include flex();
-    @include size(85%, 85%);
+    @include size(50%, 50%);
 
     #game-img {
-        @include size(100px, 100px);
-
+        @include size(100%, 30%);
+        background-size: cover;
+        background-image: url("/img/creation/creation1.jpg");
+        background-position: center;
+        display: none;
         margin-right: 15px;
         flex: 1;
+
+        @include for-desktop {
+            display: block;
+        }
     }
 
     .game-info {
         flex: 2;
     }
 
-    #game-description {
-        margin: 15px 0;
+    #game-team {
+        font-style: italic;
     }
 
     #game-btn {
         background-color: red;
         padding: 15px;
         width: fit-content;
+    }
+
+    .game-margin {
+        margin: 15px 0;
     }
 }

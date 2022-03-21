@@ -15,7 +15,12 @@ const d = document,
     viewportHeight = window.innerHeight,
     
     gameTitle = d.getElementById("game-title"),
-    gameDescription = d.getElementById("game-description");
+    gameTeam = d.getElementById("game-team"),
+    gameDescription = d.getElementById("game-description"),
+    gameObjective = d.getElementById("game-objective"),
+    gameRole = d.getElementById("game-role"),
+    gameLink = d.getElementById("game-link"),
+    gameImg = d.getElementById("game-img");
 
 const displayType = [
     "none", "block", "flex", "grid"
@@ -181,9 +186,14 @@ function showDiagonal(iNum) {
 }
 
 /**
- * 
+ * Update the popup with a specific game info after click
  */
 function changeGame(game) {
     gameTitle.innerHTML = game.getAttribute("data-game-title");
+    gameTeam.innerHTML = game.getAttribute("data-game-team");
     gameDescription.innerHTML = game.getAttribute("data-game-description");
+    gameObjective.innerHTML = game.getAttribute("data-game-objective");
+    gameRole.innerHTML = game.getAttribute("data-game-role");
+    gameLink.href = game.getAttribute("data-game-link");
+    gameImg.style.backgroundImage = "url('"+ game.getAttribute("data-game-img") + "')";
 }

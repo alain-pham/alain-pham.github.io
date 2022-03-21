@@ -68,6 +68,12 @@
             background-size: cover;
         }
 
+        &#slide-6 {
+            background: url("/img/games/game6.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
         &:hover {
             .diagonal-box {
                 width: 100%;
@@ -88,14 +94,10 @@
                 filter: brightness(10%);
                 flex: 1 1 13.33%;
             }
-
-            .game-name {
-                // font-size: 600%;
-            }
         }
 
         .slide {
-            @include size(100%, 15%); // width corresponding to 100/number of games
+            @include size(100%, 16.67%); // width corresponding to 100/number of games
 
             list-style: none;
             overflow: hidden;

@@ -98,6 +98,7 @@
         });
     }
 
+    // Close the popup window
     closeBtnPopup.addEventListener("click", () => {
         gamePopup.style.display = "none";
     })

@@ -2367,6 +2367,12 @@ time {
   background-size: cover;
 }
 
+#projects .slide#slide-6 {
+  background: url("/img/games/game6.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 #projects .slide:hover .diagonal-box {
   width: 100%;
 }
@@ -2389,7 +2395,7 @@ time {
   }
   #projects .slide {
     height: 100%;
-    width: 15%;
+    width: 16.67%;
     list-style: none;
     overflow: hidden;
     position: relative;
@@ -2643,17 +2649,27 @@ time {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 85%;
-  width: 85%;
+  height: 50%;
+  width: 50%;
 }
 
 .popup-body #game-img {
-  height: 100px;
-  width: 100px;
+  height: 100%;
+  width: 30%;
+  background-size: cover;
+  background-image: url("/img/creation/creation1.jpg");
+  background-position: center;
+  display: none;
   margin-right: 15px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media (min-width: 992px) {
+  .popup-body #game-img {
+    display: block;
+  }
 }
 
 .popup-body .game-info {
@@ -2662,8 +2678,8 @@ time {
           flex: 2;
 }
 
-.popup-body #game-description {
-  margin: 15px 0;
+.popup-body #game-team {
+  font-style: italic;
 }
 
 .popup-body #game-btn {
@@ -2672,5 +2688,9 @@ time {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.popup-body .game-margin {
+  margin: 15px 0;
 }
 /*# sourceMappingURL=style.css.map */
