@@ -20,7 +20,8 @@ const d = document,
     gameObjective = d.getElementById("game-objective"),
     gameRole = d.getElementById("game-role"),
     gameLink = d.getElementById("game-link"),
-    gameImg = d.getElementById("game-img");
+    gameImg = d.getElementById("game-img"),
+    gameOther = d.getElementById("game-other");
 
 const displayType = [
     "none", "block", "flex", "grid"
@@ -195,5 +196,7 @@ function changeGame(game) {
     gameObjective.innerHTML = game.getAttribute("data-game-objective");
     gameRole.innerHTML = game.getAttribute("data-game-role");
     gameLink.href = game.getAttribute("data-game-link");
+    gameOther.href = game.getAttribute("data-game-other");
+    gameOther.innerHTML = game.getAttribute("data-game-other");
     gameImg.style.backgroundImage = "url('"+ game.getAttribute("data-game-img") + "')";
 }
