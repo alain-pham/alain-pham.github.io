@@ -2373,6 +2373,12 @@ time {
   background-size: cover;
 }
 
+#projects .slide#slide-7 {
+  background: url("/img/games/game7.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 #projects .slide:hover .diagonal-box {
   width: 100%;
 }
@@ -2395,7 +2401,7 @@ time {
   }
   #projects .slide {
     height: 100%;
-    width: 16.67%;
+    width: 14.29%;
     list-style: none;
     overflow: hidden;
     position: relative;
@@ -2407,8 +2413,8 @@ time {
     -webkit-filter: none;
             filter: none;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 60%;
-            flex: 1 1 60%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
   #projects .diagonal-box {
     -webkit-box-align: center;
@@ -2608,7 +2614,7 @@ time {
 }
 
 .game-popup {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   left: 0;
   height: 100%;
   position: fixed;
@@ -2682,12 +2688,30 @@ time {
   font-style: italic;
 }
 
+.popup-body #game-other {
+  font-family: monospace;
+  font-weight: bold;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.popup-body #game-other:hover {
+  color: red;
+}
+
 .popup-body #game-btn {
   background-color: red;
+  margin: 15px 0;
   padding: 15px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.popup-body #game-btn:hover {
+  background-color: #660000;
 }
 
 .popup-body .game-margin {
