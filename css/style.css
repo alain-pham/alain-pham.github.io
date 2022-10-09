@@ -2306,6 +2306,7 @@ time {
   width: 100%;
   -webkit-animation: slideUp 0.5s forwards;
           animation: slideUp 0.5s forwards;
+  border: inset red 0.25rem;
   display: none;
   opacity: 0;
   overflow-x: auto;
@@ -2332,6 +2333,7 @@ time {
   width: 100%;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   scroll-snap-align: start;
@@ -2373,6 +2375,12 @@ time {
   background-size: cover;
 }
 
+#projects .slide#slide-7 {
+  background: url("/img/games/game7.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 #projects .slide:hover .diagonal-box {
   width: 100%;
 }
@@ -2395,7 +2403,7 @@ time {
   }
   #projects .slide {
     height: 100%;
-    width: 16.67%;
+    width: 14.29%;
     list-style: none;
     overflow: hidden;
     position: relative;
@@ -2407,8 +2415,8 @@ time {
     -webkit-filter: none;
             filter: none;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 60%;
-            flex: 1 1 60%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
   #projects .diagonal-box {
     -webkit-box-align: center;
@@ -2440,7 +2448,6 @@ time {
   }
   #projects .game-name {
     font-size: 3rem;
-    opacity: 0.65;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
   }
@@ -2458,6 +2465,7 @@ time {
   width: 100%;
   -webkit-animation: slideUp 0.5s forwards;
           animation: slideUp 0.5s forwards;
+  border: inset red 0.25rem;
   display: none;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
@@ -2608,7 +2616,7 @@ time {
 }
 
 .game-popup {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   left: 0;
   height: 100%;
   position: fixed;
@@ -2682,12 +2690,30 @@ time {
   font-style: italic;
 }
 
+.popup-body #game-other {
+  font-family: monospace;
+  font-weight: bold;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.popup-body #game-other:hover {
+  color: red;
+}
+
 .popup-body #game-btn {
   background-color: red;
+  margin: 15px 0;
   padding: 15px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.popup-body #game-btn:hover {
+  background-color: #660000;
 }
 
 .popup-body .game-margin {

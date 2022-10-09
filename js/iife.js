@@ -90,7 +90,7 @@
         d.getElementById("projects-2").style.display = displayType[3];
     });
 
-    //
+    // Display clicked game in carousel
     for (let i = 0; i < slide.length; i++) {
         slide[i].addEventListener("click", () => {
             gamePopup.style.display = "flex";
@@ -102,5 +102,11 @@
     closeBtnPopup.addEventListener("click", () => {
         gamePopup.style.display = "none";
     })
+
+    d.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            gamePopup.style.display = "none";
+        }
+    });
 
 })();
