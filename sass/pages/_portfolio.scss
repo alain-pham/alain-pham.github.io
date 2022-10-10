@@ -23,6 +23,7 @@
     @include size(60%, 100%);
 
     animation: slideUp 0.5s forwards;
+    border: inset red 0.25rem;
     display: none;
     opacity: 0;
     overflow-x: auto;
@@ -35,6 +36,7 @@
 
         background-position: center;
         background-size: cover;
+        cursor: pointer;
         flex-shrink: 0;
         scroll-snap-align: start;
 
@@ -74,6 +76,18 @@
             background-size: cover;
         }
 
+        &#slide-7 {
+            background: url("/img/games/game7.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        &#slide-8 {
+            background: url("/img/games/game8.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
         &:hover {
             .diagonal-box {
                 width: 100%;
@@ -97,7 +111,7 @@
         }
 
         .slide {
-            @include size(100%, 16.67%); // width corresponding to 100/number of games
+            @include size(100%, 14.29%); // width corresponding to 100/number of games
 
             list-style: none;
             overflow: hidden;
@@ -107,7 +121,7 @@
 
             &:hover {
                 filter: none;
-                flex: 1 1 60%;
+                flex: 1 1 100%;
             }
         }
 
@@ -128,7 +142,7 @@
 
         .game-name {
             font-size: 3rem;
-            opacity: 0.65;
+            // opacity: 0.65;
             transition: all 0.25s;
         }
     }
@@ -145,6 +159,7 @@
     @include size(60%, 100%);
 
     animation: slideUp 0.5s forwards;
+    border: inset red 0.25rem;
     display: none;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
