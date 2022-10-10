@@ -14,6 +14,7 @@ const d = document,
     diagLine = d.getElementsByClassName("diagonal-line"),
     viewportHeight = window.innerHeight,
     
+    gamePopup = d.getElementById("popup"),
     gameTitle = d.getElementById("game-title"),
     gameTeam = d.getElementById("game-team"),
     gameDescription = d.getElementById("game-description"),
