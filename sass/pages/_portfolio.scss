@@ -111,7 +111,7 @@
         }
 
         .slide {
-            @include size(100%, 16.67%); // width corresponding to 100/number of games
+            @include size(100%, 14.29%); // width corresponding to 100/number of games
 
             list-style: none;
             overflow: hidden;
