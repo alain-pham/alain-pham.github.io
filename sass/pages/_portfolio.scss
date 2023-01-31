@@ -23,7 +23,7 @@
     @include size(75%, 100vw);
 
     animation: slideUp 0.5s forwards;
-    // border: inset red 0.25rem;
+    border: inset red 0.25rem;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -79,13 +79,13 @@
         }
 
         &#slide-7 {
-            background: url("/img/games/game7.jpg");
+            background: url("/img/games/tobor.gif");
             background-position: center;
             background-size: cover;
         }
 
         &#slide-8 {
-            background: url("/img/games/game8.jpg");
+            background: url("/img/games/project_pew.gif");
             background-position: center;
             background-size: cover;
         }

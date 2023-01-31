@@ -2382,13 +2382,13 @@ time {
 }
 
 #projects .slide#slide-7 {
-  background: url("/img/games/game7.jpg");
+  background: url("/img/games/tobor.gif");
   background-position: center;
   background-size: cover;
 }
 
 #projects .slide#slide-8 {
-  background: url("/img/games/game8.jpg");
+  background: url("/img/games/project_pew.gif");
   background-position: center;
   background-size: cover;
 }
@@ -2419,7 +2419,7 @@ time {
   }
   #projects .slide {
     height: 100%;
-    width: 14.29%;
+    width: 16.67%;
     list-style: none;
     overflow: hidden;
     position: relative;
