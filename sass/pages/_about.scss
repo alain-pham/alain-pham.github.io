@@ -173,6 +173,11 @@
         opacity: 0;
     }
 
+    &:nth-of-type(3) {
+        animation: slideUp 0.5s 2.5s forwards;
+        opacity: 0;
+    }
+
     p {
         display: inline-block;
         font-weight: bold;
@@ -192,12 +197,19 @@
         animation: slideUp 0.5s 2.25s forwards;
         opacity: 0;
     }
+
+    &:nth-of-type(3) {
+        animation: slideUp 0.5s 2.75s forwards;
+        opacity: 0;
+    }
+
 }
 
 .skill {
     @include neumorph();
 
-    background: $red;
+    background: $cyan;
+    color: black;
     display: inline-block;
     font-size: 0.8rem;
     margin: 0 0.5rem 0.5rem 0;
@@ -209,7 +221,11 @@
 }
 
 #alain {
-    color: $red;
+    color: $cyan;
     font-weight: bold;
     text-shadow: 1px 1px black;
+}
+
+.downloadButton {
+    color: red;
 }

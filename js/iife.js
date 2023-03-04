@@ -17,9 +17,11 @@
         scrollIndicator = d.getElementById("scroll-indicator"),
         worksTitle = d.getElementsByClassName("title-reveal"),
         
-        slide = d.getElementsByClassName("slide"),
-        gamePopup = d.getElementById("popup"),
-        closeBtnPopup = d.getElementById("closeBtnPopup");
+        // slide = d.getElementsByClassName("slide"),
+        // gamePopup = d.getElementById("popup"),
+        // closeBtnPopup = d.getElementById("closeBtnPopup");
+
+         slide = d.getElementsByClassName("game");
 
     // Logo animation at start
     setTimeout(() => {
@@ -90,23 +92,23 @@
         d.getElementById("projects-2").style.display = displayType[3];
     });
 
-    // Display clicked game in carousel
-    for (let i = 0; i < slide.length; i++) {
-        slide[i].addEventListener("click", () => {
-            gamePopup.style.display = "flex";
-            changeGame(slide[i]);
-        });
-    }
+    // // Display clicked game in carousel
+    // for (let i = 0; i < slide.length; i++) {
+    //     slide[i].addEventListener("click", () => {
+    //         gamePopup.style.display = "flex";
+    //         changeGame(slide[i]);
+    //     });
+    // }
 
-    // Close the popup window
-    closeBtnPopup.addEventListener("click", () => {
-        gamePopup.style.display = "none";
-    })
+    // // Close the popup window
+    // closeBtnPopup.addEventListener("click", () => {
+    //     gamePopup.style.display = "none";
+    // })
 
-    d.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            gamePopup.style.display = "none";
-        }
-    });
+    // d.addEventListener("keydown", (event) => {
+    //     if (event.key === "Escape") {
+    //         gamePopup.style.display = "none";
+    //     }
+    // });
 
 })();

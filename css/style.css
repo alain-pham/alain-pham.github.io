@@ -398,7 +398,7 @@ ul {
   width: 6rem;
   -webkit-animation: fadeIn100 0.75s 1.5s ease-out forwards;
           animation: fadeIn100 0.75s 1.5s ease-out forwards;
-  background-color: red;
+  background-color: #00FFFFFF;
   border-radius: 0.1rem;
   display: block;
   margin: 1rem auto 1.5rem auto;
@@ -469,7 +469,7 @@ ul {
 .diagonal-line {
   -webkit-animation: fullWidth 2s;
           animation: fullWidth 2s;
-  background-color: red;
+  background-color: cyan;
   display: none;
   height: 1rem;
   position: absolute;
@@ -670,7 +670,7 @@ body {
 #separator {
   height: 100%;
   width: 0.25rem;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(0, 255, 255, 0.5);
   border-radius: 0.1rem;
   margin-left: 150%;
   position: absolute;
@@ -848,12 +848,12 @@ polygon.st1 {
 #nav a {
   height: 100%;
   width: 100%;
-  color: red;
+  color: #00FFFFFF;
   display: block;
 }
 
 .current {
-  background-color: red;
+  background-color: #00FFFFFF;
 }
 
 #menu {
@@ -1020,7 +1020,7 @@ polygon.st1 {
 }
 
 #bg-num {
-  color: red;
+  color: #00FFFFFF;
   font-size: 3rem;
   opacity: 0.75;
   position: absolute;
@@ -1040,7 +1040,7 @@ polygon.st1 {
 }
 
 #sections li:active a {
-  color: red;
+  color: #00FFFFFF;
 }
 
 @media (min-width: 992px) {
@@ -1059,7 +1059,7 @@ polygon.st1 {
     top: 50%;
     height: 1rem;
     width: 1rem;
-    background-color: red;
+    background-color: #00FFFFFF;
     border-radius: 0.1rem;
     content: "";
     display: inline-block;
@@ -1958,6 +1958,12 @@ time {
   opacity: 0;
 }
 
+.skills-title:nth-of-type(3) {
+  -webkit-animation: slideUp 0.5s 2.5s forwards;
+          animation: slideUp 0.5s 2.5s forwards;
+  opacity: 0;
+}
+
 .skills-title p {
   display: inline-block;
   font-weight: bold;
@@ -1983,12 +1989,19 @@ time {
   opacity: 0;
 }
 
+.skill-category:nth-of-type(3) {
+  -webkit-animation: slideUp 0.5s 2.75s forwards;
+          animation: slideUp 0.5s 2.75s forwards;
+  opacity: 0;
+}
+
 .skill {
   background: #191919;
   border-radius: 0.1rem;
   -webkit-box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
           box-shadow: 5px 5px 10px #151515, -5px -5px 10px #1d1d1d;
-  background: red;
+  background: #00FFFFFF;
+  color: black;
   display: inline-block;
   font-size: 0.8rem;
   margin: 0 0.5rem 0.5rem 0;
@@ -2002,9 +2015,13 @@ time {
 }
 
 #alain {
-  color: red;
+  color: #00FFFFFF;
   font-weight: bold;
   text-shadow: 1px 1px black;
+}
+
+.downloadButton {
+  color: red;
 }
 
 #contact .social-media {
@@ -2306,7 +2323,7 @@ time {
   width: 100vw;
   -webkit-animation: slideUp 0.5s forwards;
           animation: slideUp 0.5s forwards;
-  border: inset red 0.25rem;
+  border: inset cyan 0.25rem;
   display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -2487,7 +2504,7 @@ time {
   width: 100%;
   -webkit-animation: slideUp 0.5s forwards;
           animation: slideUp 0.5s forwards;
-  border: inset red 0.25rem;
+  border: inset cyan 0.25rem;
   display: none;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
@@ -2613,7 +2630,7 @@ time {
   position: absolute;
   right: 0;
   top: 0;
-  border: 0.5rem solid red;
+  border: 0.5rem solid #00FFFFFF;
   border-radius: 0.75rem;
   opacity: 0;
   -webkit-transition: all 0.25s;
@@ -2720,11 +2737,11 @@ time {
 }
 
 .popup-body #game-other:hover {
-  color: red;
+  color: cyan;
 }
 
 .popup-body #game-btn {
-  background-color: red;
+  background-color: cyan;
   margin: 15px 0;
   padding: 15px;
   -webkit-transition: all 0.1s;
@@ -2740,5 +2757,103 @@ time {
 
 .popup-body .game-margin {
   margin: 15px 0;
+}
+
+#games {
+  display: none;
+  grid-gap: 1rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 75vh;
+  margin: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 576px) {
+  #games {
+    margin: 0 auto;
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  #games {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  #games {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #games {
+    max-width: 1140px;
+  }
+}
+
+.game {
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.game#obscura {
+  background-image: url("/img/games/obscura.png");
+  background-position: bottom;
+  background-size: cover;
+}
+
+.game#projectpew {
+  background-image: url("/img/games/project_pew.gif");
+  background-position: center;
+  background-size: cover;
+}
+
+.game#tobor {
+  background-image: url("/img/games/tobor.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.game#z1353ad {
+  background-image: url("/img/games/1353ad.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.game#warriorsarena {
+  background-image: url("/img/games/warriorsarena.gif");
+  background-position: center;
+  background-size: cover;
+}
+
+.game#quercus {
+  background-image: url("/img/games/quercus.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.game:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 /*# sourceMappingURL=style.css.map */

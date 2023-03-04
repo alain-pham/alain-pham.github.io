@@ -66,6 +66,8 @@ function completeLoad() {
     if (mediaBig.matches) {
         d.getElementById("nav").style.display = displayType[2];
     }
+
+    d.getElementById("games").style.display = displayType[3];
 }
 
 /**

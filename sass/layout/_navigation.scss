@@ -30,7 +30,7 @@
 #separator {
     @include size(100%, 0.25rem);
 
-    background-color: rgba($color: red, $alpha: 0.5);
+    background-color: rgba($color: cyan, $alpha: 0.5);
     border-radius: 0.1rem;
     margin-left: 150%;
     position: absolute;
@@ -151,11 +151,11 @@ polygon.st1 {
     a {
         @include size(100%, 100%);
 
-        color: $red;
+        color: $cyan;
         display: block;
     }
 }
 
 .current {
-    background-color: $red;
+    background-color: $cyan;
 }

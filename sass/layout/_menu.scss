@@ -100,7 +100,7 @@
 }
 
 #bg-num {
-    color: $red;
+    color: $cyan;
     font-size: 3rem;
     opacity: 0.75;
     position: absolute;
@@ -117,7 +117,7 @@
 
         &:active {
             a {
-                color: $red;
+                color: $cyan;
             }
         }
 
@@ -133,7 +133,7 @@
                 @include pos(absolute, 50%);
                 @include size(1rem, 1rem);
 
-                background-color: $red;
+                background-color: $cyan;
                 border-radius: 0.1rem;
                 content: "";
                 display: inline-block;

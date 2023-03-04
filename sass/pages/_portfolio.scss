@@ -23,7 +23,7 @@
     @include size(75%, 100vw);
 
     animation: slideUp 0.5s forwards;
-    border: inset red 0.25rem;
+    border: inset cyan 0.25rem;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -170,7 +170,7 @@
     @include size(60%, 100%);
 
     animation: slideUp 0.5s forwards;
-    border: inset red 0.25rem;
+    border: inset cyan 0.25rem;
     display: none;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -260,7 +260,7 @@
     &::after {
         @include pos(absolute, 0, 0, 0, 0);
 
-        border: 0.5rem solid $red;
+        border: 0.5rem solid $cyan;
         border-radius: 0.75rem;
         opacity: 0;
         transition: all 0.25s;
